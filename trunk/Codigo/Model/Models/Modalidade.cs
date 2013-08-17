@@ -15,13 +15,13 @@ namespace Models.Models
         [Display(Name = "Código")]
         public int Codigo { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_nome")]
         [StringLength(45)]
         public string Nome { get; set; }
 
 
-        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "erro_valor")]
-        [Range(0, 1000000)]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+        [Range(0, 1000000, ErrorMessage = "O Valor de estar entre 0 e 1000000")]
         [DisplayFormat(DataFormatString = "{0:c}")]        
         public decimal Valor { get; set; }
 
