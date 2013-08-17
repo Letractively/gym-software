@@ -46,15 +46,15 @@ namespace BibliotecaWeb.Controllers
         // POST: /Modalidade/Create
 
         [HttpPost]
-        public ActionResult Create(Modalidade editoraModel)
+        public ActionResult Create(Modalidade modalidadeModel)
         {
             if (ModelState.IsValid)
             {
-                gModalidade.Inserir(editoraModel);
+                gModalidade.Inserir(modalidadeModel);
                 return RedirectToAction("Index");
             }
 
-            return View(editoraModel);
+            return View(modalidadeModel);
         }
         
         //
@@ -62,22 +62,22 @@ namespace BibliotecaWeb.Controllers
  
         public ActionResult Edit(int id)
         {
-            Modalidade editoraModel = gModalidade.Obter(id);
-            return View(editoraModel);
+            Modalidade modalidadeModel = gModalidade.Obter(id);
+            return View(modalidadeModel);
         }
 
         //
         // POST: /Modalidade/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, Modalidade editoraModel)
+        public ActionResult Edit(int id, Modalidade modalidadeModel)
         {
             if (ModelState.IsValid)
             {
-                gModalidade.Editar(editoraModel);
+                gModalidade.Editar(modalidadeModel);
                 return RedirectToAction("Index");
             }
-            return View(editoraModel);
+            return View(modalidadeModel);
         }
 
         //
@@ -85,15 +85,15 @@ namespace BibliotecaWeb.Controllers
  
         public ActionResult Delete(int id)
         {
-            Modalidade editoraModel = gModalidade.Obter(id);
-            return View(editoraModel);
+            Modalidade modalidadeModel = gModalidade.Obter(id);
+            return View(modalidadeModel);
         }
 
         //
         // POST: /Modalidade/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, Modalidade editoraModel)
+        public ActionResult Delete(int id, Modalidade modalidadeModel)
         {
             gModalidade.Remover(id);
             return RedirectToAction("Index");

@@ -6,12 +6,12 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <fieldset>
     <legend>Modalidade</legend>
 
-    <div class="display-label">Codigo</div>
+    <div class="display-label">Código</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Codigo) %>
     </div>
@@ -27,8 +27,8 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) %> |
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Editar", "Edit", new { id=Model.Codigo}) %> |
+    <%: Html.ActionLink("Voltar Para Lista", "Index")%>
 </p>
 
 </asp:Content>

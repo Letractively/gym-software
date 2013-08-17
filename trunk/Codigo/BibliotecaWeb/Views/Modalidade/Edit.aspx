@@ -6,10 +6,19 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Edit</h2>
+<h2>Editar</h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
+<script type="text/javascript">
+    $.validator.methods.number = function (value, element) {
+        return !isNaN($.parseFloat(value));
+    }
+
+    $(function () {
+        $.preferCulture('pt-BR');
+    });
+</script>
 
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
@@ -39,13 +48,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Salvar" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar Para Lista", "Index") %>
 </div>
 
 </asp:Content>

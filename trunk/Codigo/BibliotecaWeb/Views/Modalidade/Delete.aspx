@@ -6,13 +6,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2>Excluir</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você Realmente deseja apagar esse registro?</h3>
 <fieldset>
     <legend>Modalidade</legend>
 
-    <div class="display-label">Codigo</div>
+    <div class="display-label">Código</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Codigo) %>
     </div>
@@ -29,8 +29,8 @@
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <input type="submit" value="Excluir" /> |
+        <%: Html.ActionLink("Voltar Para Lista", "Index")%>
     </p>
 <% } %>
 

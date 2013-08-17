@@ -10,19 +10,22 @@
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
+<script type="text/javascript">
+    $.validator.methods.number = function (value, element) {
+        return !isNaN($.parseFloat(value));
+    }
+
+    $(function () {
+        $.preferCulture('pt-BR');
+    });
+</script>
 
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend>Modalidade</legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Codigo) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Codigo) %>
-            <%: Html.ValidationMessageFor(model => model.Codigo) %>
-        </div>
+
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>
@@ -41,13 +44,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Adicionar" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar Para Lista", "Index") %>
 </div>
 
 </asp:Content>

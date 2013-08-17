@@ -6,15 +6,15 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2>Gerenciar Modalidade</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Inserir Nova", "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            Codigo
+            Código
         </th>
         <th>
             Nome
@@ -37,9 +37,9 @@
             <%: Html.DisplayFor(modelItem => item.Valor) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.Codigo }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.Codigo }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.Codigo }) %>
+            <%: Html.ActionLink("Alterar", "Edit", new { id=item.Codigo }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.Codigo }) %> |
+            <%: Html.ActionLink("Excluir", "Delete", new { id=item.Codigo }) %>
         </td>
     </tr>
 <% } %>
