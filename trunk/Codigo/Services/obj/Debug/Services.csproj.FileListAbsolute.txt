@@ -1,0 +1,29 @@
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Services\bin\Debug\en\Model.resources.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\bin\Debug\en\Model.resources.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\obj\Debug\Services.pdb
