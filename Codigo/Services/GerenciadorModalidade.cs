@@ -64,9 +64,9 @@ namespace Services
         /// Remove da base de dados
         /// </summary>
         /// <param name="modalidadeModel"></param>
-        public void Remover(int idModalidade)
+        public void Remover(int CodigoModalidade)
         {
-            unitOfWork.RepositorioModalidade.Remover(modalidade => modalidade.CodigoModalidade.Equals(idModalidade));
+            unitOfWork.RepositorioModalidade.Remover(modalidade => modalidade.CodigoModalidade.Equals(CodigoModalidade));
             unitOfWork.Commit(shared);
         }
 

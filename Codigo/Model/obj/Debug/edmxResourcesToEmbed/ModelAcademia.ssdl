@@ -200,7 +200,7 @@
     <Key>
       <PropertyRef Name="CodigoModalidade" />
     </Key>
-    <Property Name="CodigoModalidade" Type="int" Nullable="false" />
+    <Property Name="CodigoModalidade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="NomeModalidade" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="ValorModalidade" Type="decimal" Nullable="false" Scale="2" />
   </EntityType>
@@ -217,7 +217,7 @@
     <Key>
       <PropertyRef Name="CodigoPessoa" />
     </Key>
-    <Property Name="CodigoPessoa" Type="int" Nullable="false" />
+    <Property Name="CodigoPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CadastradoDesde" Type="date" Nullable="false" />
     <Property Name="NomeRazao" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="ApelidoFantasia" Type="varchar" MaxLength="45" />
@@ -241,7 +241,7 @@
     <Key>
       <PropertyRef Name="CodigoProduto" />
     </Key>
-    <Property Name="CodigoProduto" Type="int" Nullable="false" />
+    <Property Name="CodigoProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoBarra" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="NomeItem" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="Quantidade" Type="decimal" Nullable="false" Scale="5" />
