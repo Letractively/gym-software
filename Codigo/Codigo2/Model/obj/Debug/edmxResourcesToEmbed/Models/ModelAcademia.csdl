@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="academiaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AcademiaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_aluno" EntityType="academiaModel.tbl_aluno" />
+    <EntitySet Name="tbl_atividade" EntityType="academiaModel.tbl_atividade" />
+    <EntitySet Name="tbl_atividade_aluno" EntityType="academiaModel.tbl_atividade_aluno" />
+    <EntitySet Name="tbl_despesa" EntityType="academiaModel.tbl_despesa" />
+    <EntitySet Name="tbl_funcionario" EntityType="academiaModel.tbl_funcionario" />
+    <EntitySet Name="tbl_historico_rotina" EntityType="academiaModel.tbl_historico_rotina" />
+    <EntitySet Name="tbl_item" EntityType="academiaModel.tbl_item" />
+    <EntitySet Name="tbl_medida" EntityType="academiaModel.tbl_medida" />
+    <EntitySet Name="tbl_mensagem" EntityType="academiaModel.tbl_mensagem" />
+    <EntitySet Name="tbl_modalidade" EntityType="academiaModel.tbl_modalidade" />
+    <EntitySet Name="tbl_pagamento_mensalidade" EntityType="academiaModel.tbl_pagamento_mensalidade" />
+    <EntitySet Name="tbl_pessoa" EntityType="academiaModel.tbl_pessoa" />
+    <EntitySet Name="tbl_produto" EntityType="academiaModel.tbl_produto" />
+    <EntitySet Name="tbl_rotina" EntityType="academiaModel.tbl_rotina" />
+    <EntitySet Name="tbl_venda" EntityType="academiaModel.tbl_venda" />
+    <AssociationSet Name="fk_tbl_aluno_tbl_pessoa" Association="academiaModel.fk_tbl_aluno_tbl_pessoa">
+      <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
+      <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_atividadealuno_tbl_aluno1" Association="academiaModel.fk_tbl_atividadealuno_tbl_aluno1">
+      <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+      <End Role="tbl_atividade_aluno" EntitySet="tbl_atividade_aluno" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_medida_tbl_aluno1" Association="academiaModel.fk_tbl_medida_tbl_aluno1">
+      <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+      <End Role="tbl_medida" EntitySet="tbl_medida" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_pagamentomensalidade_tbl_aluno1" Association="academiaModel.fk_tbl_pagamentomensalidade_tbl_aluno1">
+      <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+      <End Role="tbl_pagamento_mensalidade" EntitySet="tbl_pagamento_mensalidade" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_atividade_tbl_modalidade1" Association="academiaModel.fk_tbl_atividade_tbl_modalidade1">
+      <End Role="tbl_modalidade" EntitySet="tbl_modalidade" />
+      <End Role="tbl_atividade" EntitySet="tbl_atividade" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_atividadealuno_tbl_atividade1" Association="academiaModel.fk_tbl_atividadealuno_tbl_atividade1">
+      <End Role="tbl_atividade" EntitySet="tbl_atividade" />
+      <End Role="tbl_atividade_aluno" EntitySet="tbl_atividade_aluno" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_historicorotina_tbl_atividadealuno1" Association="academiaModel.fk_tbl_historicorotina_tbl_atividadealuno1">
+      <End Role="tbl_atividade_aluno" EntitySet="tbl_atividade_aluno" />
+      <End Role="tbl_historico_rotina" EntitySet="tbl_historico_rotina" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_despesa_tbl_pessoa2" Association="academiaModel.fk_tbl_despesa_tbl_pessoa2">
+      <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
+      <End Role="tbl_despesa" EntitySet="tbl_despesa" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_funcionario_tbl_pessoa1" Association="academiaModel.fk_tbl_funcionario_tbl_pessoa1">
+      <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
+      <End Role="tbl_funcionario" EntitySet="tbl_funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_venda_tbl_funcionario1" Association="academiaModel.fk_tbl_venda_tbl_funcionario1">
+      <End Role="tbl_funcionario" EntitySet="tbl_funcionario" />
+      <End Role="tbl_venda" EntitySet="tbl_venda" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_rotina_tbl_historicorotina1" Association="academiaModel.fk_tbl_rotina_tbl_historicorotina1">
+      <End Role="tbl_historico_rotina" EntitySet="tbl_historico_rotina" />
+      <End Role="tbl_rotina" EntitySet="tbl_rotina" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_item_tbl_pessoa1" Association="academiaModel.fk_tbl_item_tbl_pessoa1">
+      <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
+      <End Role="tbl_item" EntitySet="tbl_item" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_item_tbl_produto1" Association="academiaModel.fk_tbl_item_tbl_produto1">
+      <End Role="tbl_produto" EntitySet="tbl_produto" />
+      <End Role="tbl_item" EntitySet="tbl_item" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_item_tbl_venda1" Association="academiaModel.fk_tbl_item_tbl_venda1">
+      <End Role="tbl_venda" EntitySet="tbl_venda" />
+      <End Role="tbl_item" EntitySet="tbl_item" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_mensagem_tbl_pessoa1" Association="academiaModel.fk_tbl_mensagem_tbl_pessoa1">
+      <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
+      <End Role="tbl_mensagem" EntitySet="tbl_mensagem" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbl_venda_tbl_pessoa1" Association="academiaModel.fk_tbl_venda_tbl_pessoa1">
+      <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
+      <End Role="tbl_venda" EntitySet="tbl_venda" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbl_aluno">
+    <Key>
+      <PropertyRef Name="Matricula" />
+    </Key>
+    <Property Name="Matricula" Type="Int32" Nullable="false" />
+    <Property Name="CodigoPessoa" Type="Int32" Nullable="false" />
+    <Property Name="ValorMensalidade" Type="String" Nullable="false" />
+    <Property Name="AtivoDesde" Type="DateTime" Nullable="false" />
+    <Property Name="DiaVencimento" Type="DateTime" Nullable="false" />
+    <Property Name="DataMatricula" Type="DateTime" Nullable="false" />
+    <Property Name="DataTrancamento" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_aluno_tbl_pessoa" FromRole="tbl_aluno" ToRole="tbl_pessoa" />
+    <NavigationProperty Name="tbl_atividade_aluno" Relationship="academiaModel.fk_tbl_atividadealuno_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_atividade_aluno" />
+    <NavigationProperty Name="tbl_medida" Relationship="academiaModel.fk_tbl_medida_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_medida" />
+    <NavigationProperty Name="tbl_pagamento_mensalidade" Relationship="academiaModel.fk_tbl_pagamentomensalidade_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_pagamento_mensalidade" />
+  </EntityType>
+  <EntityType Name="tbl_atividade">
+    <Key>
+      <PropertyRef Name="CodigoAtividade" />
+    </Key>
+    <Property Name="CodigoAtividade" Type="Int32" Nullable="false" />
+    <Property Name="CodigoModalidade" Type="Int32" Nullable="false" />
+    <Property Name="NomeAtividade" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_modalidade" Relationship="academiaModel.fk_tbl_atividade_tbl_modalidade1" FromRole="tbl_atividade" ToRole="tbl_modalidade" />
+    <NavigationProperty Name="tbl_atividade_aluno" Relationship="academiaModel.fk_tbl_atividadealuno_tbl_atividade1" FromRole="tbl_atividade" ToRole="tbl_atividade_aluno" />
+  </EntityType>
+  <EntityType Name="tbl_atividade_aluno">
+    <Key>
+      <PropertyRef Name="Matricula" />
+      <PropertyRef Name="CodigoAtividade" />
+    </Key>
+    <Property Name="Matricula" Type="Int32" Nullable="false" />
+    <Property Name="CodigoAtividade" Type="Int32" Nullable="false" />
+    <Property Name="DataAtividade" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="tbl_aluno" Relationship="academiaModel.fk_tbl_atividadealuno_tbl_aluno1" FromRole="tbl_atividade_aluno" ToRole="tbl_aluno" />
+    <NavigationProperty Name="tbl_atividade" Relationship="academiaModel.fk_tbl_atividadealuno_tbl_atividade1" FromRole="tbl_atividade_aluno" ToRole="tbl_atividade" />
+    <NavigationProperty Name="tbl_historico_rotina" Relationship="academiaModel.fk_tbl_historicorotina_tbl_atividadealuno1" FromRole="tbl_atividade_aluno" ToRole="tbl_historico_rotina" />
+  </EntityType>
+  <EntityType Name="tbl_despesa">
+    <Key>
+      <PropertyRef Name="CodigoDespesa" />
+    </Key>
+    <Property Name="CodigoDespesa" Type="Int32" Nullable="false" />
+    <Property Name="CodigoPessoa" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" Nullable="false" />
+    <Property Name="DataEntrada" Type="String" Nullable="false" />
+    <Property Name="DataVencimento" Type="String" Nullable="false" />
+    <Property Name="ValorTotal" Type="String" Nullable="false" />
+    <Property Name="TipoDespesa" Type="String" Nullable="false" />
+    <Property Name="TipoPagamento" Type="String" Nullable="false" />
+    <Property Name="NumeroParcelas" Type="String" Nullable="false" />
+    <Property Name="Observacao" Type="String" Nullable="false" />
+    <Property Name="Parcela" Type="String" Nullable="false" />
+    <Property Name="Vencimento" Type="String" Nullable="false" />
+    <Property Name="Valor" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_despesa_tbl_pessoa2" FromRole="tbl_despesa" ToRole="tbl_pessoa" />
+  </EntityType>
+  <EntityType Name="tbl_funcionario">
+    <Key>
+      <PropertyRef Name="CodigoFuncionario" />
+    </Key>
+    <Property Name="CodigoFuncionario" Type="Int32" Nullable="false" />
+    <Property Name="CodigoPessoa" Type="Int32" Nullable="false" />
+    <Property Name="Permicao" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_funcionario_tbl_pessoa1" FromRole="tbl_funcionario" ToRole="tbl_pessoa" />
+    <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_venda_tbl_funcionario1" FromRole="tbl_funcionario" ToRole="tbl_venda" />
+  </EntityType>
+  <EntityType Name="tbl_historico_rotina">
+    <Key>
+      <PropertyRef Name="Matricula" />
+      <PropertyRef Name="CodigoAtividade" />
+    </Key>
+    <Property Name="Matricula" Type="Int32" Nullable="false" />
+    <Property Name="CodigoAtividade" Type="Int32" Nullable="false" />
+    <Property Name="DataInicio" Type="DateTime" Nullable="false" />
+    <Property Name="DataFim" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_atividade_aluno" Relationship="academiaModel.fk_tbl_historicorotina_tbl_atividadealuno1" FromRole="tbl_historico_rotina" ToRole="tbl_atividade_aluno" />
+    <NavigationProperty Name="tbl_rotina" Relationship="academiaModel.fk_tbl_rotina_tbl_historicorotina1" FromRole="tbl_historico_rotina" ToRole="tbl_rotina" />
+  </EntityType>
+  <EntityType Name="tbl_item">
+    <Key>
+      <PropertyRef Name="CodigoItem" />
+    </Key>
+    <Property Name="CodigoItem" Type="Int32" Nullable="false" />
+    <Property Name="CodigoVenda" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProduto" Type="Int32" Nullable="false" />
+    <Property Name="Quantidade" Type="String" Nullable="false" />
+    <Property Name="ValorItem" Type="String" Nullable="false" />
+    <Property Name="QuantidadeMinima" Type="String" Nullable="false" />
+    <Property Name="PrecoCusto" Type="String" Nullable="false" />
+    <Property Name="PrecoVenda" Type="String" Nullable="false" />
+    <Property Name="TipoProduto" Type="String" Nullable="false" />
+    <Property Name="CodigoPessoa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_item_tbl_pessoa1" FromRole="tbl_item" ToRole="tbl_pessoa" />
+    <NavigationProperty Name="tbl_produto" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_item" ToRole="tbl_produto" />
+    <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_item_tbl_venda1" FromRole="tbl_item" ToRole="tbl_venda" />
+  </EntityType>
+  <EntityType Name="tbl_medida">
+    <Key>
+      <PropertyRef Name="CodigoMedida" />
+    </Key>
+    <Property Name="CodigoMedida" Type="Int32" Nullable="false" />
+    <Property Name="Matricula" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Altura" Type="String" Nullable="false" />
+    <Property Name="Peso" Type="String" Nullable="false" />
+    <Property Name="IMC" Type="String" Nullable="false" />
+    <Property Name="Gordura" Type="String" Nullable="false" />
+    <Property Name="Abdomen" Type="String" Nullable="false" />
+    <Property Name="Cintura" Type="String" Nullable="false" />
+    <Property Name="Costa" Type="String" Nullable="false" />
+    <Property Name="Peitoral" Type="String" Nullable="false" />
+    <Property Name="Quadril" Type="String" Nullable="false" />
+    <Property Name="Ombro" Type="String" Nullable="false" />
+    <Property Name="BicepsEsq" Type="String" Nullable="false" />
+    <Property Name="BicepsDir" Type="String" Nullable="false" />
+    <Property Name="AnteBracoEsq" Type="String" Nullable="false" />
+    <Property Name="AnteBracoDir" Type="String" Nullable="false" />
+    <Property Name="CoxaEsq" Type="String" Nullable="false" />
+    <Property Name="CoxaDir" Type="String" Nullable="false" />
+    <Property Name="PanturrilhaEsq" Type="String" Nullable="false" />
+    <Property Name="PanturrilhaDir" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_aluno" Relationship="academiaModel.fk_tbl_medida_tbl_aluno1" FromRole="tbl_medida" ToRole="tbl_aluno" />
+  </EntityType>
+  <EntityType Name="tbl_mensagem">
+    <Key>
+      <PropertyRef Name="CodigoMensagem" />
+    </Key>
+    <Property Name="CodigoMensagem" Type="Int32" Nullable="false" />
+    <Property Name="CodigoPessoa" Type="Int32" Nullable="false" />
+    <Property Name="CodRemetente" Type="String" Nullable="false" />
+    <Property Name="CodDestinatario" Type="String" Nullable="false" />
+    <Property Name="Mensagem" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_mensagem_tbl_pessoa1" FromRole="tbl_mensagem" ToRole="tbl_pessoa" />
+  </EntityType>
+  <EntityType Name="tbl_modalidade">
+    <Key>
+      <PropertyRef Name="CodigoModalidade" />
+    </Key>
+    <Property Name="CodigoModalidade" Type="Int32" Nullable="false" />
+    <Property Name="NomeModalidade" Type="String" Nullable="false" />
+    <Property Name="ValorModalidade" Type="Decimal" Nullable="false" />
+    <NavigationProperty Name="tbl_atividade" Relationship="academiaModel.fk_tbl_atividade_tbl_modalidade1" FromRole="tbl_modalidade" ToRole="tbl_atividade" />
+  </EntityType>
+  <EntityType Name="tbl_pagamento_mensalidade">
+    <Key>
+      <PropertyRef Name="Matricula" />
+    </Key>
+    <Property Name="Matricula" Type="Int32" Nullable="false" />
+    <Property Name="DataPagamento" Type="DateTime" Nullable="false" />
+    <Property Name="MesReferente" Type="DateTime" Nullable="false" />
+    <Property Name="Pago" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_aluno" Relationship="academiaModel.fk_tbl_pagamentomensalidade_tbl_aluno1" FromRole="tbl_pagamento_mensalidade" ToRole="tbl_aluno" />
+  </EntityType>
+  <EntityType Name="tbl_pessoa">
+    <Key>
+      <PropertyRef Name="CodigoPessoa" />
+    </Key>
+    <Property Name="CodigoPessoa" Type="Int32" Nullable="false" />
+    <Property Name="CadastradoDesde" Type="DateTime" Nullable="false" />
+    <Property Name="NomeRazao" Type="String" Nullable="false" />
+    <Property Name="ApelidoFantasia" Type="String" />
+    <Property Name="CpfCnpj" Type="String" Nullable="false" />
+    <Property Name="RG" Type="String" Nullable="false" />
+    <Property Name="DataNascimento" Type="DateTime" Nullable="false" />
+    <Property Name="Sexo" Type="String" Nullable="false" />
+    <Property Name="Rua" Type="String" Nullable="false" />
+    <Property Name="Numero" Type="String" Nullable="false" />
+    <Property Name="Bairro" Type="String" Nullable="false" />
+    <Property Name="Cidade" Type="String" Nullable="false" />
+    <Property Name="Estado" Type="String" Nullable="false" />
+    <Property Name="CEP" Type="String" Nullable="false" />
+    <Property Name="Complemento" Type="String" />
+    <Property Name="Telefone1" Type="String" Nullable="false" />
+    <Property Name="Telefone2" Type="String" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="Senha" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_aluno" Relationship="academiaModel.fk_tbl_aluno_tbl_pessoa" FromRole="tbl_pessoa" ToRole="tbl_aluno" />
+    <NavigationProperty Name="tbl_despesa" Relationship="academiaModel.fk_tbl_despesa_tbl_pessoa2" FromRole="tbl_pessoa" ToRole="tbl_despesa" />
+    <NavigationProperty Name="tbl_funcionario" Relationship="academiaModel.fk_tbl_funcionario_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_funcionario" />
+    <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_item" />
+    <NavigationProperty Name="tbl_mensagem" Relationship="academiaModel.fk_tbl_mensagem_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_mensagem" />
+    <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_venda_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_venda" />
+  </EntityType>
+  <EntityType Name="tbl_produto">
+    <Key>
+      <PropertyRef Name="CodigoProduto" />
+    </Key>
+    <Property Name="CodigoProduto" Type="Int32" Nullable="false" />
+    <Property Name="CodigoBarra" Type="String" Nullable="false" />
+    <Property Name="NomeItem" Type="String" Nullable="false" />
+    <Property Name="Quantidade" Type="String" Nullable="false" />
+    <Property Name="ValorItem" Type="String" Nullable="false" />
+    <Property Name="QuantidadeMinima" Type="String" Nullable="false" />
+    <Property Name="PrecoCusto" Type="String" Nullable="false" />
+    <Property Name="PrecoVenda" Type="String" Nullable="false" />
+    <Property Name="TipoProduto" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_produto" ToRole="tbl_item" />
+  </EntityType>
+  <EntityType Name="tbl_rotina">
+    <Key>
+      <PropertyRef Name="CodigoRotina" />
+      <PropertyRef Name="Matricula" />
+      <PropertyRef Name="CodigoAtividade" />
+    </Key>
+    <Property Name="CodigoRotina" Type="Int32" Nullable="false" />
+    <Property Name="Matricula" Type="Int32" Nullable="false" />
+    <Property Name="CodigoAtividade" Type="Int32" Nullable="false" />
+    <Property Name="Quantidade" Type="String" Nullable="false" />
+    <Property Name="Repeticao" Type="String" Nullable="false" />
+    <Property Name="Dia" Type="String" Nullable="false" />
+    <NavigationProperty Name="tbl_historico_rotina" Relationship="academiaModel.fk_tbl_rotina_tbl_historicorotina1" FromRole="tbl_rotina" ToRole="tbl_historico_rotina" />
+  </EntityType>
+  <EntityType Name="tbl_venda">
+    <Key>
+      <PropertyRef Name="CodigoVenda" />
+    </Key>
+    <Property Name="CodigoVenda" Type="Int32" Nullable="false" />
+    <Property Name="CodigoPessoa" Type="Int32" Nullable="false" />
+    <Property Name="CodigoFuncionario" Type="Int32" Nullable="false" />
+    <Property Name="DataVenda" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="tbl_funcionario" Relationship="academiaModel.fk_tbl_venda_tbl_funcionario1" FromRole="tbl_venda" ToRole="tbl_funcionario" />
+    <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_venda1" FromRole="tbl_venda" ToRole="tbl_item" />
+    <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_venda_tbl_pessoa1" FromRole="tbl_venda" ToRole="tbl_pessoa" />
+  </EntityType>
+  <Association Name="fk_tbl_aluno_tbl_pessoa">
+    <End Role="tbl_pessoa" Type="academiaModel.tbl_pessoa" Multiplicity="1" />
+    <End Role="tbl_aluno" Type="academiaModel.tbl_aluno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_pessoa">
+        <PropertyRef Name="CodigoPessoa" />
+      </Principal>
+      <Dependent Role="tbl_aluno">
+        <PropertyRef Name="CodigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_atividadealuno_tbl_aluno1">
+    <End Role="tbl_aluno" Type="academiaModel.tbl_aluno" Multiplicity="1" />
+    <End Role="tbl_atividade_aluno" Type="academiaModel.tbl_atividade_aluno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aluno">
+        <PropertyRef Name="Matricula" />
+      </Principal>
+      <Dependent Role="tbl_atividade_aluno">
+        <PropertyRef Name="Matricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_medida_tbl_aluno1">
+    <End Role="tbl_aluno" Type="academiaModel.tbl_aluno" Multiplicity="1" />
+    <End Role="tbl_medida" Type="academiaModel.tbl_medida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aluno">
+        <PropertyRef Name="Matricula" />
+      </Principal>
+      <Dependent Role="tbl_medida">
+        <PropertyRef Name="Matricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_pagamentomensalidade_tbl_aluno1">
+    <End Role="tbl_aluno" Type="academiaModel.tbl_aluno" Multiplicity="1" />
+    <End Role="tbl_pagamento_mensalidade" Type="academiaModel.tbl_pagamento_mensalidade" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aluno">
+        <PropertyRef Name="Matricula" />
+      </Principal>
+      <Dependent Role="tbl_pagamento_mensalidade">
+        <PropertyRef Name="Matricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_atividade_tbl_modalidade1">
+    <End Role="tbl_modalidade" Type="academiaModel.tbl_modalidade" Multiplicity="1" />
+    <End Role="tbl_atividade" Type="academiaModel.tbl_atividade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_modalidade">
+        <PropertyRef Name="CodigoModalidade" />
+      </Principal>
+      <Dependent Role="tbl_atividade">
+        <PropertyRef Name="CodigoModalidade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_atividadealuno_tbl_atividade1">
+    <End Role="tbl_atividade" Type="academiaModel.tbl_atividade" Multiplicity="1" />
+    <End Role="tbl_atividade_aluno" Type="academiaModel.tbl_atividade_aluno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_atividade">
+        <PropertyRef Name="CodigoAtividade" />
+      </Principal>
+      <Dependent Role="tbl_atividade_aluno">
+        <PropertyRef Name="CodigoAtividade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_historicorotina_tbl_atividadealuno1">
+    <End Role="tbl_atividade_aluno" Type="academiaModel.tbl_atividade_aluno" Multiplicity="1" />
+    <End Role="tbl_historico_rotina" Type="academiaModel.tbl_historico_rotina" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_atividade_aluno">
+        <PropertyRef Name="Matricula" />
+        <PropertyRef Name="CodigoAtividade" />
+      </Principal>
+      <Dependent Role="tbl_historico_rotina">
+        <PropertyRef Name="Matricula" />
+        <PropertyRef Name="CodigoAtividade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_despesa_tbl_pessoa2">
+    <End Role="tbl_pessoa" Type="academiaModel.tbl_pessoa" Multiplicity="1" />
+    <End Role="tbl_despesa" Type="academiaModel.tbl_despesa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_pessoa">
+        <PropertyRef Name="CodigoPessoa" />
+      </Principal>
+      <Dependent Role="tbl_despesa">
+        <PropertyRef Name="CodigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_funcionario_tbl_pessoa1">
+    <End Role="tbl_pessoa" Type="academiaModel.tbl_pessoa" Multiplicity="1" />
+    <End Role="tbl_funcionario" Type="academiaModel.tbl_funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_pessoa">
+        <PropertyRef Name="CodigoPessoa" />
+      </Principal>
+      <Dependent Role="tbl_funcionario">
+        <PropertyRef Name="CodigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_venda_tbl_funcionario1">
+    <End Role="tbl_funcionario" Type="academiaModel.tbl_funcionario" Multiplicity="1" />
+    <End Role="tbl_venda" Type="academiaModel.tbl_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_funcionario">
+        <PropertyRef Name="CodigoFuncionario" />
+      </Principal>
+      <Dependent Role="tbl_venda">
+        <PropertyRef Name="CodigoFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_rotina_tbl_historicorotina1">
+    <End Role="tbl_historico_rotina" Type="academiaModel.tbl_historico_rotina" Multiplicity="1" />
+    <End Role="tbl_rotina" Type="academiaModel.tbl_rotina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_historico_rotina">
+        <PropertyRef Name="Matricula" />
+        <PropertyRef Name="CodigoAtividade" />
+      </Principal>
+      <Dependent Role="tbl_rotina">
+        <PropertyRef Name="Matricula" />
+        <PropertyRef Name="CodigoAtividade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_item_tbl_pessoa1">
+    <End Role="tbl_pessoa" Type="academiaModel.tbl_pessoa" Multiplicity="1" />
+    <End Role="tbl_item" Type="academiaModel.tbl_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_pessoa">
+        <PropertyRef Name="CodigoPessoa" />
+      </Principal>
+      <Dependent Role="tbl_item">
+        <PropertyRef Name="CodigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_item_tbl_produto1">
+    <End Role="tbl_produto" Type="academiaModel.tbl_produto" Multiplicity="1" />
+    <End Role="tbl_item" Type="academiaModel.tbl_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_produto">
+        <PropertyRef Name="CodigoProduto" />
+      </Principal>
+      <Dependent Role="tbl_item">
+        <PropertyRef Name="CodigoProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_item_tbl_venda1">
+    <End Role="tbl_venda" Type="academiaModel.tbl_venda" Multiplicity="1" />
+    <End Role="tbl_item" Type="academiaModel.tbl_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_venda">
+        <PropertyRef Name="CodigoVenda" />
+      </Principal>
+      <Dependent Role="tbl_item">
+        <PropertyRef Name="CodigoVenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_mensagem_tbl_pessoa1">
+    <End Role="tbl_pessoa" Type="academiaModel.tbl_pessoa" Multiplicity="1" />
+    <End Role="tbl_mensagem" Type="academiaModel.tbl_mensagem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_pessoa">
+        <PropertyRef Name="CodigoPessoa" />
+      </Principal>
+      <Dependent Role="tbl_mensagem">
+        <PropertyRef Name="CodigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbl_venda_tbl_pessoa1">
+    <End Role="tbl_pessoa" Type="academiaModel.tbl_pessoa" Multiplicity="1" />
+    <End Role="tbl_venda" Type="academiaModel.tbl_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_pessoa">
+        <PropertyRef Name="CodigoPessoa" />
+      </Principal>
+      <Dependent Role="tbl_venda">
+        <PropertyRef Name="CodigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
