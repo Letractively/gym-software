@@ -67,9 +67,9 @@
             <%: Html.DisplayFor(modelItem => item.PrecoVenda) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new {  id=item.Codigo }) %> |
-            <%: Html.ActionLink("Details", "Details", new {  id=item.Codigo }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new {  id=item.Codigo }) %>
+            <%: Html.ActionLink("Alterar", "Edit", new {  id=item.Codigo }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new {  id=item.Codigo }) %> |
+            <%: Html.ActionLink("Excluir", "Delete", new {  id=item.Codigo }) %>
         </td>
     </tr>
 <% } %>

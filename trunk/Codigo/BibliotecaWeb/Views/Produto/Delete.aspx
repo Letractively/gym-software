@@ -8,7 +8,7 @@
 
 <h2>Deletar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você Realmente deseja apagar esse registro?</h3>
 <fieldset>
     <legend>Produto</legend>
 
