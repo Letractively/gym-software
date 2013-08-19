@@ -58,6 +58,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAcademia.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
