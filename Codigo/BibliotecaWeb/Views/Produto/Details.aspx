@@ -52,7 +52,7 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink("Edit", "Edit", new {  id=Model.Codigo }) %> |
+    <%: Html.ActionLink("Editar", "Edit", new {  id=Model.Codigo }) %> |
     <%: Html.ActionLink("Voltar Para Lista", "Index")%>
 </p>
 

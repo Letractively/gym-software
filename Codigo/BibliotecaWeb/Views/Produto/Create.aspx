@@ -16,13 +16,7 @@
     <fieldset>
         <legend>Produto</legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Codigo) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Codigo) %>
-            <%: Html.ValidationMessageFor(model => model.Codigo) %>
-        </div>
+        
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.CodigoBarra) %>
