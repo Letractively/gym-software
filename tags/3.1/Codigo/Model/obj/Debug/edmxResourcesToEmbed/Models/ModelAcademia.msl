@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="academiaModelStoreContainer" CdmEntityContainer="AcademiaEntities">
+    <EntitySetMapping Name="tbl_aluno">
+      <EntityTypeMapping TypeName="academiaModel.tbl_aluno">
+        <MappingFragment StoreEntitySet="tbl_aluno">
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
+          <ScalarProperty Name="ValorMensalidade" ColumnName="ValorMensalidade" />
+          <ScalarProperty Name="AtivoDesde" ColumnName="AtivoDesde" />
+          <ScalarProperty Name="DiaVencimento" ColumnName="DiaVencimento" />
+          <ScalarProperty Name="DataMatricula" ColumnName="DataMatricula" />
+          <ScalarProperty Name="DataTrancamento" ColumnName="DataTrancamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_atividade">
+      <EntityTypeMapping TypeName="academiaModel.tbl_atividade">
+        <MappingFragment StoreEntitySet="tbl_atividade">
+          <ScalarProperty Name="CodigoAtividade" ColumnName="CodigoAtividade" />
+          <ScalarProperty Name="CodigoModalidade" ColumnName="CodigoModalidade" />
+          <ScalarProperty Name="NomeAtividade" ColumnName="NomeAtividade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_atividade_aluno">
+      <EntityTypeMapping TypeName="academiaModel.tbl_atividade_aluno">
+        <MappingFragment StoreEntitySet="tbl_atividade_aluno">
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="CodigoAtividade" ColumnName="CodigoAtividade" />
+          <ScalarProperty Name="DataAtividade" ColumnName="DataAtividade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_despesa">
+      <EntityTypeMapping TypeName="academiaModel.tbl_despesa">
+        <MappingFragment StoreEntitySet="tbl_despesa">
+          <ScalarProperty Name="CodigoDespesa" ColumnName="CodigoDespesa" />
+          <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="DataEntrada" ColumnName="DataEntrada" />
+          <ScalarProperty Name="DataVencimento" ColumnName="DataVencimento" />
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+          <ScalarProperty Name="TipoDespesa" ColumnName="TipoDespesa" />
+          <ScalarProperty Name="TipoPagamento" ColumnName="TipoPagamento" />
+          <ScalarProperty Name="NumeroParcelas" ColumnName="NumeroParcelas" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+          <ScalarProperty Name="Parcela" ColumnName="Parcela" />
+          <ScalarProperty Name="Vencimento" ColumnName="Vencimento" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_funcionario">
+      <EntityTypeMapping TypeName="academiaModel.tbl_funcionario">
+        <MappingFragment StoreEntitySet="tbl_funcionario">
+          <ScalarProperty Name="CodigoFuncionario" ColumnName="CodigoFuncionario" />
+          <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
+          <ScalarProperty Name="Permicao" ColumnName="Permicao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_historico_rotina">
+      <EntityTypeMapping TypeName="academiaModel.tbl_historico_rotina">
+        <MappingFragment StoreEntitySet="tbl_historico_rotina">
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="CodigoAtividade" ColumnName="CodigoAtividade" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_item">
+      <EntityTypeMapping TypeName="academiaModel.tbl_item">
+        <MappingFragment StoreEntitySet="tbl_item">
+          <ScalarProperty Name="CodigoItem" ColumnName="CodigoItem" />
+          <ScalarProperty Name="CodigoVenda" ColumnName="CodigoVenda" />
+          <ScalarProperty Name="CodigoProduto" ColumnName="CodigoProduto" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="ValorItem" ColumnName="ValorItem" />
+          <ScalarProperty Name="QuantidadeMinima" ColumnName="QuantidadeMinima" />
+          <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
+          <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
+          <ScalarProperty Name="TipoProduto" ColumnName="TipoProduto" />
+          <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_medida">
+      <EntityTypeMapping TypeName="academiaModel.tbl_medida">
+        <MappingFragment StoreEntitySet="tbl_medida">
+          <ScalarProperty Name="CodigoMedida" ColumnName="CodigoMedida" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Altura" ColumnName="Altura" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="IMC" ColumnName="IMC" />
+          <ScalarProperty Name="Gordura" ColumnName="Gordura" />
+          <ScalarProperty Name="Abdomen" ColumnName="Abdomen" />
+          <ScalarProperty Name="Cintura" ColumnName="Cintura" />
+          <ScalarProperty Name="Costa" ColumnName="Costa" />
+          <ScalarProperty Name="Peitoral" ColumnName="Peitoral" />
+          <ScalarProperty Name="Quadril" ColumnName="Quadril" />
+          <ScalarProperty Name="Ombro" ColumnName="Ombro" />
+          <ScalarProperty Name="BicepsEsq" ColumnName="BicepsEsq" />
+          <ScalarProperty Name="BicepsDir" ColumnName="BicepsDir" />
+          <ScalarProperty Name="AnteBracoEsq" ColumnName="AnteBracoEsq" />
+          <ScalarProperty Name="AnteBracoDir" ColumnName="AnteBracoDir" />
+          <ScalarProperty Name="CoxaEsq" ColumnName="CoxaEsq" />
+          <ScalarProperty Name="CoxaDir" ColumnName="CoxaDir" />
+          <ScalarProperty Name="PanturrilhaEsq" ColumnName="PanturrilhaEsq" />
+          <ScalarProperty Name="PanturrilhaDir" ColumnName="PanturrilhaDir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_mensagem">
+      <EntityTypeMapping TypeName="academiaModel.tbl_mensagem">
+        <MappingFragment StoreEntitySet="tbl_mensagem">
+          <ScalarProperty Name="CodigoMensagem" ColumnName="CodigoMensagem" />
+          <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
+          <ScalarProperty Name="CodRemetente" ColumnName="CodRemetente" />
+          <ScalarProperty Name="CodDestinatario" ColumnName="CodDestinatario" />
+          <ScalarProperty Name="Mensagem" ColumnName="Mensagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_modalidade">
+      <EntityTypeMapping TypeName="academiaModel.tbl_modalidade">
+        <MappingFragment StoreEntitySet="tbl_modalidade">
+          <ScalarProperty Name="CodigoModalidade" ColumnName="CodigoModalidade" />
+          <ScalarProperty Name="NomeModalidade" ColumnName="NomeModalidade" />
+          <ScalarProperty Name="ValorModalidade" ColumnName="ValorModalidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_pagamento_mensalidade">
+      <EntityTypeMapping TypeName="academiaModel.tbl_pagamento_mensalidade">
+        <MappingFragment StoreEntitySet="tbl_pagamento_mensalidade">
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="DataPagamento" ColumnName="DataPagamento" />
+          <ScalarProperty Name="MesReferente" ColumnName="MesReferente" />
+          <ScalarProperty Name="Pago" ColumnName="Pago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_pessoa">
+      <EntityTypeMapping TypeName="academiaModel.tbl_pessoa">
+        <MappingFragment StoreEntitySet="tbl_pessoa">
+          <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
+          <ScalarProperty Name="CadastradoDesde" ColumnName="CadastradoDesde" />
+          <ScalarProperty Name="NomeRazao" ColumnName="NomeRazao" />
+          <ScalarProperty Name="ApelidoFantasia" ColumnName="ApelidoFantasia" />
+          <ScalarProperty Name="CpfCnpj" ColumnName="CpfCnpj" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Telefone1" ColumnName="Telefone1" />
+          <ScalarProperty Name="Telefone2" ColumnName="Telefone2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_produto">
+      <EntityTypeMapping TypeName="academiaModel.tbl_produto">
+        <MappingFragment StoreEntitySet="tbl_produto">
+          <ScalarProperty Name="CodigoProduto" ColumnName="CodigoProduto" />
+          <ScalarProperty Name="CodigoBarra" ColumnName="CodigoBarra" />
+          <ScalarProperty Name="NomeItem" ColumnName="NomeItem" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="ValorItem" ColumnName="ValorItem" />
+          <ScalarProperty Name="QuantidadeMinima" ColumnName="QuantidadeMinima" />
+          <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
+          <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
+          <ScalarProperty Name="TipoProduto" ColumnName="TipoProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_rotina">
+      <EntityTypeMapping TypeName="academiaModel.tbl_rotina">
+        <MappingFragment StoreEntitySet="tbl_rotina">
+          <ScalarProperty Name="CodigoRotina" ColumnName="CodigoRotina" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="CodigoAtividade" ColumnName="CodigoAtividade" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="Repeticao" ColumnName="Repeticao" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_venda">
+      <EntityTypeMapping TypeName="academiaModel.tbl_venda">
+        <MappingFragment StoreEntitySet="tbl_venda">
+          <ScalarProperty Name="CodigoVenda" ColumnName="CodigoVenda" />
+          <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
+          <ScalarProperty Name="CodigoFuncionario" ColumnName="CodigoFuncionario" />
+          <ScalarProperty Name="DataVenda" ColumnName="DataVenda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

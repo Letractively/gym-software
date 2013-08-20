@@ -1,0 +1,35 @@
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Islas\Desktop\biblioteca-es\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Islas\Documents\Visual Studio 2010\Codigo\Persistence\bin\Debug\en\Model.resources.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\bin\Debug\en\Model.resources.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\bin\Debug\en\Model.resources.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
