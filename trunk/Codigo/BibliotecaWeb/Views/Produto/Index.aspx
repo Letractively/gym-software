@@ -14,28 +14,25 @@
 <table>
     <tr>
         <th>
-            Codigo
+            Código
         </th>
         <th>
-            CodigoBarra
+            Código de Barra
         </th>
         <th>
             Nome
         </th>
         <th>
             Quantidade
+        </th>        
+        <th>
+            Quantidade Mínima
         </th>
         <th>
-            Valor
+            Preço de Custo
         </th>
         <th>
-            QuantidadeMinima
-        </th>
-        <th>
-            PrecoCusto
-        </th>
-        <th>
-            PrecoVenda
+            Preço de Venda
         </th>
         <th></th>
     </tr>
@@ -53,9 +50,6 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Quantidade) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Valor) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.QuantidadeMinima) %>

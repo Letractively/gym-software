@@ -167,20 +167,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbl_produto">
-      <EntityTypeMapping TypeName="academiaModel.tbl_produto">
-        <MappingFragment StoreEntitySet="tbl_produto">
-          <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
-          <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
-          <ScalarProperty Name="QuantidadeMinima" ColumnName="QuantidadeMinima" />
-          <ScalarProperty Name="ValorItem" ColumnName="ValorItem" />
-          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
-          <ScalarProperty Name="NomeItem" ColumnName="NomeItem" />
-          <ScalarProperty Name="CodigoBarra" ColumnName="CodigoBarra" />
-          <ScalarProperty Name="CodigoProduto" ColumnName="CodigoProduto" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tbl_rotina">
       <EntityTypeMapping TypeName="academiaModel.tbl_rotina">
         <MappingFragment StoreEntitySet="tbl_rotina">
@@ -200,6 +186,19 @@
           <ScalarProperty Name="CodigoFuncionario" ColumnName="CodigoFuncionario" />
           <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
           <ScalarProperty Name="CodigoVenda" ColumnName="CodigoVenda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_produto">
+      <EntityTypeMapping TypeName="academiaModel.tbl_produto">
+        <MappingFragment StoreEntitySet="tbl_produto">
+          <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
+          <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
+          <ScalarProperty Name="QuantidadeMinima" ColumnName="QuantidadeMinima" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="NomeItem" ColumnName="NomeItem" />
+          <ScalarProperty Name="CodigoBarra" ColumnName="CodigoBarra" />
+          <ScalarProperty Name="CodigoProduto" ColumnName="CodigoProduto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

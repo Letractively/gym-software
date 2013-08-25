@@ -83,8 +83,7 @@ namespace Services
                             Codigo = produto.CodigoProduto,
                             CodigoBarra = produto.CodigoBarra,
                             Nome = produto.NomeItem,
-                            Quantidade = produto.Quantidade,
-                            Valor = produto.ValorItem,
+                            Quantidade = produto.Quantidade,                         
                             QuantidadeMinima = produto.QuantidadeMinima,
                             PrecoCusto = produto.PrecoCusto,
                             PrecoVenda = produto.PrecoVenda
@@ -122,8 +121,7 @@ namespace Services
             produtoE.CodigoProduto = produtoModel.Codigo;
             produtoE.CodigoBarra = produtoModel.CodigoBarra;
             produtoE.NomeItem = produtoModel.Nome;
-            produtoE.Quantidade = produtoModel.Quantidade;
-            produtoE.ValorItem = produtoModel.Valor;
+            produtoE.Quantidade = produtoModel.Quantidade;         
             produtoE.QuantidadeMinima = produtoModel.QuantidadeMinima;
             produtoE.PrecoCusto = produtoModel.PrecoCusto;
             produtoE.PrecoVenda = produtoModel.PrecoVenda;

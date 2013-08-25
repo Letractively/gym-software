@@ -31,12 +31,7 @@
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Quantidade) %>
     </div>
-
-    <div class="display-label">Valor</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.Valor) %>
-    </div>
-
+        
     <div class="display-label">QuantidadeMinima</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.QuantidadeMinima) %>

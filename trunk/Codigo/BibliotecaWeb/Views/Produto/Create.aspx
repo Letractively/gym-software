@@ -41,15 +41,7 @@
             <%: Html.EditorFor(model => model.Quantidade) %>
             <%: Html.ValidationMessageFor(model => model.Quantidade) %>
         </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Valor) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Valor) %>
-            <%: Html.ValidationMessageFor(model => model.Valor) %>
-        </div>
-
+               
         <div class="editor-label">
             <%: Html.LabelFor(model => model.QuantidadeMinima) %>
         </div>
