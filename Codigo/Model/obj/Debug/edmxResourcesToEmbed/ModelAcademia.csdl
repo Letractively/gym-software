@@ -13,7 +13,6 @@
     <EntitySet Name="tbl_modalidade" EntityType="academiaModel.tbl_modalidade" />
     <EntitySet Name="tbl_pagamento_mensalidade" EntityType="academiaModel.tbl_pagamento_mensalidade" />
     <EntitySet Name="tbl_pessoa" EntityType="academiaModel.tbl_pessoa" />
-    <EntitySet Name="tbl_produto" EntityType="academiaModel.tbl_produto" />
     <EntitySet Name="tbl_rotina" EntityType="academiaModel.tbl_rotina" />
     <EntitySet Name="tbl_venda" EntityType="academiaModel.tbl_venda" />
     <AssociationSet Name="fk_tbl_aluno_tbl_pessoa" Association="academiaModel.fk_tbl_aluno_tbl_pessoa">
@@ -64,10 +63,6 @@
       <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
       <End Role="tbl_item" EntitySet="tbl_item" />
     </AssociationSet>
-    <AssociationSet Name="fk_tbl_item_tbl_produto1" Association="academiaModel.fk_tbl_item_tbl_produto1">
-      <End Role="tbl_produto" EntitySet="tbl_produto" />
-      <End Role="tbl_item" EntitySet="tbl_item" />
-    </AssociationSet>
     <AssociationSet Name="fk_tbl_item_tbl_venda1" Association="academiaModel.fk_tbl_item_tbl_venda1">
       <End Role="tbl_venda" EntitySet="tbl_venda" />
       <End Role="tbl_item" EntitySet="tbl_item" />
@@ -79,6 +74,11 @@
     <AssociationSet Name="fk_tbl_venda_tbl_pessoa1" Association="academiaModel.fk_tbl_venda_tbl_pessoa1">
       <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
       <End Role="tbl_venda" EntitySet="tbl_venda" />
+    </AssociationSet>
+    <EntitySet Name="tbl_produto" EntityType="academiaModel.tbl_produto" />
+    <AssociationSet Name="fk_tbl_item_tbl_produto1" Association="academiaModel.fk_tbl_item_tbl_produto1">
+      <End Role="tbl_produto" EntitySet="tbl_produto" />
+      <End Role="tbl_item" EntitySet="tbl_item" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="tbl_aluno">
@@ -174,8 +174,8 @@
     <Property Type="Decimal" Name="PrecoVenda" Nullable="false" />
     <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
     <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_item_tbl_pessoa1" FromRole="tbl_item" ToRole="tbl_pessoa" />
-    <NavigationProperty Name="tbl_produto" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_item" ToRole="tbl_produto" />
     <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_item_tbl_venda1" FromRole="tbl_item" ToRole="tbl_venda" />
+    <NavigationProperty Name="tbl_produto" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_item" ToRole="tbl_produto" />
   </EntityType>
   <EntityType Name="tbl_medida">
     <Key>
@@ -263,20 +263,6 @@
     <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_item" />
     <NavigationProperty Name="tbl_mensagem" Relationship="academiaModel.fk_tbl_mensagem_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_mensagem" />
     <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_venda_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_venda" />
-  </EntityType>
-  <EntityType Name="tbl_produto">
-    <Key>
-      <PropertyRef Name="CodigoProduto" />
-    </Key>
-    <Property Type="Int32" Name="CodigoProduto" Nullable="false" />
-    <Property Type="String" Name="CodigoBarra" Nullable="false" />
-    <Property Type="String" Name="NomeItem" Nullable="false" />
-    <Property Type="Decimal" Name="Quantidade" Nullable="false" />
-    <Property Type="Decimal" Name="ValorItem" Nullable="false" />
-    <Property Type="Decimal" Name="QuantidadeMinima" Nullable="false" />
-    <Property Type="Decimal" Name="PrecoCusto" Nullable="false" />
-    <Property Type="Decimal" Name="PrecoVenda" Nullable="false" />
-    <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_produto" ToRole="tbl_item" />
   </EntityType>
   <EntityType Name="tbl_rotina">
     <Key>
@@ -452,18 +438,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_tbl_item_tbl_produto1">
-    <End Type="academiaModel.tbl_produto" Role="tbl_produto" Multiplicity="1" />
-    <End Type="academiaModel.tbl_item" Role="tbl_item" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tbl_produto">
-        <PropertyRef Name="CodigoProduto" />
-      </Principal>
-      <Dependent Role="tbl_item">
-        <PropertyRef Name="CodigoProduto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_tbl_item_tbl_venda1">
     <End Type="academiaModel.tbl_venda" Role="tbl_venda" Multiplicity="1" />
     <End Type="academiaModel.tbl_item" Role="tbl_item" Multiplicity="*" />
@@ -497,6 +471,31 @@
       </Principal>
       <Dependent Role="tbl_venda">
         <PropertyRef Name="CodigoPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_produto">
+    <Key>
+      <PropertyRef Name="CodigoProduto" />
+    </Key>
+    <Property Type="Int32" Name="CodigoProduto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CodigoBarra" Nullable="false" />
+    <Property Type="String" Name="NomeItem" Nullable="false" />
+    <Property Type="Decimal" Name="Quantidade" Nullable="false" />
+    <Property Type="Decimal" Name="QuantidadeMinima" Nullable="false" />
+    <Property Type="Decimal" Name="PrecoCusto" Nullable="false" />
+    <Property Type="Decimal" Name="PrecoVenda" Nullable="false" />
+    <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_produto" ToRole="tbl_item" />
+  </EntityType>
+  <Association Name="fk_tbl_item_tbl_produto1">
+    <End Type="academiaModel.tbl_produto" Role="tbl_produto" Multiplicity="1" />
+    <End Type="academiaModel.tbl_item" Role="tbl_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_produto">
+        <PropertyRef Name="CodigoProduto" />
+      </Principal>
+      <Dependent Role="tbl_item">
+        <PropertyRef Name="CodigoProduto" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

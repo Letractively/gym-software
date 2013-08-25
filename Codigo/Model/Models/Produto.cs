@@ -28,11 +28,6 @@ namespace Models.Models
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
         [Range(0, 1000000)]
         [DisplayFormat(DataFormatString = "{0:c}")]
-        public decimal Valor { get; set; }
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
-        [Range(0, 1000000)]
-        [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal QuantidadeMinima { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
