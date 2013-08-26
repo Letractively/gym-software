@@ -52,12 +52,14 @@
       <DependentUpon>Mensagem.resx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Modalidade.cs" />
     <Compile Include="ModelAcademia.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAcademia.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
