@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Aluno.cs" />
+    <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Modalidade.cs" />
     <Compile Include="ModelAcademia.Designer.cs">
       <AutoGen>True</AutoGen>

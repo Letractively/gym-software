@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GerenciadorAluno.cs" />
+    <Compile Include="GerenciadorFuncionario.cs" />
     <Compile Include="GerenciadorPessoa.cs" />
     <Compile Include="GerenciadorModalidade.cs" />
     <Compile Include="GerenciadorProduto.cs" />
