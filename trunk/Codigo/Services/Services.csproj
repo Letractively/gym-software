@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerenciadorAluno.cs" />
+    <Compile Include="GerenciadorPessoa.cs" />
     <Compile Include="GerenciadorModalidade.cs" />
     <Compile Include="GerenciadorProduto.cs" />
     <Compile Include="ServiceException.cs" />
