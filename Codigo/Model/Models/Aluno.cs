@@ -8,7 +8,6 @@ namespace Models.Models
     public class Aluno : Pessoa
     {
         public int Matricula { get; set; }
-        //public int CodigoPessoa { get; set; }
         public decimal ValorMensalidade { get; set; }
         public DateTime AtivoDesde { get; set; }
         public DateTime DiaVencimento { get; set; }
