@@ -17,7 +17,8 @@ namespace Persistence
         private AcademiaEntities _context;
         private IRepositorioGenerico<tbl_modalidade> _repModalidade;
         private IRepositorioGenerico<tbl_produto> _repProduto;
-
+        private IRepositorioGenerico<tbl_pessoa> _repPessoa;
+        private IRepositorioGenerico<tbl_aluno> _repAluno;
         /// <summary>
         /// Construtor cria contexto transacional
         /// </summary>
@@ -54,6 +55,32 @@ namespace Persistence
                 return _repProduto;
             }
         }
+
+
+        public IRepositorioGenerico<tbl_pessoa> RepositorioPessoa
+        {
+            get
+            {
+                if (_repPessoa == null)
+                {
+                    _repPessoa = new RepositorioGenerico<tbl_pessoa>(_context);
+                }
+                return _repPessoa;
+            }
+        }
+
+        public IRepositorioGenerico<tbl_aluno> RepositorioAluno
+        {
+            get
+            {
+                if (_repAluno == null)
+                {
+                    _repAluno = new RepositorioGenerico<tbl_aluno>(_context);
+                }
+                return _repAluno;
+            }
+        }
+
 
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto
