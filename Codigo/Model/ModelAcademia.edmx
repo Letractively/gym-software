@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="academiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="academiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="academiaModelStoreContainer">
           <EntitySet Name="tbl_aluno" EntityType="academiaModel.Store.tbl_aluno" store:Type="Tables" Schema="bd_gymsoftare" />
           <EntitySet Name="tbl_atividade" EntityType="academiaModel.Store.tbl_atividade" store:Type="Tables" Schema="bd_gymsoftare" />
@@ -92,11 +92,11 @@
           </Key>
           <Property Name="Matricula" Type="int" Nullable="false" />
           <Property Name="CodigoPessoa" Type="int" Nullable="false" />
-          <Property Name="ValorMensalidade" Type="varchar" Nullable="false" MaxLength="45" />
-          <Property Name="AtivoDesde" Type="date" Nullable="false" />
-          <Property Name="DiaVencimento" Type="date" Nullable="false" />
-          <Property Name="DataMatricula" Type="date" Nullable="false" />
-          <Property Name="DataTrancamento" Type="date" Nullable="false" />
+          <Property Name="ValorMensalidade" Type="decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="AtivoDesde" Type="datetime" Nullable="false" />
+          <Property Name="DiaVencimento" Type="datetime" Nullable="false" />
+          <Property Name="DataMatricula" Type="datetime" Nullable="false" />
+          <Property Name="DataTrancamento" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="tbl_atividade">
           <Key>
@@ -113,7 +113,7 @@
           </Key>
           <Property Name="Matricula" Type="int" Nullable="false" />
           <Property Name="CodigoAtividade" Type="int" Nullable="false" />
-          <Property Name="DataAtividade" Type="date" Nullable="false" />
+          <Property Name="DataAtividade" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="tbl_despesa">
           <Key>
@@ -122,8 +122,8 @@
           <Property Name="CodigoDespesa" Type="int" Nullable="false" />
           <Property Name="CodigoPessoa" Type="int" Nullable="false" />
           <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="45" />
-          <Property Name="DataEntrada" Type="varchar" Nullable="false" MaxLength="45" />
-          <Property Name="DataVencimento" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="DataEntrada" Type="datetime" Nullable="false" />
+          <Property Name="DataVencimento" Type="datetime" Nullable="false" />
           <Property Name="ValorTotal" Type="decimal" Nullable="false" Scale="2" />
           <Property Name="TipoDespesa" Type="int" Nullable="false" />
           <Property Name="TipoPagamento" Type="int" Nullable="false" />
@@ -171,7 +171,7 @@
           </Key>
           <Property Name="CodigoMedida" Type="int" Nullable="false" />
           <Property Name="Matricula" Type="int" Nullable="false" />
-          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="Altura" Type="decimal" Nullable="false" Precision="5" Scale="2" />
           <Property Name="Peso" Type="decimal" Nullable="false" Scale="5" />
           <Property Name="IMC" Type="decimal" Nullable="false" Precision="5" Scale="2" />
@@ -214,8 +214,8 @@
             <PropertyRef Name="Matricula" />
           </Key>
           <Property Name="Matricula" Type="int" Nullable="false" />
-          <Property Name="DataPagamento" Type="date" Nullable="false" />
-          <Property Name="MesReferente" Type="date" Nullable="false" />
+          <Property Name="DataPagamento" Type="datetime" Nullable="false" />
+          <Property Name="MesReferente" Type="datetime" Nullable="false" />
           <Property Name="Pago" Type="enum" Nullable="false" />
         </EntityType>
         <EntityType Name="tbl_pessoa">
@@ -223,19 +223,19 @@
             <PropertyRef Name="CodigoPessoa" />
           </Key>
           <Property Name="CodigoPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="CadastradoDesde" Type="date" Nullable="false" />
+          <Property Name="CadastradoDesde" Type="datetime" Nullable="false" />
           <Property Name="NomeRazao" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="ApelidoFantasia" Type="varchar" MaxLength="45" />
           <Property Name="CpfCnpj" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="RG" Type="varchar" Nullable="false" MaxLength="12" />
-          <Property Name="DataNascimento" Type="date" Nullable="false" />
+          <Property Name="DataNascimento" Type="datetime" Nullable="false" />
           <Property Name="Sexo" Type="enum" Nullable="false" />
           <Property Name="Rua" Type="varchar" Nullable="false" MaxLength="100" />
           <Property Name="Numero" Type="varchar" Nullable="false" MaxLength="10" />
           <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="30" />
           <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="30" />
           <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
-          <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="CEP" Type="int" Nullable="false" />
           <Property Name="Complemento" Type="varchar" MaxLength="50" />
           <Property Name="Telefone1" Type="varchar" Nullable="false" MaxLength="12" />
           <Property Name="Telefone2" Type="varchar" MaxLength="12" />
@@ -250,6 +250,7 @@
           <Property Name="CodigoBarra" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="NomeItem" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="Quantidade" Type="decimal" Nullable="false" Scale="5" />
+          <Property Name="ValorItem" Type="decimal" Nullable="false" Scale="2" />
           <Property Name="QuantidadeMinima" Type="decimal" Nullable="false" Scale="5" />
           <Property Name="PrecoCusto" Type="decimal" Nullable="false" Scale="2" />
           <Property Name="PrecoVenda" Type="decimal" Nullable="false" Scale="2" />
@@ -274,7 +275,7 @@
           <Property Name="CodigoVenda" Type="int" Nullable="false" />
           <Property Name="CodigoPessoa" Type="int" Nullable="false" />
           <Property Name="CodigoFuncionario" Type="int" Nullable="false" />
-          <Property Name="DataVenda" Type="date" Nullable="false" />
+          <Property Name="DataVenda" Type="datetime" Nullable="false" />
         </EntityType>
         <Association Name="fk_tbl_aluno_tbl_pessoa">
           <End Role="tbl_pessoa" Type="academiaModel.Store.tbl_pessoa" Multiplicity="1" />
@@ -489,6 +490,7 @@
           <EntitySet Name="tbl_modalidade" EntityType="academiaModel.tbl_modalidade" />
           <EntitySet Name="tbl_pagamento_mensalidade" EntityType="academiaModel.tbl_pagamento_mensalidade" />
           <EntitySet Name="tbl_pessoa" EntityType="academiaModel.tbl_pessoa" />
+          <EntitySet Name="tbl_produto" EntityType="academiaModel.tbl_produto" />
           <EntitySet Name="tbl_rotina" EntityType="academiaModel.tbl_rotina" />
           <EntitySet Name="tbl_venda" EntityType="academiaModel.tbl_venda" />
           <AssociationSet Name="fk_tbl_aluno_tbl_pessoa" Association="academiaModel.fk_tbl_aluno_tbl_pessoa">
@@ -539,6 +541,10 @@
             <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
             <End Role="tbl_item" EntitySet="tbl_item" />
           </AssociationSet>
+          <AssociationSet Name="fk_tbl_item_tbl_produto1" Association="academiaModel.fk_tbl_item_tbl_produto1">
+            <End Role="tbl_produto" EntitySet="tbl_produto" />
+            <End Role="tbl_item" EntitySet="tbl_item" />
+          </AssociationSet>
           <AssociationSet Name="fk_tbl_item_tbl_venda1" Association="academiaModel.fk_tbl_item_tbl_venda1">
             <End Role="tbl_venda" EntitySet="tbl_venda" />
             <End Role="tbl_item" EntitySet="tbl_item" />
@@ -551,11 +557,6 @@
             <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
             <End Role="tbl_venda" EntitySet="tbl_venda" />
           </AssociationSet>
-          <EntitySet Name="tbl_produto" EntityType="academiaModel.tbl_produto" />
-          <AssociationSet Name="fk_tbl_item_tbl_produto1" Association="academiaModel.fk_tbl_item_tbl_produto1">
-            <End Role="tbl_produto" EntitySet="tbl_produto" />
-            <End Role="tbl_item" EntitySet="tbl_item" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="tbl_aluno">
           <Key>
@@ -563,7 +564,7 @@
           </Key>
           <Property Type="Int32" Name="Matricula" Nullable="false" />
           <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
-          <Property Type="String" Name="ValorMensalidade" Nullable="false" />
+          <Property Type="Decimal" Name="ValorMensalidade" Nullable="false" />
           <Property Type="DateTime" Name="AtivoDesde" Nullable="false" />
           <Property Type="DateTime" Name="DiaVencimento" Nullable="false" />
           <Property Type="DateTime" Name="DataMatricula" Nullable="false" />
@@ -602,8 +603,8 @@
           <Property Type="Int32" Name="CodigoDespesa" Nullable="false" />
           <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
           <Property Type="String" Name="Descricao" Nullable="false" />
-          <Property Type="String" Name="DataEntrada" Nullable="false" />
-          <Property Type="String" Name="DataVencimento" Nullable="false" />
+          <Property Type="DateTime" Name="DataEntrada" Nullable="false" />
+          <Property Type="DateTime" Name="DataVencimento" Nullable="false" />
           <Property Type="Decimal" Name="ValorTotal" Nullable="false" />
           <Property Type="Int32" Name="TipoDespesa" Nullable="false" />
           <Property Type="Int32" Name="TipoPagamento" Nullable="false" />
@@ -650,8 +651,8 @@
           <Property Type="Decimal" Name="PrecoVenda" Nullable="false" />
           <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
           <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_item_tbl_pessoa1" FromRole="tbl_item" ToRole="tbl_pessoa" />
-          <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_item_tbl_venda1" FromRole="tbl_item" ToRole="tbl_venda" />
           <NavigationProperty Name="tbl_produto" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_item" ToRole="tbl_produto" />
+          <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_item_tbl_venda1" FromRole="tbl_item" ToRole="tbl_venda" />
         </EntityType>
         <EntityType Name="tbl_medida">
           <Key>
@@ -695,7 +696,7 @@
           <Key>
             <PropertyRef Name="CodigoModalidade" />
           </Key>
-          <Property Type="Int32" Name="CodigoModalidade" Nullable="false" />
+          <Property Type="Int32" Name="CodigoModalidade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="NomeModalidade" Nullable="false" />
           <Property Type="Decimal" Name="ValorModalidade" Nullable="false" />
           <NavigationProperty Name="tbl_atividade" Relationship="academiaModel.fk_tbl_atividade_tbl_modalidade1" FromRole="tbl_modalidade" ToRole="tbl_atividade" />
@@ -714,7 +715,7 @@
           <Key>
             <PropertyRef Name="CodigoPessoa" />
           </Key>
-          <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
+          <Property Type="Int32" Name="CodigoPessoa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="DateTime" Name="CadastradoDesde" Nullable="false" />
           <Property Type="String" Name="NomeRazao" Nullable="false" />
           <Property Type="String" Name="ApelidoFantasia" />
@@ -727,7 +728,7 @@
           <Property Type="String" Name="Bairro" Nullable="false" />
           <Property Type="String" Name="Cidade" Nullable="false" />
           <Property Type="String" Name="Estado" Nullable="false" />
-          <Property Type="String" Name="CEP" Nullable="false" />
+          <Property Type="Int32" Name="CEP" Nullable="false" />
           <Property Type="String" Name="Complemento" />
           <Property Type="String" Name="Telefone1" Nullable="false" />
           <Property Type="String" Name="Telefone2" />
@@ -739,6 +740,20 @@
           <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_item" />
           <NavigationProperty Name="tbl_mensagem" Relationship="academiaModel.fk_tbl_mensagem_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_mensagem" />
           <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_venda_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_venda" />
+        </EntityType>
+        <EntityType Name="tbl_produto">
+          <Key>
+            <PropertyRef Name="CodigoProduto" />
+          </Key>
+          <Property Type="Int32" Name="CodigoProduto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CodigoBarra" Nullable="false" />
+          <Property Type="String" Name="NomeItem" Nullable="false" />
+          <Property Type="Decimal" Name="Quantidade" Nullable="false" />
+          <Property Type="Decimal" Name="ValorItem" Nullable="false" />
+          <Property Type="Decimal" Name="QuantidadeMinima" Nullable="false" />
+          <Property Type="Decimal" Name="PrecoCusto" Nullable="false" />
+          <Property Type="Decimal" Name="PrecoVenda" Nullable="false" />
+          <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_produto" ToRole="tbl_item" />
         </EntityType>
         <EntityType Name="tbl_rotina">
           <Key>
@@ -914,6 +929,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_tbl_item_tbl_produto1">
+          <End Type="academiaModel.tbl_produto" Role="tbl_produto" Multiplicity="1" />
+          <End Type="academiaModel.tbl_item" Role="tbl_item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_produto">
+              <PropertyRef Name="CodigoProduto" />
+            </Principal>
+            <Dependent Role="tbl_item">
+              <PropertyRef Name="CodigoProduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_tbl_item_tbl_venda1">
           <End Type="academiaModel.tbl_venda" Role="tbl_venda" Multiplicity="1" />
           <End Type="academiaModel.tbl_item" Role="tbl_item" Multiplicity="*" />
@@ -947,31 +974,6 @@
             </Principal>
             <Dependent Role="tbl_venda">
               <PropertyRef Name="CodigoPessoa" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="tbl_produto">
-          <Key>
-            <PropertyRef Name="CodigoProduto" />
-          </Key>
-          <Property Type="Int32" Name="CodigoProduto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="CodigoBarra" Nullable="false" />
-          <Property Type="String" Name="NomeItem" Nullable="false" />
-          <Property Type="Decimal" Name="Quantidade" Nullable="false" />
-          <Property Type="Decimal" Name="QuantidadeMinima" Nullable="false" />
-          <Property Type="Decimal" Name="PrecoCusto" Nullable="false" />
-          <Property Type="Decimal" Name="PrecoVenda" Nullable="false" />
-          <NavigationProperty Name="tbl_item" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_produto" ToRole="tbl_item" />
-        </EntityType>
-        <Association Name="fk_tbl_item_tbl_produto1">
-          <End Type="academiaModel.tbl_produto" Role="tbl_produto" Multiplicity="1" />
-          <End Type="academiaModel.tbl_item" Role="tbl_item" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tbl_produto">
-              <PropertyRef Name="CodigoProduto" />
-            </Principal>
-            <Dependent Role="tbl_item">
-              <PropertyRef Name="CodigoProduto" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1147,6 +1149,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tbl_produto">
+            <EntityTypeMapping TypeName="academiaModel.tbl_produto">
+              <MappingFragment StoreEntitySet="tbl_produto">
+                <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
+                <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
+                <ScalarProperty Name="QuantidadeMinima" ColumnName="QuantidadeMinima" />
+                <ScalarProperty Name="ValorItem" ColumnName="ValorItem" />
+                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+                <ScalarProperty Name="NomeItem" ColumnName="NomeItem" />
+                <ScalarProperty Name="CodigoBarra" ColumnName="CodigoBarra" />
+                <ScalarProperty Name="CodigoProduto" ColumnName="CodigoProduto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tbl_rotina">
             <EntityTypeMapping TypeName="academiaModel.tbl_rotina">
               <MappingFragment StoreEntitySet="tbl_rotina">
@@ -1166,19 +1182,6 @@
                 <ScalarProperty Name="CodigoFuncionario" ColumnName="CodigoFuncionario" />
                 <ScalarProperty Name="CodigoPessoa" ColumnName="CodigoPessoa" />
                 <ScalarProperty Name="CodigoVenda" ColumnName="CodigoVenda" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tbl_produto">
-            <EntityTypeMapping TypeName="academiaModel.tbl_produto">
-              <MappingFragment StoreEntitySet="tbl_produto">
-                <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
-                <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
-                <ScalarProperty Name="QuantidadeMinima" ColumnName="QuantidadeMinima" />
-                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
-                <ScalarProperty Name="NomeItem" ColumnName="NomeItem" />
-                <ScalarProperty Name="CodigoBarra" ColumnName="CodigoBarra" />
-                <ScalarProperty Name="CodigoProduto" ColumnName="CodigoProduto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1203,38 +1206,39 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="ModelAcademia">
-        <EntityTypeShape EntityType="academiaModel.tbl_aluno" Width="1.5" PointX="3" PointY="6.625" Height="3.1340950520833246" />
+        <EntityTypeShape EntityType="academiaModel.tbl_aluno" Width="1.5" PointX="3" PointY="6.625" Height="3.1340950520833388" />
         <EntityTypeShape EntityType="academiaModel.tbl_atividade" Width="1.5" PointX="3" PointY="3.125" Height="1.9802864583333388" />
-        <EntityTypeShape EntityType="academiaModel.tbl_atividade_aluno" Width="1.5" PointX="5.25" PointY="4.125" Height="2.1725878906250102" />
-        <EntityTypeShape EntityType="academiaModel.tbl_despesa" Width="1.5" PointX="3" PointY="12.875" Height="3.7109993489583246" />
+        <EntityTypeShape EntityType="academiaModel.tbl_atividade_aluno" Width="1.5" PointX="5.25" PointY="4.125" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="academiaModel.tbl_despesa" Width="1.5" PointX="3" PointY="12.875" Height="3.7109993489583388" />
         <EntityTypeShape EntityType="academiaModel.tbl_funcionario" Width="1.5" PointX="3" PointY="17.375" Height="1.9802864583333388" />
-        <EntityTypeShape EntityType="academiaModel.tbl_historico_rotina" Width="1.5" PointX="7.5" PointY="4.125" Height="2.1725878906250102" />
-        <EntityTypeShape EntityType="academiaModel.tbl_item" Width="1.5" PointX="7.5" PointY="13" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="academiaModel.tbl_historico_rotina" Width="1.5" PointX="7.5" PointY="4.125" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="academiaModel.tbl_item" Width="1.5" PointX="7.5" PointY="13" Height="3.3263964843750067" />
         <EntityTypeShape EntityType="academiaModel.tbl_medida" Width="1.5" PointX="5.25" PointY="7.25" Height="5.2494108072916674" />
         <EntityTypeShape EntityType="academiaModel.tbl_mensagem" Width="1.5" PointX="3" PointY="20.125" Height="2.172587890624996" />
         <EntityTypeShape EntityType="academiaModel.tbl_modalidade" Width="1.5" PointX="0.75" PointY="3.25" Height="1.7879850260416674" />
         <EntityTypeShape EntityType="academiaModel.tbl_pagamento_mensalidade" Width="1.5" PointX="5.25" PointY="13.25" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="academiaModel.tbl_pessoa" Width="1.5" PointX="0.75" PointY="10.375" Height="5.8263151041666674" />
+        <EntityTypeShape EntityType="academiaModel.tbl_pessoa" Width="1.5" PointX="0.75" PointY="10.375" Height="5.8263151041666656" />
+        <EntityTypeShape EntityType="academiaModel.tbl_produto" Width="1.5" PointX="5.25" PointY="20.25" Height="2.749492187499996" />
         <EntityTypeShape EntityType="academiaModel.tbl_rotina" Width="1.5" PointX="9.75" PointY="4" Height="2.3648893229166674" />
         <EntityTypeShape EntityType="academiaModel.tbl_venda" Width="1.5" PointX="5.25" PointY="16.625" Height="2.3648893229166674" />
         <AssociationConnector Association="academiaModel.fk_tbl_aluno_tbl_pessoa" >
           <ConnectorPoint PointX="1.5" PointY="10.375" />
-          <ConnectorPoint PointX="1.5" PointY="8.1920475260416623" />
-          <ConnectorPoint PointX="3" PointY="8.1920475260416623" />
+          <ConnectorPoint PointX="1.5" PointY="8.19204752604167" />
+          <ConnectorPoint PointX="3" PointY="8.19204752604167" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_atividadealuno_tbl_aluno1" >
           <ConnectorPoint PointX="4.5" PointY="6.625" />
           <ConnectorPoint PointX="4.875" PointY="6.25" />
-          <ConnectorPoint PointX="4.875" PointY="6.67258789062501" />
-          <ConnectorPoint PointX="5.25" PointY="6.29758789062501" />
+          <ConnectorPoint PointX="4.875" PointY="6.6725878906250031" />
+          <ConnectorPoint PointX="5.25" PointY="6.2975878906250031" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_medida_tbl_aluno1" >
-          <ConnectorPoint PointX="4.5" PointY="8.5045475260416623" />
-          <ConnectorPoint PointX="5.25" PointY="8.5045475260416623" />
+          <ConnectorPoint PointX="4.5" PointY="8.50454752604167" />
+          <ConnectorPoint PointX="5.25" PointY="8.50454752604167" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_pagamentomensalidade_tbl_aluno1" >
-          <ConnectorPoint PointX="4.5" PointY="9.7590950520833246" />
-          <ConnectorPoint PointX="4.875" PointY="10.134095052083325" />
+          <ConnectorPoint PointX="4.5" PointY="9.7590950520833388" />
+          <ConnectorPoint PointX="4.875" PointY="10.134095052083339" />
           <ConnectorPoint PointX="4.875" PointY="14.240143229166662" />
           <ConnectorPoint PointX="5.25" PointY="14.240143229166662" />
         </AssociationConnector>
@@ -1247,8 +1251,8 @@
           <ConnectorPoint PointX="5.25" PointY="4.6151432291666694" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_historicorotina_tbl_atividadealuno1" >
-          <ConnectorPoint PointX="6.75" PointY="5.2112939453125051" />
-          <ConnectorPoint PointX="7.5" PointY="5.2112939453125051" />
+          <ConnectorPoint PointX="6.75" PointY="5.2112939453125016" />
+          <ConnectorPoint PointX="7.5" PointY="5.2112939453125016" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_despesa_tbl_pessoa2" >
           <ConnectorPoint PointX="2.25" PointY="14.538157552083334" />
@@ -1266,8 +1270,8 @@
           <ConnectorPoint PointX="5.25" PointY="18.182444661458334" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_rotina_tbl_historicorotina1" >
-          <ConnectorPoint PointX="9" PointY="5.2112939453125051" />
-          <ConnectorPoint PointX="9.75" PointY="5.2112939453125051" />
+          <ConnectorPoint PointX="9" PointY="5.2112939453125016" />
+          <ConnectorPoint PointX="9.75" PointY="5.2112939453125016" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_item_tbl_pessoa1" >
           <ConnectorPoint PointX="2.25" PointY="12.687205403645834" />
@@ -1276,11 +1280,15 @@
           <ConnectorPoint PointX="8.25" PointY="12.687205403645834" />
           <ConnectorPoint PointX="8.25" PointY="13" />
         </AssociationConnector>
+        <AssociationConnector Association="academiaModel.fk_tbl_item_tbl_produto1" >
+          <ConnectorPoint PointX="6.75" PointY="21.624746093749998" />
+          <ConnectorPoint PointX="8.25" PointY="21.624746093749998" />
+          <ConnectorPoint PointX="8.25" PointY="16.326396484375007" />
+        </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_item_tbl_venda1" >
-          <ConnectorPoint PointX="6.75" PointY="16.626152846153843" />
-          <ConnectorPoint PointX="7.125" PointY="16.251152846153843" />
-          <ConnectorPoint PointX="7.125" PointY="16.702549330528857" />
-          <ConnectorPoint PointX="7.5011528461538459" PointY="16.32639648437501" />
+          <ConnectorPoint PointX="6.75" PointY="17.807444661458334" />
+          <ConnectorPoint PointX="7.8437475" PointY="17.807444661458334" />
+          <ConnectorPoint PointX="7.8437475" PointY="16.326396484375007" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_mensagem_tbl_pessoa1" >
           <ConnectorPoint PointX="1.9062525" PointY="16.201315104166667" />
@@ -1295,11 +1303,6 @@
           <ConnectorPoint PointX="1.8229191666666667" PointY="16.96875" />
           <ConnectorPoint PointX="1.9895858333333332" PointY="16.96875" />
           <ConnectorPoint PointX="5.25" PointY="16.96875" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="academiaModel.tbl_produto" Width="1.5" PointX="7" PointY="19.875" Height="2.5571907552083388" />
-        <AssociationConnector Association="academiaModel.fk_tbl_item_tbl_produto1">
-          <ConnectorPoint PointX="8.0318289230769224" PointY="19.875" />
-          <ConnectorPoint PointX="8.0318289230769224" PointY="16.32639648437501" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>
