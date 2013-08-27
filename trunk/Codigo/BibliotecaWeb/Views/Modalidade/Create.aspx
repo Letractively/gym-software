@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.Modalidade>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    <%: Models.App_GlobalResources.Mensagem.criar_novo %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Create</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.novo %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -23,7 +23,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Modalidade</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.modalidade %> </legend>
 
 
 
@@ -44,13 +44,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Adicionar" />
+            <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.adicionar %>  />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Voltar Para Lista", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.modalidade, "Index")%>
 </div>
 
 </asp:Content>

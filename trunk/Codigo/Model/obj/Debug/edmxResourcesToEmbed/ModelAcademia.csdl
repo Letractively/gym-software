@@ -85,13 +85,13 @@
     <Key>
       <PropertyRef Name="Matricula" />
     </Key>
-    <Property Type="Int32" Name="Matricula" Nullable="false" />
+    <Property Type="Int32" Name="Matricula" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
     <Property Type="Decimal" Name="ValorMensalidade" Nullable="false" />
-    <Property Type="DateTime" Name="AtivoDesde" Nullable="false" />
+    <Property Type="DateTime" Name="AtivoDesde" />
     <Property Type="DateTime" Name="DiaVencimento" Nullable="false" />
-    <Property Type="DateTime" Name="DataMatricula" Nullable="false" />
-    <Property Type="DateTime" Name="DataTrancamento" Nullable="false" />
+    <Property Type="DateTime" Name="DataMatricula" />
+    <Property Type="DateTime" Name="DataTrancamento" />
     <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_aluno_tbl_pessoa" FromRole="tbl_aluno" ToRole="tbl_pessoa" />
     <NavigationProperty Name="tbl_atividade_aluno" Relationship="academiaModel.fk_tbl_atividadealuno_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_atividade_aluno" />
     <NavigationProperty Name="tbl_medida" Relationship="academiaModel.fk_tbl_medida_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_medida" />
@@ -126,8 +126,8 @@
     <Property Type="Int32" Name="CodigoDespesa" Nullable="false" />
     <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
     <Property Type="String" Name="Descricao" Nullable="false" />
-    <Property Type="DateTime" Name="DataEntrada" Nullable="false" />
-    <Property Type="DateTime" Name="DataVencimento" Nullable="false" />
+    <Property Type="String" Name="DataEntrada" Nullable="false" />
+    <Property Type="String" Name="DataVencimento" Nullable="false" />
     <Property Type="Decimal" Name="ValorTotal" Nullable="false" />
     <Property Type="Int32" Name="TipoDespesa" Nullable="false" />
     <Property Type="Int32" Name="TipoPagamento" Nullable="false" />
@@ -251,12 +251,13 @@
     <Property Type="String" Name="Bairro" Nullable="false" />
     <Property Type="String" Name="Cidade" Nullable="false" />
     <Property Type="String" Name="Estado" Nullable="false" />
-    <Property Type="Int32" Name="CEP" Nullable="false" />
+    <Property Type="String" Name="CEP" Nullable="false" />
     <Property Type="String" Name="Complemento" />
     <Property Type="String" Name="Telefone1" Nullable="false" />
     <Property Type="String" Name="Telefone2" />
     <Property Type="String" Name="Email" Nullable="false" />
     <Property Type="String" Name="Senha" Nullable="false" />
+    <Property Type="String" Name="Fornecedor" />
     <NavigationProperty Name="tbl_aluno" Relationship="academiaModel.fk_tbl_aluno_tbl_pessoa" FromRole="tbl_pessoa" ToRole="tbl_aluno" />
     <NavigationProperty Name="tbl_despesa" Relationship="academiaModel.fk_tbl_despesa_tbl_pessoa2" FromRole="tbl_pessoa" ToRole="tbl_despesa" />
     <NavigationProperty Name="tbl_funcionario" Relationship="academiaModel.fk_tbl_funcionario_tbl_pessoa1" FromRole="tbl_pessoa" ToRole="tbl_funcionario" />
@@ -272,7 +273,6 @@
     <Property Type="String" Name="CodigoBarra" Nullable="false" />
     <Property Type="String" Name="NomeItem" Nullable="false" />
     <Property Type="Decimal" Name="Quantidade" Nullable="false" />
-    <Property Type="Decimal" Name="ValorItem" Nullable="false" />
     <Property Type="Decimal" Name="QuantidadeMinima" Nullable="false" />
     <Property Type="Decimal" Name="PrecoCusto" Nullable="false" />
     <Property Type="Decimal" Name="PrecoVenda" Nullable="false" />

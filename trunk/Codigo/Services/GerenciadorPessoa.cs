@@ -99,7 +99,8 @@ namespace Services
                             Telefone1 = pessoa.Telefone1,
                             Telefone2 = pessoa.Telefone2,
                             Email = pessoa.Email,
-                            Senha = pessoa.Senha
+                            Senha = pessoa.Senha,
+                            Fornecedor = pessoa.Fornecedor
 
 
                         };
@@ -153,6 +154,7 @@ namespace Services
             pessoaE.Telefone2 = pessoaModel.Telefone2;
             pessoaE.Email = pessoaModel.Email;
             pessoaE.Senha = pessoaModel.Senha;
+            pessoaE.Fornecedor = pessoaModel.Fornecedor;
         }
 
     }

@@ -117,10 +117,148 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="adicionar" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="aluno" xml:space="preserve">
+    <value>Aluno</value>
+  </data>
+  <data name="apelido" xml:space="preserve">
+    <value>Apelido</value>
+  </data>
+  <data name="apelido_fantasia" xml:space="preserve">
+    <value>Apelido/Fantasia</value>
+  </data>
+  <data name="ativo_desde" xml:space="preserve">
+    <value>Ativo Desde</value>
+  </data>
+  <data name="bairro" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="cadastrado_desde" xml:space="preserve">
+    <value>Cadastrado Desde</value>
+  </data>
+  <data name="cancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="cep" xml:space="preserve">
+    <value>Cep</value>
+  </data>
+  <data name="cidade" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="codigo" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="complemento" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="cpf_cnpj" xml:space="preserve">
+    <value>Cpf/Cnpj</value>
+  </data>
+  <data name="criar_novo" xml:space="preserve">
+    <value>Inserir Novo</value>
+  </data>
+  <data name="data_matricula" xml:space="preserve">
+    <value>Data Matrícula</value>
+  </data>
+  <data name="data_nascimento" xml:space="preserve">
+    <value>Data Nascimento</value>
+  </data>
+  <data name="data_trancamento" xml:space="preserve">
+    <value>Data Trancamento</value>
+  </data>
+  <data name="deseja_apagar" xml:space="preserve">
+    <value>Você Realmente deseja apagar esse registro?</value>
+  </data>
+  <data name="detalhes" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="dia_vencimento" xml:space="preserve">
+    <value>Dia Venciamento</value>
+  </data>
+  <data name="editar" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
   <data name="erro_nome" xml:space="preserve">
     <value>O campo Nome é requerido.</value>
   </data>
   <data name="erro_valor" xml:space="preserve">
     <value>O campo Valor é requerido.</value>
+  </data>
+  <data name="estado" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="excluir" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="feminino" xml:space="preserve">
+    <value>Feminino</value>
+  </data>
+  <data name="fornecedor" xml:space="preserve">
+    <value>Fornecedor</value>
+  </data>
+  <data name="gerenciar_aluno" xml:space="preserve">
+    <value>Gerenciar Aluno</value>
+  </data>
+  <data name="gerenciar_modalidade" xml:space="preserve">
+    <value>Gerenciar Modalidade</value>
+  </data>
+  <data name="masculino" xml:space="preserve">
+    <value>Masculino</value>
+  </data>
+  <data name="matricula" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="modalidade" xml:space="preserve">
+    <value>Modalidade</value>
+  </data>
+  <data name="nome" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="nome_razao" xml:space="preserve">
+    <value>Nome/Razão Social</value>
+  </data>
+  <data name="novo" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="numero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="rg" xml:space="preserve">
+    <value>Rg</value>
+  </data>
+  <data name="rua" xml:space="preserve">
+    <value>Rua</value>
+  </data>
+  <data name="salvar" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="selecione" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
+  <data name="senha" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="sexo" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="telefone1" xml:space="preserve">
+    <value>Telefone 1</value>
+  </data>
+  <data name="telefone2" xml:space="preserve">
+    <value>Telefone 2</value>
+  </data>
+  <data name="valor" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="valor_mensalidade" xml:space="preserve">
+    <value>Valor Mensalidade</value>
+  </data>
+  <data name="voltar_para_lista" xml:space="preserve">
+    <value>Voltar Para Lista</value>
   </data>
 </root>

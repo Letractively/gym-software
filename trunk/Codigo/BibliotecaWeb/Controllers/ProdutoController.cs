@@ -96,7 +96,7 @@ namespace BibliotecaWeb.Controllers
         {
             gProduto.Remover(id);
             return RedirectToAction("Index");
-            View();
+            
         }
     }
 }

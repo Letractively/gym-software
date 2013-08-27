@@ -22,7 +22,7 @@ namespace Models.App_GlobalResources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Mensagem {
+    public class Mensagem {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Models.App_GlobalResources {
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Models.App_GlobalResources.Mensagem", typeof(Mensagem).Assembly);
@@ -51,7 +51,7 @@ namespace Models.App_GlobalResources {
         ///   pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,207 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Adicionar.
+        /// </summary>
+        public static string adicionar {
+            get {
+                return ResourceManager.GetString("adicionar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Aluno.
+        /// </summary>
+        public static string aluno {
+            get {
+                return ResourceManager.GetString("aluno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Apelido.
+        /// </summary>
+        public static string apelido {
+            get {
+                return ResourceManager.GetString("apelido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Apelido/Fantasia.
+        /// </summary>
+        public static string apelido_fantasia {
+            get {
+                return ResourceManager.GetString("apelido_fantasia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Ativo Desde.
+        /// </summary>
+        public static string ativo_desde {
+            get {
+                return ResourceManager.GetString("ativo_desde", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Bairro.
+        /// </summary>
+        public static string bairro {
+            get {
+                return ResourceManager.GetString("bairro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastrado Desde.
+        /// </summary>
+        public static string cadastrado_desde {
+            get {
+                return ResourceManager.GetString("cadastrado_desde", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cancelar.
+        /// </summary>
+        public static string cancelar {
+            get {
+                return ResourceManager.GetString("cancelar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cep.
+        /// </summary>
+        public static string cep {
+            get {
+                return ResourceManager.GetString("cep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cidade.
+        /// </summary>
+        public static string cidade {
+            get {
+                return ResourceManager.GetString("cidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Código.
+        /// </summary>
+        public static string codigo {
+            get {
+                return ResourceManager.GetString("codigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Complemento.
+        /// </summary>
+        public static string complemento {
+            get {
+                return ResourceManager.GetString("complemento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cpf/Cnpj.
+        /// </summary>
+        public static string cpf_cnpj {
+            get {
+                return ResourceManager.GetString("cpf_cnpj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Inserir Novo.
+        /// </summary>
+        public static string criar_novo {
+            get {
+                return ResourceManager.GetString("criar_novo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Data Matrícula.
+        /// </summary>
+        public static string data_matricula {
+            get {
+                return ResourceManager.GetString("data_matricula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Data Nascimento.
+        /// </summary>
+        public static string data_nascimento {
+            get {
+                return ResourceManager.GetString("data_nascimento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Data Trancamento.
+        /// </summary>
+        public static string data_trancamento {
+            get {
+                return ResourceManager.GetString("data_trancamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Você Realmente deseja apagar esse registro?.
+        /// </summary>
+        public static string deseja_apagar {
+            get {
+                return ResourceManager.GetString("deseja_apagar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Detalhes.
+        /// </summary>
+        public static string detalhes {
+            get {
+                return ResourceManager.GetString("detalhes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Dia Venciamento.
+        /// </summary>
+        public static string dia_vencimento {
+            get {
+                return ResourceManager.GetString("dia_vencimento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Alterar.
+        /// </summary>
+        public static string editar {
+            get {
+                return ResourceManager.GetString("editar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-mail.
+        /// </summary>
+        public static string email {
+            get {
+                return ResourceManager.GetString("email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a O campo Nome é requerido..
         /// </summary>
-        internal static string erro_nome {
+        public static string erro_nome {
             get {
                 return ResourceManager.GetString("erro_nome", resourceCulture);
             }
@@ -72,9 +270,225 @@ namespace Models.App_GlobalResources {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a O campo Valor é requerido..
         /// </summary>
-        internal static string erro_valor {
+        public static string erro_valor {
             get {
                 return ResourceManager.GetString("erro_valor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Estado.
+        /// </summary>
+        public static string estado {
+            get {
+                return ResourceManager.GetString("estado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir.
+        /// </summary>
+        public static string excluir {
+            get {
+                return ResourceManager.GetString("excluir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Feminino.
+        /// </summary>
+        public static string feminino {
+            get {
+                return ResourceManager.GetString("feminino", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Fornecedor.
+        /// </summary>
+        public static string fornecedor {
+            get {
+                return ResourceManager.GetString("fornecedor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Gerenciar Aluno.
+        /// </summary>
+        public static string gerenciar_aluno {
+            get {
+                return ResourceManager.GetString("gerenciar_aluno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Gerenciar Modalidade.
+        /// </summary>
+        public static string gerenciar_modalidade {
+            get {
+                return ResourceManager.GetString("gerenciar_modalidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Masculino.
+        /// </summary>
+        public static string masculino {
+            get {
+                return ResourceManager.GetString("masculino", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Matrícula.
+        /// </summary>
+        public static string matricula {
+            get {
+                return ResourceManager.GetString("matricula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Modalidade.
+        /// </summary>
+        public static string modalidade {
+            get {
+                return ResourceManager.GetString("modalidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nome.
+        /// </summary>
+        public static string nome {
+            get {
+                return ResourceManager.GetString("nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nome/Razão Social.
+        /// </summary>
+        public static string nome_razao {
+            get {
+                return ResourceManager.GetString("nome_razao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Novo.
+        /// </summary>
+        public static string novo {
+            get {
+                return ResourceManager.GetString("novo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Número.
+        /// </summary>
+        public static string numero {
+            get {
+                return ResourceManager.GetString("numero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Rg.
+        /// </summary>
+        public static string rg {
+            get {
+                return ResourceManager.GetString("rg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Rua.
+        /// </summary>
+        public static string rua {
+            get {
+                return ResourceManager.GetString("rua", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Salvar.
+        /// </summary>
+        public static string salvar {
+            get {
+                return ResourceManager.GetString("salvar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Selecione.
+        /// </summary>
+        public static string selecione {
+            get {
+                return ResourceManager.GetString("selecione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Senha.
+        /// </summary>
+        public static string senha {
+            get {
+                return ResourceManager.GetString("senha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Sexo.
+        /// </summary>
+        public static string sexo {
+            get {
+                return ResourceManager.GetString("sexo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Telefone 1.
+        /// </summary>
+        public static string telefone1 {
+            get {
+                return ResourceManager.GetString("telefone1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Telefone 2.
+        /// </summary>
+        public static string telefone2 {
+            get {
+                return ResourceManager.GetString("telefone2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Valor.
+        /// </summary>
+        public static string valor {
+            get {
+                return ResourceManager.GetString("valor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Valor Mensalidade.
+        /// </summary>
+        public static string valor_mensalidade {
+            get {
+                return ResourceManager.GetString("valor_mensalidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Voltar Para Lista.
+        /// </summary>
+        public static string voltar_para_lista {
+            get {
+                return ResourceManager.GetString("voltar_para_lista", resourceCulture);
             }
         }
     }

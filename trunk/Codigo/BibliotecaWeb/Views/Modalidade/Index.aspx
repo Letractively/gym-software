@@ -6,21 +6,21 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Gerenciar Modalidade</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.gerenciar_modalidade %></h2>
 
 <p>
-    <%: Html.ActionLink("Inserir Nova", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.criar_novo, "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            Código
+             <%: Models.App_GlobalResources.Mensagem.codigo %>
         </th>
         <th>
-            Nome
+             <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
         <th>
-            Valor
+             <%: Models.App_GlobalResources.Mensagem.valor %>
         </th>
         <th></th>
     </tr>
@@ -37,9 +37,9 @@
             <%: Html.DisplayFor(modelItem => item.Valor) %>
         </td>
         <td>
-            <%: Html.ActionLink("Alterar", "Edit", new { id=item.Codigo }) %> |
-            <%: Html.ActionLink("Detalhes", "Details", new { id=item.Codigo }) %> |
-            <%: Html.ActionLink("Excluir", "Delete", new { id=item.Codigo }) %>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id=item.Codigo }) %> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id=item.Codigo }) %> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.excluir, "Delete", new { id=item.Codigo }) %>
         </td>
     </tr>
 <% } %>

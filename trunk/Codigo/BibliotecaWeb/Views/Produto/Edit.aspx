@@ -70,7 +70,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> />
         </p>
     </fieldset>
 <% } %>

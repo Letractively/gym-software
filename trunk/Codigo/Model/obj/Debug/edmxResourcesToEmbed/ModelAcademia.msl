@@ -145,6 +145,7 @@
     <EntitySetMapping Name="tbl_pessoa">
       <EntityTypeMapping TypeName="academiaModel.tbl_pessoa">
         <MappingFragment StoreEntitySet="tbl_pessoa">
+          <ScalarProperty Name="Fornecedor" ColumnName="Fornecedor" />
           <ScalarProperty Name="Senha" ColumnName="Senha" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Telefone2" ColumnName="Telefone2" />
@@ -173,7 +174,6 @@
           <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
           <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
           <ScalarProperty Name="QuantidadeMinima" ColumnName="QuantidadeMinima" />
-          <ScalarProperty Name="ValorItem" ColumnName="ValorItem" />
           <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
           <ScalarProperty Name="NomeItem" ColumnName="NomeItem" />
           <ScalarProperty Name="CodigoBarra" ColumnName="CodigoBarra" />

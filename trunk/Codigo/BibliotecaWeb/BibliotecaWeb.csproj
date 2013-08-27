@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlunoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MedidaController.cs" />
     <Compile Include="Controllers\ModalidadeController.cs" />
@@ -116,6 +117,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Views\Aluno\Create.aspx" />
+    <Content Include="Views\Aluno\Delete.aspx" />
+    <Content Include="Views\Aluno\Details.aspx" />
+    <Content Include="Views\Aluno\Edit.aspx" />
+    <Content Include="Views\Aluno\Index.aspx" />
     <Content Include="Views\Modalidade\Create.aspx" />
     <Content Include="Views\Modalidade\Delete.aspx" />
     <Content Include="Views\Modalidade\Details.aspx" />
