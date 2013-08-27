@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlunoController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MedidaController.cs" />
     <Compile Include="Controllers\ModalidadeController.cs" />
@@ -122,6 +123,16 @@
     <Content Include="Views\Aluno\Details.aspx" />
     <Content Include="Views\Aluno\Edit.aspx" />
     <Content Include="Views\Aluno\Index.aspx" />
+    <Content Include="Views\Funcionario\Create.aspx" />
+    <Content Include="Views\Funcionario\Delete.aspx" />
+    <Content Include="Views\Funcionario\Details.aspx" />
+    <Content Include="Views\Funcionario\Edit.aspx" />
+    <Content Include="Views\Funcionario\Index.aspx" />
+    <Content Include="Views\Medida\Create.aspx" />
+    <Content Include="Views\Medida\Delete.aspx" />
+    <Content Include="Views\Medida\Details.aspx" />
+    <Content Include="Views\Medida\Edit.aspx" />
+    <Content Include="Views\Medida\Index.aspx" />
     <Content Include="Views\Modalidade\Create.aspx" />
     <Content Include="Views\Modalidade\Delete.aspx" />
     <Content Include="Views\Modalidade\Details.aspx" />
