@@ -8,7 +8,7 @@ using Models;
 
 namespace Services
 {
-    class GerenciadorFuncionario
+    public class GerenciadorFuncionario
     {
         private IUnitOfWork unitOfWork;
         private bool shared;
@@ -81,8 +81,7 @@ namespace Services
                         select new Funcionario
                         {
                             CodigoFuncionario = funcionario.CodigoFuncionario,
-                     //       Permicao = funcionario.Equals("Atendente") ? funcionario.Equals("Instrutor") ? funcionario.Equals("Proprietario")
-                                                      
+                            Permicao = funcionario.Permicao
                         };
             return query;
         }

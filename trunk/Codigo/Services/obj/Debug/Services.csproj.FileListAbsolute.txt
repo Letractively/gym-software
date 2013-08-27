@@ -23,7 +23,6 @@ C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\bin\Debug\Mo
 C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\bin\Debug\Persistence.dll
 C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\bin\Debug\Model.pdb
 C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\bin\Debug\Persistence.pdb
-C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\bin\Debug\en\Model.resources.dll
 C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
 C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\obj\Debug\Services.dll
 C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\obj\Debug\Services.pdb
@@ -36,3 +35,4 @@ C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\obj\Debug\Services.dll
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Services\bin\Debug\en\Model.resources.dll

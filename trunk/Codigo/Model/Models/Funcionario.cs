@@ -12,12 +12,10 @@ namespace Models.Models
         [Display(Name = "Código")]
         public int CodigoFuncionario { get; set; }
         
-        [Required]        
+        [Required]
+        [Display(Name = "sexo", ResourceType = typeof(Mensagem))]
         public /*Permicao*/ string Permicao { get; set; }
     }
-/*
-    public enum Permicao
-    {
-        Atendente, Instrutor, Proprietario
-    }*/
+
+    public enum Permicao { Atendente, Instrutor, Proprietario };
 }
