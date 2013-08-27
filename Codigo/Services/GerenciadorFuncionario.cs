@@ -42,7 +42,7 @@ namespace Services
         {
             tbl_funcionario funcionarioE = new tbl_funcionario();
             Atribuir(funcionarioModel, funcionarioE);
-            unitOfWork.RepositorioPagamentoMensalidade.Inserir(funcionarioE);
+            unitOfWork.RepositorioFuncionario.Inserir(funcionarioE);
             unitOfWork.Commit(shared);
             return funcionarioE.CodigoFuncionario;
         }
@@ -55,7 +55,7 @@ namespace Services
         {
             tbl_funcionario funcionarioE = new tbl_funcionario(); 
             Atribuir(funcionarioModel, funcionarioE);
-            unitOfWork.RepositorioPagamentoMensalidade.Editar(funcionarioE);
+            unitOfWork.RepositorioFuncionario.Editar(funcionarioE);
             unitOfWork.Commit(shared);
         }
 
@@ -65,7 +65,7 @@ namespace Services
         /// <param name="funcionarioModel"></param>
         public void Remover(int CodigoFuncionario)
         {
-            unitOfWork.RepositorioPagamentoMensalidade.Remover(funcionario => funcionario.CodigoFuncionario.Equals(CodigoFuncionario));
+            unitOfWork.RepositorioFuncionario.Remover(funcionario => funcionario.CodigoFuncionario.Equals(CodigoFuncionario));
             unitOfWork.Commit(shared);
         }
 
@@ -76,7 +76,7 @@ namespace Services
         /// <returns></returns>
         private IQueryable<Funcionario> GetQuery()
         {
-            IQueryable<tbl_funcionario> tbl_funcionario = unitOfWork.RepositorioPagamentoMensalidade.GetQueryable();
+            IQueryable<tbl_funcionario> tbl_funcionario = unitOfWork.RepositorioFuncionario.GetQueryable();
             var query = from funcionario in tbl_funcionario 
                         select new Funcionario
                         {

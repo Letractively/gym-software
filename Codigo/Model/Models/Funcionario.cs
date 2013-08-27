@@ -12,13 +12,12 @@ namespace Models.Models
         [Display(Name = "Código")]
         public int CodigoFuncionario { get; set; }
         
-        [Required]
-        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
-        public Permicao Permicao { get; set; }
+        [Required]        
+        public /*Permicao*/ string Permicao { get; set; }
     }
-
+/*
     public enum Permicao
     {
         Atendente, Instrutor, Proprietario
-    }
+    }*/
 }
