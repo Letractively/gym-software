@@ -85,13 +85,13 @@
     <Key>
       <PropertyRef Name="Matricula" />
     </Key>
-    <Property Name="Matricula" Type="int" Nullable="false" />
+    <Property Name="Matricula" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoPessoa" Type="int" Nullable="false" />
-    <Property Name="ValorMensalidade" Type="decimal" Nullable="false" Precision="5" Scale="2" />
-    <Property Name="AtivoDesde" Type="datetime" Nullable="false" />
+    <Property Name="ValorMensalidade" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="AtivoDesde" Type="datetime" />
     <Property Name="DiaVencimento" Type="datetime" Nullable="false" />
-    <Property Name="DataMatricula" Type="datetime" Nullable="false" />
-    <Property Name="DataTrancamento" Type="datetime" Nullable="false" />
+    <Property Name="DataMatricula" Type="datetime" />
+    <Property Name="DataTrancamento" Type="datetime" />
   </EntityType>
   <EntityType Name="tbl_atividade">
     <Key>
@@ -117,8 +117,8 @@
     <Property Name="CodigoDespesa" Type="int" Nullable="false" />
     <Property Name="CodigoPessoa" Type="int" Nullable="false" />
     <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="45" />
-    <Property Name="DataEntrada" Type="datetime" Nullable="false" />
-    <Property Name="DataVencimento" Type="datetime" Nullable="false" />
+    <Property Name="DataEntrada" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="DataVencimento" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="ValorTotal" Type="decimal" Nullable="false" Scale="2" />
     <Property Name="TipoDespesa" Type="int" Nullable="false" />
     <Property Name="TipoPagamento" Type="int" Nullable="false" />
@@ -166,7 +166,7 @@
     </Key>
     <Property Name="CodigoMedida" Type="int" Nullable="false" />
     <Property Name="Matricula" Type="int" Nullable="false" />
-    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
     <Property Name="Altura" Type="decimal" Nullable="false" Precision="5" Scale="2" />
     <Property Name="Peso" Type="decimal" Nullable="false" Scale="5" />
     <Property Name="IMC" Type="decimal" Nullable="false" Precision="5" Scale="2" />
@@ -219,8 +219,8 @@
     </Key>
     <Property Name="CodigoPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CadastradoDesde" Type="datetime" Nullable="false" />
-    <Property Name="NomeRazao" Type="varchar" Nullable="false" MaxLength="45" />
-    <Property Name="ApelidoFantasia" Type="varchar" MaxLength="45" />
+    <Property Name="NomeRazao" Type="varchar" Nullable="false" MaxLength="55" />
+    <Property Name="ApelidoFantasia" Type="varchar" MaxLength="55" />
     <Property Name="CpfCnpj" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="RG" Type="varchar" Nullable="false" MaxLength="12" />
     <Property Name="DataNascimento" Type="datetime" Nullable="false" />
@@ -230,12 +230,13 @@
     <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
-    <Property Name="CEP" Type="int" Nullable="false" />
+    <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
     <Property Name="Complemento" Type="varchar" MaxLength="50" />
     <Property Name="Telefone1" Type="varchar" Nullable="false" MaxLength="12" />
     <Property Name="Telefone2" Type="varchar" MaxLength="12" />
     <Property Name="Email" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Fornecedor" Type="char" MaxLength="1" />
   </EntityType>
   <EntityType Name="tbl_produto">
     <Key>
@@ -245,7 +246,6 @@
     <Property Name="CodigoBarra" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="NomeItem" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="Quantidade" Type="decimal" Nullable="false" Scale="5" />
-    <Property Name="ValorItem" Type="decimal" Nullable="false" Scale="2" />
     <Property Name="QuantidadeMinima" Type="decimal" Nullable="false" Scale="5" />
     <Property Name="PrecoCusto" Type="decimal" Nullable="false" Scale="2" />
     <Property Name="PrecoVenda" Type="decimal" Nullable="false" Scale="2" />

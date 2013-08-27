@@ -82,9 +82,8 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App_GlobalResources\Mensagem.en.resx" />
     <EmbeddedResource Include="App_GlobalResources\Mensagem.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Mensagem.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

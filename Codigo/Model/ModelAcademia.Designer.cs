@@ -472,20 +472,14 @@ namespace Models
         /// <param name="matricula">Valor inicial da propriedade Matricula.</param>
         /// <param name="codigoPessoa">Valor inicial da propriedade CodigoPessoa.</param>
         /// <param name="valorMensalidade">Valor inicial da propriedade ValorMensalidade.</param>
-        /// <param name="ativoDesde">Valor inicial da propriedade AtivoDesde.</param>
         /// <param name="diaVencimento">Valor inicial da propriedade DiaVencimento.</param>
-        /// <param name="dataMatricula">Valor inicial da propriedade DataMatricula.</param>
-        /// <param name="dataTrancamento">Valor inicial da propriedade DataTrancamento.</param>
-        public static tbl_aluno Createtbl_aluno(global::System.Int32 matricula, global::System.Int32 codigoPessoa, global::System.Decimal valorMensalidade, global::System.DateTime ativoDesde, global::System.DateTime diaVencimento, global::System.DateTime dataMatricula, global::System.DateTime dataTrancamento)
+        public static tbl_aluno Createtbl_aluno(global::System.Int32 matricula, global::System.Int32 codigoPessoa, global::System.Decimal valorMensalidade, global::System.DateTime diaVencimento)
         {
             tbl_aluno tbl_aluno = new tbl_aluno();
             tbl_aluno.Matricula = matricula;
             tbl_aluno.CodigoPessoa = codigoPessoa;
             tbl_aluno.ValorMensalidade = valorMensalidade;
-            tbl_aluno.AtivoDesde = ativoDesde;
             tbl_aluno.DiaVencimento = diaVencimento;
-            tbl_aluno.DataMatricula = dataMatricula;
-            tbl_aluno.DataTrancamento = dataTrancamento;
             return tbl_aluno;
         }
 
@@ -570,9 +564,9 @@ namespace Models
         /// <summary>
         /// Nenhuma Documentação de Metadados disponível.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.DateTime AtivoDesde
+        public Nullable<global::System.DateTime> AtivoDesde
         {
             get
             {
@@ -587,8 +581,8 @@ namespace Models
                 OnAtivoDesdeChanged();
             }
         }
-        private global::System.DateTime _AtivoDesde;
-        partial void OnAtivoDesdeChanging(global::System.DateTime value);
+        private Nullable<global::System.DateTime> _AtivoDesde;
+        partial void OnAtivoDesdeChanging(Nullable<global::System.DateTime> value);
         partial void OnAtivoDesdeChanged();
     
         /// <summary>
@@ -618,9 +612,9 @@ namespace Models
         /// <summary>
         /// Nenhuma Documentação de Metadados disponível.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.DateTime DataMatricula
+        public Nullable<global::System.DateTime> DataMatricula
         {
             get
             {
@@ -635,16 +629,16 @@ namespace Models
                 OnDataMatriculaChanged();
             }
         }
-        private global::System.DateTime _DataMatricula;
-        partial void OnDataMatriculaChanging(global::System.DateTime value);
+        private Nullable<global::System.DateTime> _DataMatricula;
+        partial void OnDataMatriculaChanging(Nullable<global::System.DateTime> value);
         partial void OnDataMatriculaChanged();
     
         /// <summary>
         /// Nenhuma Documentação de Metadados disponível.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.DateTime DataTrancamento
+        public Nullable<global::System.DateTime> DataTrancamento
         {
             get
             {
@@ -659,8 +653,8 @@ namespace Models
                 OnDataTrancamentoChanged();
             }
         }
-        private global::System.DateTime _DataTrancamento;
-        partial void OnDataTrancamentoChanging(global::System.DateTime value);
+        private Nullable<global::System.DateTime> _DataTrancamento;
+        partial void OnDataTrancamentoChanging(Nullable<global::System.DateTime> value);
         partial void OnDataTrancamentoChanged();
 
         #endregion
@@ -1213,7 +1207,7 @@ namespace Models
         /// <param name="parcela">Valor inicial da propriedade Parcela.</param>
         /// <param name="vencimento">Valor inicial da propriedade Vencimento.</param>
         /// <param name="valor">Valor inicial da propriedade Valor.</param>
-        public static tbl_despesa Createtbl_despesa(global::System.Int32 codigoDespesa, global::System.Int32 codigoPessoa, global::System.String descricao, global::System.DateTime dataEntrada, global::System.DateTime dataVencimento, global::System.Decimal valorTotal, global::System.Int32 tipoDespesa, global::System.Int32 tipoPagamento, global::System.Int32 numeroParcelas, global::System.String observacao, global::System.Int32 parcela, global::System.DateTime vencimento, global::System.Decimal valor)
+        public static tbl_despesa Createtbl_despesa(global::System.Int32 codigoDespesa, global::System.Int32 codigoPessoa, global::System.String descricao, global::System.String dataEntrada, global::System.String dataVencimento, global::System.Decimal valorTotal, global::System.Int32 tipoDespesa, global::System.Int32 tipoPagamento, global::System.Int32 numeroParcelas, global::System.String observacao, global::System.Int32 parcela, global::System.DateTime vencimento, global::System.Decimal valor)
         {
             tbl_despesa tbl_despesa = new tbl_despesa();
             tbl_despesa.CodigoDespesa = codigoDespesa;
@@ -1315,7 +1309,7 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime DataEntrada
+        public global::System.String DataEntrada
         {
             get
             {
@@ -1325,13 +1319,13 @@ namespace Models
             {
                 OnDataEntradaChanging(value);
                 ReportPropertyChanging("DataEntrada");
-                _DataEntrada = StructuralObject.SetValidValue(value);
+                _DataEntrada = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("DataEntrada");
                 OnDataEntradaChanged();
             }
         }
-        private global::System.DateTime _DataEntrada;
-        partial void OnDataEntradaChanging(global::System.DateTime value);
+        private global::System.String _DataEntrada;
+        partial void OnDataEntradaChanging(global::System.String value);
         partial void OnDataEntradaChanged();
     
         /// <summary>
@@ -1339,7 +1333,7 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime DataVencimento
+        public global::System.String DataVencimento
         {
             get
             {
@@ -1349,13 +1343,13 @@ namespace Models
             {
                 OnDataVencimentoChanging(value);
                 ReportPropertyChanging("DataVencimento");
-                _DataVencimento = StructuralObject.SetValidValue(value);
+                _DataVencimento = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("DataVencimento");
                 OnDataVencimentoChanged();
             }
         }
-        private global::System.DateTime _DataVencimento;
-        partial void OnDataVencimentoChanging(global::System.DateTime value);
+        private global::System.String _DataVencimento;
+        partial void OnDataVencimentoChanging(global::System.String value);
         partial void OnDataVencimentoChanged();
     
         /// <summary>
@@ -3495,7 +3489,7 @@ namespace Models
         /// <param name="telefone1">Valor inicial da propriedade Telefone1.</param>
         /// <param name="email">Valor inicial da propriedade Email.</param>
         /// <param name="senha">Valor inicial da propriedade Senha.</param>
-        public static tbl_pessoa Createtbl_pessoa(global::System.Int32 codigoPessoa, global::System.DateTime cadastradoDesde, global::System.String nomeRazao, global::System.String cpfCnpj, global::System.String rG, global::System.DateTime dataNascimento, global::System.String sexo, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cidade, global::System.String estado, global::System.Int32 cEP, global::System.String telefone1, global::System.String email, global::System.String senha)
+        public static tbl_pessoa Createtbl_pessoa(global::System.Int32 codigoPessoa, global::System.DateTime cadastradoDesde, global::System.String nomeRazao, global::System.String cpfCnpj, global::System.String rG, global::System.DateTime dataNascimento, global::System.String sexo, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cidade, global::System.String estado, global::System.String cEP, global::System.String telefone1, global::System.String email, global::System.String senha)
         {
             tbl_pessoa tbl_pessoa = new tbl_pessoa();
             tbl_pessoa.CodigoPessoa = codigoPessoa;
@@ -3840,7 +3834,7 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 CEP
+        public global::System.String CEP
         {
             get
             {
@@ -3850,13 +3844,13 @@ namespace Models
             {
                 OnCEPChanging(value);
                 ReportPropertyChanging("CEP");
-                _CEP = StructuralObject.SetValidValue(value);
+                _CEP = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("CEP");
                 OnCEPChanged();
             }
         }
-        private global::System.Int32 _CEP;
-        partial void OnCEPChanging(global::System.Int32 value);
+        private global::System.String _CEP;
+        partial void OnCEPChanging(global::System.String value);
         partial void OnCEPChanged();
     
         /// <summary>
@@ -3978,6 +3972,30 @@ namespace Models
         private global::System.String _Senha;
         partial void OnSenhaChanging(global::System.String value);
         partial void OnSenhaChanged();
+    
+        /// <summary>
+        /// Nenhuma Documentação de Metadados disponível.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Fornecedor
+        {
+            get
+            {
+                return _Fornecedor;
+            }
+            set
+            {
+                OnFornecedorChanging(value);
+                ReportPropertyChanging("Fornecedor");
+                _Fornecedor = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Fornecedor");
+                OnFornecedorChanged();
+            }
+        }
+        private global::System.String _Fornecedor;
+        partial void OnFornecedorChanging(global::System.String value);
+        partial void OnFornecedorChanged();
 
         #endregion
     
@@ -4135,18 +4153,16 @@ namespace Models
         /// <param name="codigoBarra">Valor inicial da propriedade CodigoBarra.</param>
         /// <param name="nomeItem">Valor inicial da propriedade NomeItem.</param>
         /// <param name="quantidade">Valor inicial da propriedade Quantidade.</param>
-        /// <param name="valorItem">Valor inicial da propriedade ValorItem.</param>
         /// <param name="quantidadeMinima">Valor inicial da propriedade QuantidadeMinima.</param>
         /// <param name="precoCusto">Valor inicial da propriedade PrecoCusto.</param>
         /// <param name="precoVenda">Valor inicial da propriedade PrecoVenda.</param>
-        public static tbl_produto Createtbl_produto(global::System.Int32 codigoProduto, global::System.String codigoBarra, global::System.String nomeItem, global::System.Decimal quantidade, global::System.Decimal valorItem, global::System.Decimal quantidadeMinima, global::System.Decimal precoCusto, global::System.Decimal precoVenda)
+        public static tbl_produto Createtbl_produto(global::System.Int32 codigoProduto, global::System.String codigoBarra, global::System.String nomeItem, global::System.Decimal quantidade, global::System.Decimal quantidadeMinima, global::System.Decimal precoCusto, global::System.Decimal precoVenda)
         {
             tbl_produto tbl_produto = new tbl_produto();
             tbl_produto.CodigoProduto = codigoProduto;
             tbl_produto.CodigoBarra = codigoBarra;
             tbl_produto.NomeItem = nomeItem;
             tbl_produto.Quantidade = quantidade;
-            tbl_produto.ValorItem = valorItem;
             tbl_produto.QuantidadeMinima = quantidadeMinima;
             tbl_produto.PrecoCusto = precoCusto;
             tbl_produto.PrecoVenda = precoVenda;
@@ -4254,30 +4270,6 @@ namespace Models
         private global::System.Decimal _Quantidade;
         partial void OnQuantidadeChanging(global::System.Decimal value);
         partial void OnQuantidadeChanged();
-    
-        /// <summary>
-        /// Nenhuma Documentação de Metadados disponível.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal ValorItem
-        {
-            get
-            {
-                return _ValorItem;
-            }
-            set
-            {
-                OnValorItemChanging(value);
-                ReportPropertyChanging("ValorItem");
-                _ValorItem = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ValorItem");
-                OnValorItemChanged();
-            }
-        }
-        private global::System.Decimal _ValorItem;
-        partial void OnValorItemChanging(global::System.Decimal value);
-        partial void OnValorItemChanged();
     
         /// <summary>
         /// Nenhuma Documentação de Metadados disponível.

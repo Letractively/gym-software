@@ -97,7 +97,7 @@ namespace BibliotecaWeb.Controllers
         {
             gModalidade.Remover(id);
             return RedirectToAction("Index");
-            View();
+            
         }
 
     }
