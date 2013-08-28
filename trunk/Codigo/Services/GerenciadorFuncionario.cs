@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorFuncionario
     {
+        private GerenciadorPessoa gPessoa;
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -20,6 +21,7 @@ namespace Services
         {
             this.unitOfWork = new UnitOfWork();
             shared = false;
+            gPessoa = new GerenciadorPessoa(unitOfWork);
         }
 
         /// <summary>
@@ -40,10 +42,17 @@ namespace Services
         /// <returns>Chave identificante na base</returns>
         public int Inserir(Funcionario funcionarioModel)
         {
+           
+            funcionarioModel.CadastradoDesde = DateTime.Now;
+            funcionarioModel.Fornecedor = "N";
+
+            int codigoPessoa = gPessoa.Inserir(funcionarioModel);
             tbl_funcionario funcionarioE = new tbl_funcionario();
+
             Atribuir(funcionarioModel, funcionarioE);
             unitOfWork.RepositorioFuncionario.Inserir(funcionarioE);
             unitOfWork.Commit(shared);
+
             return funcionarioE.CodigoFuncionario;
         }
 
@@ -53,6 +62,7 @@ namespace Services
         /// <param name="funcionarioModel"></param>
         public void Editar(Funcionario funcionarioModel)
         {
+            gPessoa.Editar(funcionarioModel);
             tbl_funcionario funcionarioE = new tbl_funcionario(); 
             Atribuir(funcionarioModel, funcionarioE);
             unitOfWork.RepositorioFuncionario.Editar(funcionarioE);
@@ -77,11 +87,39 @@ namespace Services
         private IQueryable<Funcionario> GetQuery()
         {
             IQueryable<tbl_funcionario> tbl_funcionario = unitOfWork.RepositorioFuncionario.GetQueryable();
-            var query = from funcionario in tbl_funcionario 
+            IQueryable<tbl_pessoa> tbl_pessoa = unitOfWork.RepositorioPessoa.GetQueryable();
+
+            var query = from funcionario in tbl_funcionario
+                        join pessoa in tbl_pessoa
+                        on funcionario.CodigoPessoa equals pessoa.CodigoPessoa
+
                         select new Funcionario
                         {
+                            /*atributos Funcionario*/
                             CodigoFuncionario = funcionario.CodigoFuncionario,
-                            Permicao = funcionario.Permicao
+                            CodigoPessoa = funcionario.CodigoPessoa,
+                            Permicao = funcionario.Permicao,
+
+                            /*atributos Pessoa*/
+                            ApelidoFantasia = pessoa.ApelidoFantasia,
+                            Bairro = pessoa.Bairro,
+                            CadastradoDesde = pessoa.CadastradoDesde,
+                            CEP = pessoa.CEP,
+                            Cidade = pessoa.Cidade,
+                            Complemento = pessoa.Complemento,
+                            CpfCnpj = pessoa.CpfCnpj,
+                            DataNascimento = pessoa.DataNascimento,
+                            Email = pessoa.Email,
+                            Estado = pessoa.Estado,
+                            NomeRazao = pessoa.NomeRazao,
+                            Numero = pessoa.Numero,
+                            RG = pessoa.RG,
+                            Rua = pessoa.Rua,
+                            Senha = pessoa.Senha,
+                            Sexo = pessoa.Sexo,
+                            Telefone1 = pessoa.Telefone1,
+                            Telefone2 = pessoa.Telefone2,
+                            Fornecedor = pessoa.Fornecedor
                         };
             return query;
         }
@@ -113,7 +151,8 @@ namespace Services
         /// <param name="funcionarioE">Entity mapeada da base de dados</param>
         private void Atribuir(Funcionario funcionarioModel, tbl_funcionario funcionarioE)
         {    
-            funcionarioE.CodigoFuncionario = funcionarioModel.CodigoFuncionario;            
+            funcionarioE.CodigoFuncionario = funcionarioModel.CodigoFuncionario;
+            funcionarioE.CodigoPessoa = funcionarioModel.CodigoPessoa;
             funcionarioE.Permicao = funcionarioModel.Permicao; 
         }
     }

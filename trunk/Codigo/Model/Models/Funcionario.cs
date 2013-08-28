@@ -7,15 +7,13 @@ using Models.App_GlobalResources;
 
 namespace Models.Models
 {
-    public class Funcionario
+    public class Funcionario : Pessoa
     {
-        [Display(Name = "Código")]
+        [Display(Name = "Código_Funcionario")]
         public int CodigoFuncionario { get; set; }
-        
-        [Required]
-        [Display(Name = "sexo", ResourceType = typeof(Mensagem))]
-        public /*Permicao*/ string Permicao { get; set; }
-    }
 
-    public enum Permicao { Atendente, Instrutor, Proprietario };
+        [Required]
+        [Display(Name = "permicao")]
+        public string Permicao { get; set; }
+    }    
 }
