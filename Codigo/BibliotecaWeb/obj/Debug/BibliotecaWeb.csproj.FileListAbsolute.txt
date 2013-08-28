@@ -52,3 +52,4 @@ C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Bibliote
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\BibliotecaWeb\bin\en\Model.resources.dll
