@@ -10,6 +10,15 @@
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
+<script type="text/javascript">
+    $.validator.methods.number = function (value, element) {
+        return !isNaN($.parseFloat(value));
+    }
+
+    $(function () {
+        $.preferCulture('pt-BR');
+    });
+</script>
 
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
@@ -22,12 +31,17 @@
             <%: Html.ValidationMessageFor(model => model.CodigoMedida) %>
         </div>
 
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.Matricula) %>
+            <%: Html.ValidationMessageFor(model => model.Matricula) %>
+        </div>
+
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Date) %>
+            <%: Html.LabelFor(model => model.Data) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Date) %>
-            <%: Html.ValidationMessageFor(model => model.Date) %>
+            <%: Html.EditorFor(model => model.Data) %>
+            <%: Html.ValidationMessageFor(model => model.Data) %>
         </div>
 
         <div class="editor-label">

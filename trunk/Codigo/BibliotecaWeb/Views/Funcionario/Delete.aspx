@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Deletar</h2>
+<h2>Excluir</h2>
 
 <h3>Você Realmente deseja apagar esse registro?</h3>
 <fieldset>

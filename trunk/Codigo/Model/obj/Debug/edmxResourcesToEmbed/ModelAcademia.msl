@@ -106,7 +106,7 @@
           <ScalarProperty Name="IMC" ColumnName="IMC" />
           <ScalarProperty Name="Peso" ColumnName="Peso" />
           <ScalarProperty Name="Altura" ColumnName="Altura" />
-          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
           <ScalarProperty Name="Matricula" ColumnName="Matricula" />
           <ScalarProperty Name="CodigoMedida" ColumnName="CodigoMedida" />
         </MappingFragment>

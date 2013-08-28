@@ -16,6 +16,11 @@
         <%: Html.DisplayFor(model => model.CodigoFuncionario) %>
     </div>
 
+    <div class="display-label">Codigo da Pessoa</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.CodigoPessoa) %>
+    </div>
+
     <div class="display-label">Nome / Razão</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NomeRazao) %>
