@@ -183,7 +183,7 @@
     </Key>
     <Property Type="Int32" Name="CodigoMedida" Nullable="false" />
     <Property Type="Int32" Name="Matricula" Nullable="false" />
-    <Property Type="DateTime" Name="Date" Nullable="false" />
+    <Property Type="DateTime" Name="Data" Nullable="false" />
     <Property Type="Decimal" Name="Altura" Nullable="false" />
     <Property Type="Decimal" Name="Peso" Nullable="false" />
     <Property Type="Decimal" Name="IMC" Nullable="false" />

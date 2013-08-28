@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorMedida
     {
+        private GerenciadorAluno gAluno;
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -20,6 +21,7 @@ namespace Services
         {
             this.unitOfWork = new UnitOfWork();
             shared = false;
+            gAluno = new GerenciadorAluno(unitOfWork);
         }
 
         /// <summary>
@@ -40,10 +42,20 @@ namespace Services
         /// <returns>Chave identificante na base</returns>
         public int Inserir(Medida medidaModel)
         {
-            tbl_medida medidaE = new tbl_medida();
+           /* tbl_medida medidaE = new tbl_medida();
             Atribuir(medidaModel, medidaE);
             unitOfWork.RepositorioMedida.Inserir(medidaE);
             unitOfWork.Commit(shared);
+            return medidaE.CodigoMedida;*/
+
+            
+            int codigoAluno = gAluno.Inserir(medidaModel);
+            tbl_medida medidaE = new tbl_medida();
+
+            Atribuir(medidaModel, medidaE);
+            unitOfWork.RepositorioMedida.Inserir(medidaE);
+            unitOfWork.Commit(shared);
+
             return medidaE.CodigoMedida;
         }
 
@@ -53,6 +65,7 @@ namespace Services
         /// <param name="medidaModel"></param>
         public void Editar(Medida medidaModel)
         {
+            gAluno.Editar(medidaModel);
             tbl_medida medidaE = new tbl_medida();
             Atribuir(medidaModel, medidaE);
             unitOfWork.RepositorioMedida.Editar(medidaE);
@@ -77,11 +90,17 @@ namespace Services
         private IQueryable<Medida> GetQuery()
         {
             IQueryable<tbl_medida> tbl_medida = unitOfWork.RepositorioMedida.GetQueryable();
+            IQueryable<tbl_aluno> tbl_aluno = unitOfWork.RepositorioAluno.GetQueryable();
+
             var query = from medida in tbl_medida
+                        join aluno in tbl_aluno
+                        on medida.Matricula equals aluno.Matricula
+
                         select new Medida
                         {
                             CodigoMedida = medida.CodigoMedida,
-                            Date = medida.Date,
+                            Matricula = medida.Matricula,
+                            Data = medida.Data,
                             Altura = medida.Altura,
                             Peso = medida.Peso,
                             IMC = medida.IMC,
@@ -132,7 +151,8 @@ namespace Services
         private void Atribuir(Medida medidaModel, tbl_medida medidaE)
         {
             medidaE.CodigoMedida = medidaModel.CodigoMedida;
-            medidaE.Date = medidaModel.Date;
+            medidaE.Matricula = medidaModel.Matricula;
+            medidaE.Data = medidaModel.Data;
             medidaE.Altura = medidaModel.Altura;
             medidaE.Peso = medidaModel.Peso;
             medidaE.IMC = medidaModel.IMC;

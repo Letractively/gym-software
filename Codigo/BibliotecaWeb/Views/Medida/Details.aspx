@@ -11,14 +11,19 @@
 <fieldset>
     <legend>Medida</legend>
 
-    <div class="display-label">CodigoMedida</div>
+    <div class="display-label">Código da Medida</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.CodigoMedida) %>
     </div>
 
-    <div class="display-label">Date</div>
+    <div class="display-label">Matrícula</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.Date) %>
+        <%: Html.DisplayFor(model => model.Matricula) %>
+    </div>
+
+    <div class="display-label">Data</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.Data) %>
     </div>
 
     <div class="display-label">Altura</div>
@@ -71,49 +76,44 @@
         <%: Html.DisplayFor(model => model.Ombro) %>
     </div>
 
-    <div class="display-label">BicepsEsq</div>
+    <div class="display-label">Bíceps Esquerdo</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.BicepsEsq) %>
     </div>
 
-    <div class="display-label">BicepsDir</div>
+    <div class="display-label">Bíceps Direito</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.BicepsDir) %>
     </div>
 
-    <div class="display-label">AnteBracoEsq</div>
+    <div class="display-label">AnteBraço Esquerdo</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.AnteBracoEsq) %>
     </div>
 
-    <div class="display-label">AnteBracoDir</div>
+    <div class="display-label">AnteBraço Direito</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.AnteBracoDir) %>
     </div>
 
-    <div class="display-label">CoxaEsq</div>
+    <div class="display-label">Coxa Esquerda</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.CoxaEsq) %>
     </div>
 
-    <div class="display-label">CoxaDir</div>
+    <div class="display-label">Coxa Direita</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.CoxaDir) %>
     </div>
 
-    <div class="display-label">PanturrilhaEsq</div>
+    <div class="display-label">Panturrilha Esquerda</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.PanturrilhaEsq) %>
     </div>
 
-    <div class="display-label">PanturrilhaDir</div>
+    <div class="display-label">Panturrilha Direita</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.PanturrilhaDir) %>
-    </div>
-
-    <div class="display-label">Matricula</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.Matricula) %>
     </div>
 </fieldset>
 <p>

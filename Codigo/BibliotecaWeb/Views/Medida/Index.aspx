@@ -9,15 +9,18 @@
 <h2>Index</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Inserir Nova", "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            CodigoMedida
+            Código da Medida
         </th>
         <th>
-            Date
+            Matrícula
+        </th> 
+        <th>
+            Data
         </th>
         <th>
             Altura
@@ -34,6 +37,8 @@
         <th>
             Abdomen
         </th>
+    </tr>
+    <tr>
         <th>
             Cintura
         </th>
@@ -48,34 +53,33 @@
         </th>
         <th>
             Ombro
+        </th>    
+        <th>
+            Bíceps Esquerdo
         </th>
         <th>
-            BicepsEsq
+            Bíceps Direito
+        </th>
+    </tr>
+    <tr>
+        <th>
+            AnteBraço Esquerdo
         </th>
         <th>
-            BicepsDir
+            AnteBraço Direito
         </th>
         <th>
-            AnteBracoEsq
+            Coxa Esquerda
         </th>
         <th>
-            AnteBracoDir
+            Coxa Direita
         </th>
         <th>
-            CoxaEsq
+            Panturrilha Esquerda
         </th>
         <th>
-            CoxaDir
-        </th>
-        <th>
-            PanturrilhaEsq
-        </th>
-        <th>
-            PanturrilhaDir
-        </th>
-        <th>
-            Matricula
-        </th>        
+            Panturrilha Direita
+        </th>               
         <th></th>
     </tr>
 
@@ -85,7 +89,10 @@
             <%: Html.DisplayFor(modelItem => item.CodigoMedida) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Date) %>
+            <%: Html.DisplayFor(modelItem => item.Matricula) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Data) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Altura) %>
@@ -140,10 +147,7 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.PanturrilhaDir) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Matricula) %>
-        </td>
+        </td>        
         <td>
             <%: Html.ActionLink("Alterar", "Edit", new {  id=item.CodigoMedida }) %> |
             <%: Html.ActionLink("Detalhes", "Details", new { id = item.CodigoMedida })%> |

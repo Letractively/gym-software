@@ -5,105 +5,202 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 using Models.App_GlobalResources;
 
+
 namespace Models.Models
 {
     public class Medida : Aluno
     {
         public int CodigoMedida { get; set; }
 
-        [Required]
+    
+   /*   [Required]
         [DataType(DataType.Date)]
         [Display(Name = "data", ResourceType = typeof(Mensagem))]
-        public DateTime Date { get; set; }
+   */   public DateTime Data { get; set; }
 
-        [Required]
-        [Display(Name = "altura", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
-        public decimal Altura { get; set; }
+   //     [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+   //     [Range(0, 1000000)]
+   //     [DisplayFormat(DataFormatString = "{0:c}")]
+        public decimal Altura { get; set; } 
 
-        [Required]
-        [Display(Name = "peso", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+   //     [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+   //     [Range(0, 1000000)]
+   //     [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Peso { get; set; }
 
-        [Required]
-        [Display(Name = "imc", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+   //     [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+   //     [Range(0, 1000000)]
+   //     [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal IMC { get; set; }
 
-        [Required]
-        [Display(Name = "gordura", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+   //     [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+   //     [Range(0, 1000000)]
+   //    [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Gordura { get; set; }
 
-        [Required]
-        [Display(Name = "abdomen", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Abdomen { get; set; }
 
-        [Required]
-        [Display(Name = "cintura", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Cintura { get; set; }
 
-        [Required]
-        [Display(Name = "costa", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Costa { get; set; }
 
-        [Required]
-        [Display(Name = "peitoral", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Peitoral { get; set; }
 
-        [Required]
-        [Display(Name = "quadril", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Quadril { get; set; }
 
-        [Required]
-        [Display(Name = "ombro", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Ombro { get; set; }
-
-        [Required]
-        [Display(Name = "biceps_esquerdo", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+        
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal BicepsEsq { get; set; }
 
-        [Required]
-        [Display(Name = "biceps_direito", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal BicepsDir { get; set; }
 
-        [Required]
-        [Display(Name = "ante_braco_esquerdo", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal AnteBracoEsq { get; set; }
 
-        [Required]
-        [Display(Name = "ante_braco_direito", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal AnteBracoDir { get; set; }
 
-        [Required]
-        [Display(Name = "coxa_esquerda", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal CoxaEsq { get; set; }
 
-        [Required]
-        [Display(Name = "coxa_direita", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal CoxaDir { get; set; }
 
-        [Required]
-        [Display(Name = "panturrilha_esquerdo", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal PanturrilhaEsq { get; set; }
 
-        [Required]
-        [Display(Name = "panturrilha_direita", ResourceType = typeof(Mensagem))]
-        [StringLength(100)]
+  //      [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
+  //      [Range(0, 1000000)]
+  //      [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal PanturrilhaDir { get; set; }
-    }
+
+
+/*      
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "altura", ResourceType = typeof(Mensagem))]
+        public decimal Altura { get; set; }
+   
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "peso", ResourceType = typeof(Mensagem))]
+        public decimal Peso { get; set; }       
+ 
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "imc", ResourceType = typeof(Mensagem))]
+        public decimal IMC { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "gordura", ResourceType = typeof(Mensagem))]
+        public decimal Gordura { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "abdomen", ResourceType = typeof(Mensagem))]
+        public decimal Abdomen { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "cintura", ResourceType = typeof(Mensagem))]
+        public decimal Cintura { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "costa", ResourceType = typeof(Mensagem))]
+        public decimal Costa { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "peitoral", ResourceType = typeof(Mensagem))]
+        public decimal Peitoral { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "quadril", ResourceType = typeof(Mensagem))]
+        public decimal Quadril { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "ombro", ResourceType = typeof(Mensagem))]
+        public decimal Ombro { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "biceps_esquerdo", ResourceType = typeof(Mensagem))]
+        public decimal BicepsEsq { get; set; }
+
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "biceps_direito", ResourceType = typeof(Mensagem))]
+        public decimal BicepsDir { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "ante_braco_esquerdo", ResourceType = typeof(Mensagem))]
+        public decimal AnteBracoEsq { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "ante_braco_direito", ResourceType = typeof(Mensagem))]
+        public decimal AnteBracoDir  { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "coxa_esquerda", ResourceType = typeof(Mensagem))]
+        public decimal CoxaEsq { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "coxa_direita", ResourceType = typeof(Mensagem))]
+        public decimal CoxaDir { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "panturrilha_esquerdo", ResourceType = typeof(Mensagem))]
+        public decimal PanturrilhaEsq { get; set; }
+
+        [Range(0, 1000000)]
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "panturrilha_direita", ResourceType = typeof(Mensagem))]
+        public decimal PanturrilhaDir { get; set; }                
+  */  
+   }
 }
