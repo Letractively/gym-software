@@ -9,7 +9,7 @@
 <h2>Index</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Inserir Novo", "Create") %>
 </p>
 <table>
     <tr>
@@ -17,7 +17,28 @@
             CodigoFuncionario
         </th>
         <th>
-            Permicao
+            Nome / Razão
+        </th>
+        <th>
+            Apelido / Fantasia
+        </th>
+        <th>
+            Data Nascimento
+        </th>
+        <th>
+            Rua
+        </th>
+        <th>
+            Numero
+        </th>
+        <th>
+            Bairro
+        </th>
+        <th>
+            Cidade
+        </th>
+        <th>
+            Estado
         </th>
         <th></th>
     </tr>
@@ -28,8 +49,32 @@
             <%: Html.DisplayFor(modelItem => item.CodigoFuncionario) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Permicao) %>
+            <%: Html.DisplayFor(modelItem => item.NomeRazao) %>
         </td>
+
+        <td>
+            <%: Html.DisplayFor(modelItem => item.ApelidoFantasia) %>
+        </td>
+
+        <td>
+            <%: Html.DisplayFor(modelItem => item.DataNascimento) %>
+        </td>
+
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Rua) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Numero) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Bairro) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Cidade) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Estado) %>
+        </td>        
         <td>
             <%: Html.ActionLink("Alterar", "Edit", new {  id=item.CodigoFuncionario  }) %> |
             <%: Html.ActionLink("Detalhes", "Details", new { id = item.CodigoFuncionario })%> |

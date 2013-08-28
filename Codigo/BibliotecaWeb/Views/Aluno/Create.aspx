@@ -26,7 +26,7 @@
 
 
 
-                <div class="editor-label">
+        <div class="editor-label">
             <%: Html.LabelFor(model => model.NomeRazao) %>
         </div>
         <div class="editor-field">
