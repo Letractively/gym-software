@@ -41,14 +41,7 @@ namespace Services
         /// <param name="medidaModel">Dados do modelo</param>
         /// <returns>Chave identificante na base</returns>
         public int Inserir(Medida medidaModel)
-        {
-           /* tbl_medida medidaE = new tbl_medida();
-            Atribuir(medidaModel, medidaE);
-            unitOfWork.RepositorioMedida.Inserir(medidaE);
-            unitOfWork.Commit(shared);
-            return medidaE.CodigoMedida;*/
-
-            
+        {            
             int codigoAluno = gAluno.Inserir(medidaModel);
             tbl_medida medidaE = new tbl_medida();
 
@@ -76,9 +69,9 @@ namespace Services
         /// Remove da base de dados
         /// </summary>
         /// <param name="medidaModel"></param>
-        public void Remover(int CodigoMedida)
+        public void Remover(int idMedida)
         {
-            unitOfWork.RepositorioMedida.Remover(medida => medida.CodigoMedida.Equals(CodigoMedida));
+            unitOfWork.RepositorioMedida.Remover(medida => medida.CodigoMedida.Equals(idMedida));
             unitOfWork.Commit(shared);
         }
 

@@ -1,38 +1,38 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.Produto>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%: Models.App_GlobalResources.Mensagem.gerenciar_produto %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Gerenciar Produto</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.gerenciar_produto %></h2>
 
 <p>
-    <%: Html.ActionLink("Inserir Novo", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.criar_novo, "Create")%>
 </p>
 <table>
     <tr>
         <th>
-            Código
+            <%: Models.App_GlobalResources.Mensagem.codigo %>
         </th>
         <th>
-            Código de Barra
+            <%: Models.App_GlobalResources.Mensagem.codigo_barra %>
         </th>
         <th>
-            Nome
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
         <th>
-            Quantidade
+            <%: Models.App_GlobalResources.Mensagem.quantidade %>
         </th>        
         <th>
-            Quantidade Mínima
+            <%: Models.App_GlobalResources.Mensagem.quantidade_minima %>
         </th>
         <th>
-            Preço de Custo
+            <%: Models.App_GlobalResources.Mensagem.preco_custo %>
         </th>
         <th>
-            Preço de Venda
+            <%: Models.App_GlobalResources.Mensagem.preco_venda %>
         </th>
         <th></th>
     </tr>
@@ -61,9 +61,9 @@
             <%: Html.DisplayFor(modelItem => item.PrecoVenda) %>
         </td>
         <td>
-            <%: Html.ActionLink("Alterar", "Edit", new {  id=item.Codigo }) %> |
-            <%: Html.ActionLink("Detalhes", "Details", new {  id=item.Codigo }) %> |
-            <%: Html.ActionLink("Excluir", "Delete", new {  id=item.Codigo }) %>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.Codigo })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.Codigo })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.excluir, "Delete", new { id = item.Codigo })%>
         </td>
     </tr>
 <% } %>

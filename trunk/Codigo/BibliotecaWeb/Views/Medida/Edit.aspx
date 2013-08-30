@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.Medida>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Edit
+    <%: Models.App_GlobalResources.Mensagem.editar %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Alterar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.editar %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -23,7 +23,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Medida</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.medida %></legend>
 
         
         <div class="editor-field">
@@ -189,13 +189,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Voltar para Lista", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar_para_lista, "Index") %>
 </div>
 
 </asp:Content>

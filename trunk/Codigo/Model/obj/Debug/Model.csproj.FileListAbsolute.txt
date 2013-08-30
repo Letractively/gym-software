@@ -32,3 +32,4 @@ C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Model\ob
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Model\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Model\obj\Debug\Model.dll
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Model\obj\Debug\Model.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
