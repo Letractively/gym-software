@@ -73,9 +73,9 @@ namespace Services
         /// Remove da base de dados
         /// </summary>
         /// <param name="funcionarioModel"></param>
-        public void Remover(int CodigoFuncionario)
+        public void Remover(int idFuncionario)
         {
-            unitOfWork.RepositorioFuncionario.Remover(funcionario => funcionario.CodigoFuncionario.Equals(CodigoFuncionario));
+            unitOfWork.RepositorioFuncionario.Remover(funcionario => funcionario.CodigoFuncionario.Equals(idFuncionario));
             unitOfWork.Commit(shared);
         }
 

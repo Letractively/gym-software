@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.Funcionario>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    <%: Models.App_GlobalResources.Mensagem.novo %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Criar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.novo %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -23,7 +23,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Funcionario</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.funcionario %></legend>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.NomeRazao) %>
@@ -47,12 +47,11 @@
             <%: Html.LabelFor(model => model.Permicao) %>
         </div>
         <div class="editor-field">
-            <%: Html.RadioButtonFor(model => model.Permicao, "Atendente")%>    Atendente   <br /> 
-            <%: Html.RadioButtonFor(model => model.Permicao, "Instrutor")%>    Instrutor   <br />
-            <%: Html.RadioButtonFor(model => model.Permicao, "Proprietario")%> Proprietario
+            <%: Html.RadioButtonFor(model => model.Permicao, "Atendente")%>    <%: Models.App_GlobalResources.Mensagem.atendente %>   <br /> 
+            <%: Html.RadioButtonFor(model => model.Permicao, "Instrutor")%>    <%: Models.App_GlobalResources.Mensagem.instrutor %>   <br />
+            <%: Html.RadioButtonFor(model => model.Permicao, "Proprietario")%> <%: Models.App_GlobalResources.Mensagem.proprietario %>
             <%: Html.ValidationMessageFor(model => model.Permicao) %>
         </div>
-
               
         <div class="editor-label">
             <%: Html.LabelFor(model => model.CadastradoDesde) %>
@@ -60,9 +59,7 @@
         <div class="editor-field">
             <%: Html.EditorFor(model => model.CadastradoDesde)%>
             <%: Html.ValidationMessageFor(model => model.CadastradoDesde) %>
-        </div>
-
-        
+        </div>               
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.CpfCnpj) %>
@@ -188,12 +185,6 @@
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Senha) %>
             <%: Html.ValidationMessageFor(model => model.Senha) %>
-        </div>
-
-
-        <div class="editor-field">
-            <%: Html.LabelFor(model => model.Fornecedor)%>
-            <%: Html.ValidationMessageFor(model => model.Fornecedor)%>
         </div>
 
         <p>

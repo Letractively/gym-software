@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.Medida>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    <%: Models.App_GlobalResources.Mensagem.criar_nova %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Criar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.criar_nova %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -23,9 +23,16 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Medida</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.medida %></legend>
 
-        
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Matricula) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Matricula) %>
+            <%: Html.ValidationMessageFor(model => model.Matricula) %>
+        </div>
+
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Data) %>
         </div>
@@ -179,13 +186,13 @@
         </div>
         
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.adicionar %>" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Voltar para Lista", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar_para_lista, "Index")%>
 </div>
 
 </asp:Content>

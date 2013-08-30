@@ -9,11 +9,11 @@ namespace Models.Models
 {
     public class Funcionario : Pessoa
     {
-        [Display(Name = "Código_Funcionario")]
+        [Display(Name = "codigo_funcionario", ResourceType = typeof(Mensagem))]
         public int CodigoFuncionario { get; set; }
 
         [Required]
-        [Display(Name = "permicao")]
+        [Display(Name = "permicao", ResourceType = typeof(Mensagem))]
         public string Permicao { get; set; }
     }    
 }

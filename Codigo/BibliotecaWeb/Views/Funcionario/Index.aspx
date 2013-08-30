@@ -1,44 +1,44 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.Funcionario>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%: Models.App_GlobalResources.Mensagem.gerenciar_funcionario %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.gerenciar_funcionario %></h2>
 
 <p>
-    <%: Html.ActionLink("Inserir Novo", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.criar_novo, "Create")%>
 </p>
 <table>
     <tr>
         <th>
-            CodigoFuncionario
+            <%: Models.App_GlobalResources.Mensagem.codigo_funcionario %>
         </th>
         <th>
-            Nome / Razão
+            <%: Models.App_GlobalResources.Mensagem.nome_razao%>
         </th>
         <th>
-            Apelido / Fantasia
+            <%: Models.App_GlobalResources.Mensagem.apelido_fantasia %>
         </th>
         <th>
-            Data Nascimento
+            <%: Models.App_GlobalResources.Mensagem.data_nascimento%>
         </th>
         <th>
-            Rua
+            <%: Models.App_GlobalResources.Mensagem.rua%>
         </th>
         <th>
-            Numero
+            <%: Models.App_GlobalResources.Mensagem.numero%>
         </th>
         <th>
-            Bairro
+            <%: Models.App_GlobalResources.Mensagem.bairro%>
         </th>
         <th>
-            Cidade
+            <%: Models.App_GlobalResources.Mensagem.cidade%>
         </th>
         <th>
-            Estado
+            <%: Models.App_GlobalResources.Mensagem.estado%>
         </th>
         <th></th>
     </tr>
@@ -76,9 +76,9 @@
             <%: Html.DisplayFor(modelItem => item.Estado) %>
         </td>        
         <td>
-            <%: Html.ActionLink("Alterar", "Edit", new {  id=item.CodigoFuncionario  }) %> |
-            <%: Html.ActionLink("Detalhes", "Details", new { id = item.CodigoFuncionario })%> |
-            <%: Html.ActionLink("Excluir", "Delete", new { id = item.CodigoFuncionario })%>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.CodigoFuncionario })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.CodigoFuncionario })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.excluir, "Delete", new { id = item.CodigoFuncionario })%>
         </td>
     </tr>
 <% } %>

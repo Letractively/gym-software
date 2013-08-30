@@ -117,11 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="abdomen" xml:space="preserve">
+    <value>Abdomen</value>
+  </data>
   <data name="adicionar" xml:space="preserve">
     <value>Adicionar</value>
   </data>
+  <data name="altura" xml:space="preserve">
+    <value>Altura</value>
+  </data>
   <data name="aluno" xml:space="preserve">
     <value>Aluno</value>
+  </data>
+  <data name="ante_braco_direito" xml:space="preserve">
+    <value>Antebraço Direito</value>
+  </data>
+  <data name="ante_braco_esquerdo" xml:space="preserve">
+    <value>Antebraço Esquerdo</value>
   </data>
   <data name="apelido" xml:space="preserve">
     <value>Apelido</value>
@@ -129,11 +141,20 @@
   <data name="apelido_fantasia" xml:space="preserve">
     <value>Apelido/Fantasia</value>
   </data>
+  <data name="atendente" xml:space="preserve">
+    <value>Atendente</value>
+  </data>
   <data name="ativo_desde" xml:space="preserve">
     <value>Ativo Desde</value>
   </data>
   <data name="bairro" xml:space="preserve">
     <value>Bairro</value>
+  </data>
+  <data name="biceps_direito" xml:space="preserve">
+    <value>Bíceps Direito</value>
+  </data>
+  <data name="biceps_esquerdo" xml:space="preserve">
+    <value>Bíceps Esquerdo</value>
   </data>
   <data name="cadastrado_desde" xml:space="preserve">
     <value>Cadastrado Desde</value>
@@ -147,20 +168,50 @@
   <data name="cidade" xml:space="preserve">
     <value>Cidade</value>
   </data>
+  <data name="cintura" xml:space="preserve">
+    <value>Cintura</value>
+  </data>
   <data name="codigo" xml:space="preserve">
     <value>Código</value>
+  </data>
+  <data name="codigo_barra" xml:space="preserve">
+    <value>Código de Barra</value>
+  </data>
+  <data name="codigo_funcionario" xml:space="preserve">
+    <value>Código do Funconário</value>
+  </data>
+  <data name="codigo_medida" xml:space="preserve">
+    <value>Código da Medida</value>
+  </data>
+  <data name="codigo_pessoa" xml:space="preserve">
+    <value>Código da Pessoa</value>
   </data>
   <data name="complemento" xml:space="preserve">
     <value>Complemento</value>
   </data>
+  <data name="costa" xml:space="preserve">
+    <value>Costa</value>
+  </data>
+  <data name="coxa_direita" xml:space="preserve">
+    <value>Coxa Direita</value>
+  </data>
+  <data name="coxa_esquerda" xml:space="preserve">
+    <value>Coxa Esquerda</value>
+  </data>
   <data name="cpf_cnpj" xml:space="preserve">
     <value>Cpf/Cnpj</value>
+  </data>
+  <data name="criar_nova" xml:space="preserve">
+    <value>Inserir Nova</value>
   </data>
   <data name="criar_novo" xml:space="preserve">
     <value>Inserir Novo</value>
   </data>
   <data name="data_matricula" xml:space="preserve">
     <value>Data Matrícula</value>
+  </data>
+  <data name="data_medida" xml:space="preserve">
+    <value>Data da Medida</value>
   </data>
   <data name="data_nascimento" xml:space="preserve">
     <value>Data Nascimento</value>
@@ -201,17 +252,41 @@
   <data name="fornecedor" xml:space="preserve">
     <value>Fornecedor</value>
   </data>
+  <data name="funcionario" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
   <data name="gerenciar_aluno" xml:space="preserve">
     <value>Gerenciar Aluno</value>
   </data>
+  <data name="gerenciar_funcionario" xml:space="preserve">
+    <value>Gerenciar Funcionário</value>
+  </data>
+  <data name="gerenciar_medida" xml:space="preserve">
+    <value>Gerenciar Medida</value>
+  </data>
   <data name="gerenciar_modalidade" xml:space="preserve">
     <value>Gerenciar Modalidade</value>
+  </data>
+  <data name="gerenciar_produto" xml:space="preserve">
+    <value>Gerenciar Produto</value>
+  </data>
+  <data name="gordura" xml:space="preserve">
+    <value>Gordura</value>
+  </data>
+  <data name="imc" xml:space="preserve">
+    <value>IMC</value>
+  </data>
+  <data name="instrutor" xml:space="preserve">
+    <value>Instrutor</value>
   </data>
   <data name="masculino" xml:space="preserve">
     <value>Masculino</value>
   </data>
   <data name="matricula" xml:space="preserve">
     <value>Matrícula</value>
+  </data>
+  <data name="medida" xml:space="preserve">
+    <value>Medida</value>
   </data>
   <data name="modalidade" xml:space="preserve">
     <value>Modalidade</value>
@@ -227,6 +302,45 @@
   </data>
   <data name="numero" xml:space="preserve">
     <value>Número</value>
+  </data>
+  <data name="ombro" xml:space="preserve">
+    <value>Ombro</value>
+  </data>
+  <data name="panturrilha_direita" xml:space="preserve">
+    <value>Panturrilha Direita</value>
+  </data>
+  <data name="panturrilha_esquerdo" xml:space="preserve">
+    <value>Panturrilha Esquerdo</value>
+  </data>
+  <data name="peitoral" xml:space="preserve">
+    <value>Peitoral</value>
+  </data>
+  <data name="permicao" xml:space="preserve">
+    <value>Permição do Funcionário</value>
+  </data>
+  <data name="peso" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="preco_custo" xml:space="preserve">
+    <value>Preço de Custo</value>
+  </data>
+  <data name="preco_venda" xml:space="preserve">
+    <value>Preço de Venda</value>
+  </data>
+  <data name="produto" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="proprietario" xml:space="preserve">
+    <value>Proprietário</value>
+  </data>
+  <data name="quadril" xml:space="preserve">
+    <value>Quadril</value>
+  </data>
+  <data name="quantidade" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="quantidade_minima" xml:space="preserve">
+    <value>Quantidade Mínima</value>
   </data>
   <data name="rg" xml:space="preserve">
     <value>Rg</value>

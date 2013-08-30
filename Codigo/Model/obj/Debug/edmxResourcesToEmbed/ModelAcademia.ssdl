@@ -97,7 +97,7 @@
     <Key>
       <PropertyRef Name="CodigoAtividade" />
     </Key>
-    <Property Name="CodigoAtividade" Type="int" Nullable="false" />
+    <Property Name="CodigoAtividade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoModalidade" Type="int" Nullable="false" />
     <Property Name="NomeAtividade" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
@@ -114,7 +114,7 @@
     <Key>
       <PropertyRef Name="CodigoDespesa" />
     </Key>
-    <Property Name="CodigoDespesa" Type="int" Nullable="false" />
+    <Property Name="CodigoDespesa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoPessoa" Type="int" Nullable="false" />
     <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="DataEntrada" Type="varchar" Nullable="false" MaxLength="45" />
@@ -132,7 +132,7 @@
     <Key>
       <PropertyRef Name="CodigoFuncionario" />
     </Key>
-    <Property Name="CodigoFuncionario" Type="int" Nullable="false" />
+    <Property Name="CodigoFuncionario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoPessoa" Type="int" Nullable="false" />
     <Property Name="Permicao" Type="enum" Nullable="false" />
   </EntityType>
@@ -150,7 +150,7 @@
     <Key>
       <PropertyRef Name="CodigoItem" />
     </Key>
-    <Property Name="CodigoItem" Type="int" Nullable="false" />
+    <Property Name="CodigoItem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoVenda" Type="int" Nullable="false" />
     <Property Name="CodigoProduto" Type="int" Nullable="false" />
     <Property Name="Quantidade" Type="decimal" Nullable="false" Scale="5" />
@@ -164,7 +164,7 @@
     <Key>
       <PropertyRef Name="CodigoMedida" />
     </Key>
-    <Property Name="CodigoMedida" Type="int" Nullable="false" />
+    <Property Name="CodigoMedida" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Matricula" Type="int" Nullable="false" />
     <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="Altura" Type="decimal" Nullable="false" Precision="5" Scale="2" />
@@ -190,7 +190,7 @@
     <Key>
       <PropertyRef Name="CodigoMensagem" />
     </Key>
-    <Property Name="CodigoMensagem" Type="int" Nullable="false" />
+    <Property Name="CodigoMensagem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoPessoa" Type="int" Nullable="false" />
     <Property Name="CodRemetente" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="CodDestinatario" Type="varchar" Nullable="false" MaxLength="45" />
@@ -256,7 +256,7 @@
       <PropertyRef Name="Matricula" />
       <PropertyRef Name="CodigoAtividade" />
     </Key>
-    <Property Name="CodigoRotina" Type="int" Nullable="false" />
+    <Property Name="CodigoRotina" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Matricula" Type="int" Nullable="false" />
     <Property Name="CodigoAtividade" Type="int" Nullable="false" />
     <Property Name="Quantidade" Type="decimal" Nullable="false" Scale="5" />
@@ -267,7 +267,7 @@
     <Key>
       <PropertyRef Name="CodigoVenda" />
     </Key>
-    <Property Name="CodigoVenda" Type="int" Nullable="false" />
+    <Property Name="CodigoVenda" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="CodigoPessoa" Type="int" Nullable="false" />
     <Property Name="CodigoFuncionario" Type="int" Nullable="false" />
     <Property Name="DataVenda" Type="datetime" Nullable="false" />

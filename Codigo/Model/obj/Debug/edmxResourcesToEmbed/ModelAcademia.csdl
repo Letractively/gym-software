@@ -101,7 +101,7 @@
     <Key>
       <PropertyRef Name="CodigoAtividade" />
     </Key>
-    <Property Type="Int32" Name="CodigoAtividade" Nullable="false" />
+    <Property Type="Int32" Name="CodigoAtividade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="CodigoModalidade" Nullable="false" />
     <Property Type="String" Name="NomeAtividade" Nullable="false" />
     <NavigationProperty Name="tbl_modalidade" Relationship="academiaModel.fk_tbl_atividade_tbl_modalidade1" FromRole="tbl_atividade" ToRole="tbl_modalidade" />
@@ -123,7 +123,7 @@
     <Key>
       <PropertyRef Name="CodigoDespesa" />
     </Key>
-    <Property Type="Int32" Name="CodigoDespesa" Nullable="false" />
+    <Property Type="Int32" Name="CodigoDespesa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
     <Property Type="String" Name="Descricao" Nullable="false" />
     <Property Type="String" Name="DataEntrada" Nullable="false" />
@@ -142,7 +142,7 @@
     <Key>
       <PropertyRef Name="CodigoFuncionario" />
     </Key>
-    <Property Type="Int32" Name="CodigoFuncionario" Nullable="false" />
+    <Property Type="Int32" Name="CodigoFuncionario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
     <Property Type="String" Name="Permicao" Nullable="false" />
     <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_funcionario_tbl_pessoa1" FromRole="tbl_funcionario" ToRole="tbl_pessoa" />
@@ -164,7 +164,7 @@
     <Key>
       <PropertyRef Name="CodigoItem" />
     </Key>
-    <Property Type="Int32" Name="CodigoItem" Nullable="false" />
+    <Property Type="Int32" Name="CodigoItem" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="CodigoVenda" Nullable="false" />
     <Property Type="Int32" Name="CodigoProduto" Nullable="false" />
     <Property Type="Decimal" Name="Quantidade" Nullable="false" />
@@ -181,7 +181,7 @@
     <Key>
       <PropertyRef Name="CodigoMedida" />
     </Key>
-    <Property Type="Int32" Name="CodigoMedida" Nullable="false" />
+    <Property Type="Int32" Name="CodigoMedida" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="Matricula" Nullable="false" />
     <Property Type="DateTime" Name="Data" Nullable="false" />
     <Property Type="Decimal" Name="Altura" Nullable="false" />
@@ -208,7 +208,7 @@
     <Key>
       <PropertyRef Name="CodigoMensagem" />
     </Key>
-    <Property Type="Int32" Name="CodigoMensagem" Nullable="false" />
+    <Property Type="Int32" Name="CodigoMensagem" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
     <Property Type="String" Name="CodRemetente" Nullable="false" />
     <Property Type="String" Name="CodDestinatario" Nullable="false" />
@@ -284,7 +284,7 @@
       <PropertyRef Name="Matricula" />
       <PropertyRef Name="CodigoAtividade" />
     </Key>
-    <Property Type="Int32" Name="CodigoRotina" Nullable="false" />
+    <Property Type="Int32" Name="CodigoRotina" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="Matricula" Nullable="false" />
     <Property Type="Int32" Name="CodigoAtividade" Nullable="false" />
     <Property Type="Decimal" Name="Quantidade" Nullable="false" />
@@ -296,7 +296,7 @@
     <Key>
       <PropertyRef Name="CodigoVenda" />
     </Key>
-    <Property Type="Int32" Name="CodigoVenda" Nullable="false" />
+    <Property Type="Int32" Name="CodigoVenda" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="CodigoPessoa" Nullable="false" />
     <Property Type="Int32" Name="CodigoFuncionario" Nullable="false" />
     <Property Type="DateTime" Name="DataVenda" Nullable="false" />

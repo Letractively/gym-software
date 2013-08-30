@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.Funcionario>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Edit
+    <%: Models.App_GlobalResources.Mensagem.editar %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Alterar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.editar %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -24,7 +24,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Funcionario</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.funcionario %></legend>
 
         
         <div class="editor-field">
@@ -36,9 +36,9 @@
             <%: Html.LabelFor(model => model.Permicao) %>
         </div>
         <div class="editor-field">
-            <%: Html.RadioButtonFor(model => model.Permicao, "Atendente")%>  Atendente  <br /> 
-            <%: Html.RadioButtonFor(model => model.Permicao, "Instrutor")%>  Instrutor <br />
-            <%: Html.RadioButtonFor(model => model.Permicao, "Proprietario")%> Proprietario
+            <%: Html.RadioButtonFor(model => model.Permicao, "Atendente")%>  <%: Models.App_GlobalResources.Mensagem.atendente %>  <br /> 
+            <%: Html.RadioButtonFor(model => model.Permicao, "Instrutor")%>  <%: Models.App_GlobalResources.Mensagem.instrutor %> <br />
+            <%: Html.RadioButtonFor(model => model.Permicao, "Proprietario")%> <%: Models.App_GlobalResources.Mensagem.proprietario %>
             <%: Html.ValidationMessageFor(model => model.Permicao) %>
         </div>
 
@@ -202,13 +202,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Voltar para Lista", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar_para_lista, "Index")%>
 </div>
 
 </asp:Content>
