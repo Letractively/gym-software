@@ -12,7 +12,7 @@ namespace Models.Models
         [Display(Name = "codigo_funcionario", ResourceType = typeof(Mensagem))]
         public int CodigoFuncionario { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_nome")]
         [Display(Name = "permicao", ResourceType = typeof(Mensagem))]
         public string Permicao { get; set; }
     }    
