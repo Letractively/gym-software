@@ -10,15 +10,7 @@
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
-<script type="text/javascript">
-    $.validator.methods.number = function (value, element) {
-        return !isNaN($.parseFloat(value));
-    }
 
-    $(function () {
-        $.preferCulture('pt-BR');
-    });
-</script>
 
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
@@ -37,7 +29,7 @@
             <%: Html.LabelFor(model => model.Data) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Data) %>
+            <%: Html.TextBoxFor(model => model.Data, new { @class = "ui-datepicker" })%>
             <%: Html.ValidationMessageFor(model => model.Data) %>
         </div>
 

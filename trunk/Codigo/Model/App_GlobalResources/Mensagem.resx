@@ -186,6 +186,12 @@
   <data name="codigo_pessoa" xml:space="preserve">
     <value>Código da Pessoa</value>
   </data>
+  <data name="cod_atividade" xml:space="preserve">
+    <value>Cód. Atividade</value>
+  </data>
+  <data name="cod_modalidade" xml:space="preserve">
+    <value>Cód. Modalidade</value>
+  </data>
   <data name="complemento" xml:space="preserve">
     <value>Complemento</value>
   </data>
@@ -374,5 +380,11 @@
   </data>
   <data name="voltar_para_lista" xml:space="preserve">
     <value>Voltar Para Lista</value>
+  </data>
+  <data name="nome_atividade" xml:space="preserve">
+    <value>Nome Atividade</value>
+  </data>
+  <data name="gerenciar_atividades" xml:space="preserve">
+    <value>Gerenciar Atividades</value>
   </data>
 </root>
