@@ -21,6 +21,7 @@ namespace Persistence
         private IRepositorioGenerico<tbl_aluno> _repAluno;
         private IRepositorioGenerico<tbl_funcionario> _repFuncionario;
         private IRepositorioGenerico<tbl_medida> _repMedida;
+        private IRepositorioGenerico<tbl_atividade> _repAtividade;
         /// <summary>
         /// Construtor cria contexto transacional
         /// </summary>
@@ -106,7 +107,19 @@ namespace Persistence
                 return _repMedida;
             }
         }
-    
+
+        public IRepositorioGenerico<tbl_atividade> RepositorioAtividade
+        {
+            get
+            {
+                if (_repAtividade == null)
+                {
+                    _repAtividade = new RepositorioGenerico<tbl_atividade>(_context);
+                }
+                return _repAtividade;
+            }
+        }
+
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto
         /// quando o contexto não for compartilhado

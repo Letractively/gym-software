@@ -10,15 +10,8 @@
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
-<script type="text/javascript">
-    $.validator.methods.number = function (value, element) {
-        return !isNaN($.parseFloat(value));
-    }
 
-    $(function () {
-        $.preferCulture('pt-BR');
-    });
-</script>
+
 
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
@@ -57,7 +50,7 @@
             <%: Html.LabelFor(model => model.CadastradoDesde) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.CadastradoDesde)%>
+            <%: Html.TextBoxFor(model => model.CadastradoDesde, new { @class = "ui-datepicker" })%>
             <%: Html.ValidationMessageFor(model => model.CadastradoDesde) %>
         </div>               
 
@@ -81,7 +74,8 @@
             <%: Html.LabelFor(model => model.DataNascimento) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataNascimento) %>
+        
+            <%: Html.TextBoxFor(model => model.DataNascimento, new { @class = "ui-datepicker" })%>
             <%: Html.ValidationMessageFor(model => model.DataNascimento) %>
         </div>
 
