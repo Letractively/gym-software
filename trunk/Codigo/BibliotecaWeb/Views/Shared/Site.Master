@@ -53,8 +53,7 @@
         </header>
         <section id="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-            <footer>
-            </footer>
+
         </section>
     </div>
 </body>
