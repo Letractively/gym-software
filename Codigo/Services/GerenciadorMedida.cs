@@ -92,7 +92,7 @@ namespace Services
                         select new Medida
                         {
                             CodigoMedida = medida.CodigoMedida,
-                            Matricula = medida.Matricula,
+                            Matricula = medida.tbl_aluno.Matricula,
                             Data = medida.Data,
                             Altura = medida.Altura,
                             Peso = medida.Peso,

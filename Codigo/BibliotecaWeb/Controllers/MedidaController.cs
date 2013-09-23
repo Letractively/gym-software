@@ -14,15 +14,17 @@ namespace BibliotecaWeb.Controllers
         // GET: /Medida/
 
         GerenciadorMedida gMedida;
+        GerenciadorAluno gAluno;
 
         public MedidaController()
         {
             gMedida = new GerenciadorMedida();
+            gAluno = new GerenciadorAluno();
         }
 
         public ActionResult Index()
         {
-            return View(gMedida.ObterTodos());
+            return View(gAluno.ObterTodos());
         }
 
         //
