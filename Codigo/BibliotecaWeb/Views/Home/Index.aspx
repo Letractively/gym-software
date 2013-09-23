@@ -5,8 +5,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: ViewBag.Message %></h2>
-    <p>
-        Essa é a home page provisória.
-    </p>
+
+      <div class="slider">
+        <div id="coin-slider"> <a href="#"><img src="../../Content/shapeworld/images/slide1.jpg" width="960" height="320" alt="" /> </a> <a href="#"><img src="../../Content/shapeworld/images/slide2.jpg" width="960" height="320" alt="" /> </a> <a href="#"><img src="../../Content/shapeworld/images/slide3.jpg" width="960" height="320" alt="" /> </a> <a href="#"><img src="../../Content/shapeworld/images/slide4.jpg" width="960" height="320" alt="" /> </a> <a href="#"><img src="../../Content/shapeworld/images/slide5.jpg" width="960" height="320" alt="" /> </a></div>
+        <div class="clr"></div>
+      </div>
+
 </asp:Content>
