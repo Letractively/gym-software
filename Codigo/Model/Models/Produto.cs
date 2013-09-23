@@ -23,13 +23,13 @@ namespace Models.Models
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
         [Range(0, 1000000)]
-        [DisplayFormat(DataFormatString = "{0:c}")]
+        
         [Display(Name = "quantidade", ResourceType = typeof(Mensagem))]
         public decimal Quantidade { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
         [Range(0, 1000000)]
-        [DisplayFormat(DataFormatString = "{0:c}")]
+        
         [Display(Name = "quantidade_minima", ResourceType = typeof(Mensagem))]
         public decimal QuantidadeMinima { get; set; }
 
