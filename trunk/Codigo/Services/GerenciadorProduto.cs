@@ -120,7 +120,7 @@ namespace Services
         public IEnumerable<Produto> ObterProdutosEstoqueBaixo()
         {
 
-            return GetQuery().Where(produtoModel => produtoModel.Quantidade > produtoModel.QuantidadeMinima);
+            return GetQuery().Where(produtoModel => produtoModel.Quantidade < produtoModel.QuantidadeMinima);
         }
 
         /// <summary>
