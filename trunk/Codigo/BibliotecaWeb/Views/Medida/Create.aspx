@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.Medida>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/SiteHome.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.Medida>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.criar_nova %>
@@ -17,14 +17,7 @@
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.medida %></legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Matricula) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Matricula) %>
-            <%: Html.ValidationMessageFor(model => model.Matricula) %>
-        </div>
-
+       
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Data) %>
         </div>

@@ -55,3 +55,5 @@ C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\Bibliote
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\BibliotecaWeb\bin\en\Model.resources.dll
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.cache
 C:\Users\Islas\Documents\UFS DOCS\ENGENHARIA DE SOFTWARE 2\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.compiled
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.cache
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.compiled
