@@ -77,17 +77,18 @@ namespace Services
         private IQueryable<Produto> GetQuery()
         {
             IQueryable<tbl_produto> tbl_produto = unitOfWork.RepositorioProduto.GetQueryable();
-            var query = from produto in tbl_produto 
+            var query = from produto in tbl_produto
                         select new Produto
                         {
                             Codigo = produto.CodigoProduto,
                             CodigoBarra = produto.CodigoBarra,
                             Nome = produto.NomeItem,
-                            Quantidade = produto.Quantidade,                         
+                            Quantidade = produto.Quantidade,
                             QuantidadeMinima = produto.QuantidadeMinima,
                             PrecoCusto = produto.PrecoCusto,
                             PrecoVenda = produto.PrecoVenda
                         };
+                        
             return query;
         }
 
@@ -109,6 +110,17 @@ namespace Services
         {
             IEnumerable<Produto> produtoes = GetQuery().Where(produtoModel => produtoModel.Codigo.Equals(idProduto));
             return produtoes.ElementAtOrDefault(0);
+        }
+
+
+        /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Produto> ObterProdutosEstoqueBaixo()
+        {
+
+            return GetQuery().Where(produtoModel => produtoModel.Quantidade > produtoModel.QuantidadeMinima);
         }
 
         /// <summary>
