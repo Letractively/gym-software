@@ -115,20 +115,21 @@ h1 small {
 	padding:13px 0 0;
 	float:right;
     width: 631px;
-    height: 73px;
+    height: 44px;
 }
 .menu_nav ul {
 	list-style:none;
 	padding:0;
 	float:left;
-    width: 584px;
+    width: 655px;
+    height: 45px;
 }
 .menu_nav ul li {
 	margin:0;
 	padding:0 0 0 4px;
 	float:left;
-    height: 44px;
-    width: 33px;
+    height: 43px;
+    width: 92px;
 }
 .menu_nav ul li a {
 	display:block;
