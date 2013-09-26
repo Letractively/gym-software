@@ -82,6 +82,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\datepicker\img\arrow.png" />
+    <Content Include="Content\datepicker\img\darkdenim3.png" />
+    <Content Include="Content\datepicker\normalize.css" />
+    <Content Include="Content\datepicker\datepicker.css" />
     <Content Include="Content\shapeworld\css\coin-slider.css" />
     <Content Include="Content\shapeworld\css\style.css" />
     <Content Include="Content\shapeworld\images\fbg_bg.gif" />
