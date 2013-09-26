@@ -10,6 +10,13 @@
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
+<script src="<%: Url.Content("~/Scripts/modernizr-1.7.min.js") %>" type="text/javascript"></script>
+<script src="<%: Url.Content("~/Scripts/jquery-ui-1.8.11.min.js") %>" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ui-datepicker').datepicker({ dateFormat: "dd/mm/yy" });
+        });
+    </script>
 
 
 <% using (Html.BeginForm()) { %>
