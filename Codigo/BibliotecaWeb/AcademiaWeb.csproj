@@ -71,6 +71,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlunoController.cs" />
     <Compile Include="Controllers\AtividadeController.cs" />
+    <Compile Include="Controllers\MatriculaController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MedidaController.cs" />
@@ -173,6 +174,10 @@
     <Content Include="Views\Funcionario\Details.aspx" />
     <Content Include="Views\Funcionario\Edit.aspx" />
     <Content Include="Views\Funcionario\Index.aspx" />
+    <Content Include="Views\Matricula\Create.aspx" />
+    <Content Include="Views\Matricula\Delete.aspx" />
+    <Content Include="Views\Matricula\Edit.aspx" />
+    <Content Include="Views\Matricula\Index.aspx" />
     <Content Include="Views\Medida\Create.aspx" />
     <Content Include="Views\Medida\Delete.aspx" />
     <Content Include="Views\Medida\Details.aspx" />

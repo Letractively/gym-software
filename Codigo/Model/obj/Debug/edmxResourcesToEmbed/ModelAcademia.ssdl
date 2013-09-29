@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="academiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+<Schema Namespace="academiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="academiaModelStoreContainer">
     <EntitySet Name="tbl_aluno" EntityType="academiaModel.Store.tbl_aluno" store:Type="Tables" Schema="bd_gymsoftare" />
     <EntitySet Name="tbl_atividade" EntityType="academiaModel.Store.tbl_atividade" store:Type="Tables" Schema="bd_gymsoftare" />
@@ -8,6 +8,7 @@
     <EntitySet Name="tbl_funcionario" EntityType="academiaModel.Store.tbl_funcionario" store:Type="Tables" Schema="bd_gymsoftare" />
     <EntitySet Name="tbl_historico_rotina" EntityType="academiaModel.Store.tbl_historico_rotina" store:Type="Tables" Schema="bd_gymsoftare" />
     <EntitySet Name="tbl_item" EntityType="academiaModel.Store.tbl_item" store:Type="Tables" Schema="bd_gymsoftare" />
+    <EntitySet Name="tbl_matricula" EntityType="academiaModel.Store.tbl_matricula" store:Type="Tables" Schema="bd_gymsoftare" />
     <EntitySet Name="tbl_medida" EntityType="academiaModel.Store.tbl_medida" store:Type="Tables" Schema="bd_gymsoftare" />
     <EntitySet Name="tbl_mensagem" EntityType="academiaModel.Store.tbl_mensagem" store:Type="Tables" Schema="bd_gymsoftare" />
     <EntitySet Name="tbl_modalidade" EntityType="academiaModel.Store.tbl_modalidade" store:Type="Tables" Schema="bd_gymsoftare" />
@@ -55,6 +56,14 @@
     <AssociationSet Name="fk_tbl_item_tbl_venda1" Association="academiaModel.Store.fk_tbl_item_tbl_venda1">
       <End Role="tbl_venda" EntitySet="tbl_venda" />
       <End Role="tbl_item" EntitySet="tbl_item" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TBL_MATRICULA_TBL_ALUNO1" Association="academiaModel.Store.fk_TBL_MATRICULA_TBL_ALUNO1">
+      <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+      <End Role="tbl_matricula" EntitySet="tbl_matricula" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TBL_MATRICULA_TBL_MODALIDADE1" Association="academiaModel.Store.fk_TBL_MATRICULA_TBL_MODALIDADE1">
+      <End Role="tbl_modalidade" EntitySet="tbl_modalidade" />
+      <End Role="tbl_matricula" EntitySet="tbl_matricula" />
     </AssociationSet>
     <AssociationSet Name="fk_tbl_medida_tbl_aluno1" Association="academiaModel.Store.fk_tbl_medida_tbl_aluno1">
       <End Role="tbl_aluno" EntitySet="tbl_aluno" />
@@ -159,6 +168,15 @@
     <Property Name="PrecoCusto" Type="decimal" Nullable="false" Scale="2" />
     <Property Name="PrecoVenda" Type="decimal" Nullable="false" Scale="2" />
     <Property Name="CodigoPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_matricula">
+    <Key>
+      <PropertyRef Name="CodigoMatricula" />
+    </Key>
+    <Property Name="CodigoMatricula" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MatriculaAluno" Type="int" Nullable="false" />
+    <Property Name="CodigoModalidade" Type="int" Nullable="false" />
+    <Property Name="DataMatricula" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="tbl_medida">
     <Key>
@@ -391,6 +409,30 @@
       </Principal>
       <Dependent Role="tbl_item">
         <PropertyRef Name="CodigoVenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TBL_MATRICULA_TBL_ALUNO1">
+    <End Role="tbl_aluno" Type="academiaModel.Store.tbl_aluno" Multiplicity="1" />
+    <End Role="tbl_matricula" Type="academiaModel.Store.tbl_matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aluno">
+        <PropertyRef Name="Matricula" />
+      </Principal>
+      <Dependent Role="tbl_matricula">
+        <PropertyRef Name="MatriculaAluno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TBL_MATRICULA_TBL_MODALIDADE1">
+    <End Role="tbl_modalidade" Type="academiaModel.Store.tbl_modalidade" Multiplicity="1" />
+    <End Role="tbl_matricula" Type="academiaModel.Store.tbl_matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_modalidade">
+        <PropertyRef Name="CodigoModalidade" />
+      </Principal>
+      <Dependent Role="tbl_matricula">
+        <PropertyRef Name="CodigoModalidade" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

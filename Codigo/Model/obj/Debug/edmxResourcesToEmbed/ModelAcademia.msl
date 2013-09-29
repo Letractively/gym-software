@@ -85,6 +85,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbl_matricula">
+      <EntityTypeMapping TypeName="academiaModel.tbl_matricula">
+        <MappingFragment StoreEntitySet="tbl_matricula">
+          <ScalarProperty Name="DataMatricula" ColumnName="DataMatricula" />
+          <ScalarProperty Name="CodigoModalidade" ColumnName="CodigoModalidade" />
+          <ScalarProperty Name="MatriculaAluno" ColumnName="MatriculaAluno" />
+          <ScalarProperty Name="CodigoMatricula" ColumnName="CodigoMatricula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tbl_medida">
       <EntityTypeMapping TypeName="academiaModel.tbl_medida">
         <MappingFragment StoreEntitySet="tbl_medida">

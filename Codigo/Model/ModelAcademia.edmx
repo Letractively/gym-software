@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="academiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="academiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="academiaModelStoreContainer">
           <EntitySet Name="tbl_aluno" EntityType="academiaModel.Store.tbl_aluno" store:Type="Tables" Schema="bd_gymsoftare" />
           <EntitySet Name="tbl_atividade" EntityType="academiaModel.Store.tbl_atividade" store:Type="Tables" Schema="bd_gymsoftare" />
@@ -13,6 +13,7 @@
           <EntitySet Name="tbl_funcionario" EntityType="academiaModel.Store.tbl_funcionario" store:Type="Tables" Schema="bd_gymsoftare" />
           <EntitySet Name="tbl_historico_rotina" EntityType="academiaModel.Store.tbl_historico_rotina" store:Type="Tables" Schema="bd_gymsoftare" />
           <EntitySet Name="tbl_item" EntityType="academiaModel.Store.tbl_item" store:Type="Tables" Schema="bd_gymsoftare" />
+          <EntitySet Name="tbl_matricula" EntityType="academiaModel.Store.tbl_matricula" store:Type="Tables" Schema="bd_gymsoftare" />
           <EntitySet Name="tbl_medida" EntityType="academiaModel.Store.tbl_medida" store:Type="Tables" Schema="bd_gymsoftare" />
           <EntitySet Name="tbl_mensagem" EntityType="academiaModel.Store.tbl_mensagem" store:Type="Tables" Schema="bd_gymsoftare" />
           <EntitySet Name="tbl_modalidade" EntityType="academiaModel.Store.tbl_modalidade" store:Type="Tables" Schema="bd_gymsoftare" />
@@ -60,6 +61,14 @@
           <AssociationSet Name="fk_tbl_item_tbl_venda1" Association="academiaModel.Store.fk_tbl_item_tbl_venda1">
             <End Role="tbl_venda" EntitySet="tbl_venda" />
             <End Role="tbl_item" EntitySet="tbl_item" />
+          </AssociationSet>
+          <AssociationSet Name="fk_TBL_MATRICULA_TBL_ALUNO1" Association="academiaModel.Store.fk_TBL_MATRICULA_TBL_ALUNO1">
+            <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+            <End Role="tbl_matricula" EntitySet="tbl_matricula" />
+          </AssociationSet>
+          <AssociationSet Name="fk_TBL_MATRICULA_TBL_MODALIDADE1" Association="academiaModel.Store.fk_TBL_MATRICULA_TBL_MODALIDADE1">
+            <End Role="tbl_modalidade" EntitySet="tbl_modalidade" />
+            <End Role="tbl_matricula" EntitySet="tbl_matricula" />
           </AssociationSet>
           <AssociationSet Name="fk_tbl_medida_tbl_aluno1" Association="academiaModel.Store.fk_tbl_medida_tbl_aluno1">
             <End Role="tbl_aluno" EntitySet="tbl_aluno" />
@@ -164,6 +173,15 @@
           <Property Name="PrecoCusto" Type="decimal" Nullable="false" Scale="2" />
           <Property Name="PrecoVenda" Type="decimal" Nullable="false" Scale="2" />
           <Property Name="CodigoPessoa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_matricula">
+          <Key>
+            <PropertyRef Name="CodigoMatricula" />
+          </Key>
+          <Property Name="CodigoMatricula" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MatriculaAluno" Type="int" Nullable="false" />
+          <Property Name="CodigoModalidade" Type="int" Nullable="false" />
+          <Property Name="DataMatricula" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="tbl_medida">
           <Key>
@@ -399,6 +417,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_TBL_MATRICULA_TBL_ALUNO1">
+          <End Role="tbl_aluno" Type="academiaModel.Store.tbl_aluno" Multiplicity="1" />
+          <End Role="tbl_matricula" Type="academiaModel.Store.tbl_matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_aluno">
+              <PropertyRef Name="Matricula" />
+            </Principal>
+            <Dependent Role="tbl_matricula">
+              <PropertyRef Name="MatriculaAluno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_TBL_MATRICULA_TBL_MODALIDADE1">
+          <End Role="tbl_modalidade" Type="academiaModel.Store.tbl_modalidade" Multiplicity="1" />
+          <End Role="tbl_matricula" Type="academiaModel.Store.tbl_matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_modalidade">
+              <PropertyRef Name="CodigoModalidade" />
+            </Principal>
+            <Dependent Role="tbl_matricula">
+              <PropertyRef Name="CodigoModalidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_tbl_medida_tbl_aluno1">
           <End Role="tbl_aluno" Type="academiaModel.Store.tbl_aluno" Multiplicity="1" />
           <End Role="tbl_medida" Type="academiaModel.Store.tbl_medida" Multiplicity="*" />
@@ -485,6 +527,7 @@
           <EntitySet Name="tbl_funcionario" EntityType="academiaModel.tbl_funcionario" />
           <EntitySet Name="tbl_historico_rotina" EntityType="academiaModel.tbl_historico_rotina" />
           <EntitySet Name="tbl_item" EntityType="academiaModel.tbl_item" />
+          <EntitySet Name="tbl_matricula" EntityType="academiaModel.tbl_matricula" />
           <EntitySet Name="tbl_medida" EntityType="academiaModel.tbl_medida" />
           <EntitySet Name="tbl_mensagem" EntityType="academiaModel.tbl_mensagem" />
           <EntitySet Name="tbl_modalidade" EntityType="academiaModel.tbl_modalidade" />
@@ -500,6 +543,10 @@
           <AssociationSet Name="fk_tbl_atividadealuno_tbl_aluno1" Association="academiaModel.fk_tbl_atividadealuno_tbl_aluno1">
             <End Role="tbl_aluno" EntitySet="tbl_aluno" />
             <End Role="tbl_atividade_aluno" EntitySet="tbl_atividade_aluno" />
+          </AssociationSet>
+          <AssociationSet Name="fk_TBL_MATRICULA_TBL_ALUNO1" Association="academiaModel.fk_TBL_MATRICULA_TBL_ALUNO1">
+            <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+            <End Role="tbl_matricula" EntitySet="tbl_matricula" />
           </AssociationSet>
           <AssociationSet Name="fk_tbl_medida_tbl_aluno1" Association="academiaModel.fk_tbl_medida_tbl_aluno1">
             <End Role="tbl_aluno" EntitySet="tbl_aluno" />
@@ -549,6 +596,10 @@
             <End Role="tbl_venda" EntitySet="tbl_venda" />
             <End Role="tbl_item" EntitySet="tbl_item" />
           </AssociationSet>
+          <AssociationSet Name="fk_TBL_MATRICULA_TBL_MODALIDADE1" Association="academiaModel.fk_TBL_MATRICULA_TBL_MODALIDADE1">
+            <End Role="tbl_modalidade" EntitySet="tbl_modalidade" />
+            <End Role="tbl_matricula" EntitySet="tbl_matricula" />
+          </AssociationSet>
           <AssociationSet Name="fk_tbl_mensagem_tbl_pessoa1" Association="academiaModel.fk_tbl_mensagem_tbl_pessoa1">
             <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
             <End Role="tbl_mensagem" EntitySet="tbl_mensagem" />
@@ -571,6 +622,7 @@
           <Property Type="DateTime" Name="DataTrancamento" />
           <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_aluno_tbl_pessoa" FromRole="tbl_aluno" ToRole="tbl_pessoa" />
           <NavigationProperty Name="tbl_atividade_aluno" Relationship="academiaModel.fk_tbl_atividadealuno_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_atividade_aluno" />
+          <NavigationProperty Name="tbl_matricula" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_ALUNO1" FromRole="tbl_aluno" ToRole="tbl_matricula" />
           <NavigationProperty Name="tbl_medida" Relationship="academiaModel.fk_tbl_medida_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_medida" />
           <NavigationProperty Name="tbl_pagamento_mensalidade" Relationship="academiaModel.fk_tbl_pagamentomensalidade_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_pagamento_mensalidade" />
         </EntityType>
@@ -654,6 +706,17 @@
           <NavigationProperty Name="tbl_produto" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_item" ToRole="tbl_produto" />
           <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_item_tbl_venda1" FromRole="tbl_item" ToRole="tbl_venda" />
         </EntityType>
+        <EntityType Name="tbl_matricula">
+          <Key>
+            <PropertyRef Name="CodigoMatricula" />
+          </Key>
+          <Property Type="Int32" Name="CodigoMatricula" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MatriculaAluno" Nullable="false" />
+          <Property Type="Int32" Name="CodigoModalidade" Nullable="false" />
+          <Property Type="DateTime" Name="DataMatricula" Nullable="false" />
+          <NavigationProperty Name="tbl_aluno" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_ALUNO1" FromRole="tbl_matricula" ToRole="tbl_aluno" />
+          <NavigationProperty Name="tbl_modalidade" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_MODALIDADE1" FromRole="tbl_matricula" ToRole="tbl_modalidade" />
+        </EntityType>
         <EntityType Name="tbl_medida">
           <Key>
             <PropertyRef Name="CodigoMedida" />
@@ -700,6 +763,7 @@
           <Property Type="String" Name="NomeModalidade" Nullable="false" />
           <Property Type="Decimal" Name="ValorModalidade" Nullable="false" />
           <NavigationProperty Name="tbl_atividade" Relationship="academiaModel.fk_tbl_atividade_tbl_modalidade1" FromRole="tbl_modalidade" ToRole="tbl_atividade" />
+          <NavigationProperty Name="tbl_matricula" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_MODALIDADE1" FromRole="tbl_modalidade" ToRole="tbl_matricula" />
         </EntityType>
         <EntityType Name="tbl_pagamento_mensalidade">
           <Key>
@@ -802,6 +866,18 @@
             </Principal>
             <Dependent Role="tbl_atividade_aluno">
               <PropertyRef Name="Matricula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_TBL_MATRICULA_TBL_ALUNO1">
+          <End Type="academiaModel.tbl_aluno" Role="tbl_aluno" Multiplicity="1" />
+          <End Type="academiaModel.tbl_matricula" Role="tbl_matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_aluno">
+              <PropertyRef Name="Matricula" />
+            </Principal>
+            <Dependent Role="tbl_matricula">
+              <PropertyRef Name="MatriculaAluno" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -953,6 +1029,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_TBL_MATRICULA_TBL_MODALIDADE1">
+          <End Type="academiaModel.tbl_modalidade" Role="tbl_modalidade" Multiplicity="1" />
+          <End Type="academiaModel.tbl_matricula" Role="tbl_matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_modalidade">
+              <PropertyRef Name="CodigoModalidade" />
+            </Principal>
+            <Dependent Role="tbl_matricula">
+              <PropertyRef Name="CodigoModalidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_tbl_mensagem_tbl_pessoa1">
           <End Type="academiaModel.tbl_pessoa" Role="tbl_pessoa" Multiplicity="1" />
           <End Type="academiaModel.tbl_mensagem" Role="tbl_mensagem" Multiplicity="*" />
@@ -1064,6 +1152,16 @@
                 <ScalarProperty Name="CodigoProduto" ColumnName="CodigoProduto" />
                 <ScalarProperty Name="CodigoVenda" ColumnName="CodigoVenda" />
                 <ScalarProperty Name="CodigoItem" ColumnName="CodigoItem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_matricula">
+            <EntityTypeMapping TypeName="academiaModel.tbl_matricula">
+              <MappingFragment StoreEntitySet="tbl_matricula">
+                <ScalarProperty Name="DataMatricula" ColumnName="DataMatricula" />
+                <ScalarProperty Name="CodigoModalidade" ColumnName="CodigoModalidade" />
+                <ScalarProperty Name="MatriculaAluno" ColumnName="MatriculaAluno" />
+                <ScalarProperty Name="CodigoMatricula" ColumnName="CodigoMatricula" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1206,105 +1304,130 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="ModelAcademia">
-        <EntityTypeShape EntityType="academiaModel.tbl_aluno" Width="1.5" PointX="3" PointY="6.625" Height="3.1340950520833388" />
-        <EntityTypeShape EntityType="academiaModel.tbl_atividade" Width="1.5" PointX="3" PointY="3.125" Height="1.9802864583333388" />
-        <EntityTypeShape EntityType="academiaModel.tbl_atividade_aluno" Width="1.5" PointX="5.25" PointY="4.125" Height="2.1725878906250031" />
-        <EntityTypeShape EntityType="academiaModel.tbl_despesa" Width="1.5" PointX="3" PointY="12.875" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="academiaModel.tbl_funcionario" Width="1.5" PointX="3" PointY="17.375" Height="1.9802864583333388" />
-        <EntityTypeShape EntityType="academiaModel.tbl_historico_rotina" Width="1.5" PointX="7.5" PointY="4.125" Height="2.1725878906250031" />
-        <EntityTypeShape EntityType="academiaModel.tbl_item" Width="1.5" PointX="7.5" PointY="12.875" Height="3.3263964843750067" />
-        <EntityTypeShape EntityType="academiaModel.tbl_medida" Width="1.5" PointX="5.25" PointY="7.25" Height="5.2494108072916674" />
-        <EntityTypeShape EntityType="academiaModel.tbl_mensagem" Width="1.5" PointX="3" PointY="20.125" Height="2.172587890624996" />
-        <EntityTypeShape EntityType="academiaModel.tbl_modalidade" Width="1.5" PointX="0.75" PointY="3.25" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="academiaModel.tbl_pagamento_mensalidade" Width="1.5" PointX="5.25" PointY="13.25" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="academiaModel.tbl_pessoa" Width="1.5" PointX="0.75" PointY="10.25" Height="6.0186165364583228" />
-        <EntityTypeShape EntityType="academiaModel.tbl_produto" Width="1.5" PointX="5.25" PointY="20.375" Height="2.5571907552083246" />
-        <EntityTypeShape EntityType="academiaModel.tbl_rotina" Width="1.5" PointX="9.75" PointY="4" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="academiaModel.tbl_venda" Width="1.5" PointX="5.25" PointY="16.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="academiaModel.tbl_aluno" Width="1.5" PointX="3" PointY="8.125" Height="3.3263964843749818" />
+        <EntityTypeShape EntityType="academiaModel.tbl_atividade" Width="1.5" PointX="3" PointY="1.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="academiaModel.tbl_atividade_aluno" Width="1.5" PointX="5.25" PointY="8.75" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="academiaModel.tbl_despesa" Width="1.5" PointX="3" PointY="14.5" Height="3.710999348958353" />
+        <EntityTypeShape EntityType="academiaModel.tbl_funcionario" Width="1.5" PointX="3" PointY="19" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="academiaModel.tbl_historico_rotina" Width="1.5" PointX="7.5" PointY="8.75" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="academiaModel.tbl_item" Width="1.5" PointX="10.5" PointY="13.125" Height="3.3263964843749818" />
+        <EntityTypeShape EntityType="academiaModel.tbl_matricula" Width="1.5" PointX="5.25" PointY="5.75" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="academiaModel.tbl_medida" Width="1.5" PointX="5.25" PointY="11.875" Height="5.2494108072916674" />
+        <EntityTypeShape EntityType="academiaModel.tbl_mensagem" Width="1.5" PointX="3" PointY="21.75" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="academiaModel.tbl_modalidade" Width="1.5" PointX="3" PointY="4.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="academiaModel.tbl_pagamento_mensalidade" Width="1.5" PointX="5.25" PointY="17.875" Height="1.980286458333353" />
+        <EntityTypeShape EntityType="academiaModel.tbl_pessoa" Width="1.5" PointX="0.75" PointY="11.875" Height="6.0186165364583228" />
+        <EntityTypeShape EntityType="academiaModel.tbl_produto" Width="1.5" PointX="8.25" PointY="18.5" Height="2.557190755208353" />
+        <EntityTypeShape EntityType="academiaModel.tbl_rotina" Width="1.5" PointX="9.75" PointY="8.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="academiaModel.tbl_venda" Width="1.5" PointX="8.25" PointY="15.25" Height="2.3648893229166674" />
         <AssociationConnector Association="academiaModel.fk_tbl_aluno_tbl_pessoa" >
-          <ConnectorPoint PointX="1.5" PointY="10.25" />
-          <ConnectorPoint PointX="1.5" PointY="8.19204752604167" />
-          <ConnectorPoint PointX="3" PointY="8.19204752604167" />
+          <ConnectorPoint PointX="1.5" PointY="11.875" />
+          <ConnectorPoint PointX="1.5" PointY="9.7881982421874909" />
+          <ConnectorPoint PointX="3" PointY="9.7881982421874909" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_atividadealuno_tbl_aluno1" >
-          <ConnectorPoint PointX="4.5" PointY="6.625" />
-          <ConnectorPoint PointX="4.875" PointY="6.25" />
-          <ConnectorPoint PointX="4.875" PointY="6.6725878906250031" />
-          <ConnectorPoint PointX="5.25" PointY="6.2975878906250031" />
+          <ConnectorPoint PointX="4.5" PointY="9.8362939453124909" />
+          <ConnectorPoint PointX="5.25" PointY="9.8362939453124909" />
+        </AssociationConnector>
+        <AssociationConnector Association="academiaModel.fk_TBL_MATRICULA_TBL_ALUNO1" >
+          <ConnectorPoint PointX="4.5" PointY="8.1261528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="7.7511528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="8.2975878906249818" />
+          <ConnectorPoint PointX="5.0035744349011209" PointY="8.16901345572386" />
+          <ConnectorPoint PointX="5.1214255650988791" PointY="8.0511623255261036" />
+          <ConnectorPoint PointX="5.25" PointY="7.9225878906249818" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_medida_tbl_aluno1" >
-          <ConnectorPoint PointX="4.5" PointY="8.50454752604167" />
-          <ConnectorPoint PointX="5.25" PointY="8.50454752604167" />
+          <ConnectorPoint PointX="4.5" PointY="11.39485702283652" />
+          <ConnectorPoint PointX="5.03125" PointY="11.92610702283652" />
+          <ConnectorPoint PointX="5.03125" PointY="11.655097153846153" />
+          <ConnectorPoint PointX="5.2511528461538459" PointY="11.875" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_pagamentomensalidade_tbl_aluno1" >
-          <ConnectorPoint PointX="4.5" PointY="9.7590950520833388" />
-          <ConnectorPoint PointX="4.875" PointY="10.134095052083339" />
-          <ConnectorPoint PointX="4.875" PointY="14.240143229166662" />
-          <ConnectorPoint PointX="5.25" PointY="14.240143229166662" />
+          <ConnectorPoint PointX="4.47576923076923" PointY="11.451396484374982" />
+          <ConnectorPoint PointX="4.875" PointY="11.850627253605751" />
+          <ConnectorPoint PointX="4.875" PointY="18.865143229166677" />
+          <ConnectorPoint PointX="5.25" PointY="18.865143229166677" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_atividade_tbl_modalidade1" >
-          <ConnectorPoint PointX="2.25" PointY="4.1439925130208337" />
-          <ConnectorPoint PointX="3" PointY="4.1439925130208337" />
+          <ConnectorPoint PointX="3.75" PointY="4.75" />
+          <ConnectorPoint PointX="3.75" PointY="3.7302864583333246" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_atividadealuno_tbl_atividade1" >
-          <ConnectorPoint PointX="4.5" PointY="4.6151432291666694" />
-          <ConnectorPoint PointX="5.25" PointY="4.6151432291666694" />
+          <ConnectorPoint PointX="4.5" PointY="3.6679777660256319" />
+          <ConnectorPoint PointX="5.0625" PointY="4.2304777660256319" />
+          <ConnectorPoint PointX="5.0625" PointY="9.26189497265625" />
+          <ConnectorPoint PointX="5.25" PointY="9.26189497265625" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_historicorotina_tbl_atividadealuno1" >
-          <ConnectorPoint PointX="6.75" PointY="5.2112939453125016" />
-          <ConnectorPoint PointX="7.5" PointY="5.2112939453125016" />
+          <ConnectorPoint PointX="6.75" PointY="9.8362939453124909" />
+          <ConnectorPoint PointX="7.5" PointY="9.8362939453124909" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_despesa_tbl_pessoa2" >
-          <ConnectorPoint PointX="2.25" PointY="14.571808268229162" />
-          <ConnectorPoint PointX="3" PointY="14.571808268229162" />
+          <ConnectorPoint PointX="2.25" PointY="16.196808268229162" />
+          <ConnectorPoint PointX="3" PointY="16.196808268229162" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_funcionario_tbl_pessoa1" >
-          <ConnectorPoint PointX="1.5" PointY="16.268616536458325" />
-          <ConnectorPoint PointX="1.5" PointY="18.365143229166669" />
-          <ConnectorPoint PointX="1.8229191666666667" PointY="18.365143229166669" />
-          <ConnectorPoint PointX="1.9895858333333332" PointY="18.365143229166669" />
-          <ConnectorPoint PointX="3" PointY="18.365143229166669" />
+          <ConnectorPoint PointX="1.5" PointY="17.893616536458325" />
+          <ConnectorPoint PointX="1.5" PointY="19.990143229166662" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="19.990143229166662" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="19.990143229166662" />
+          <ConnectorPoint PointX="3" PointY="19.990143229166662" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_venda_tbl_funcionario1" >
-          <ConnectorPoint PointX="4.5" PointY="18.182444661458334" />
-          <ConnectorPoint PointX="5.25" PointY="18.182444661458334" />
+          <ConnectorPoint PointX="4.5" PointY="20.44903595833334" />
+          <ConnectorPoint PointX="8" PointY="20.44903595833334" />
+          <ConnectorPoint PointX="8" PointY="17.864889322916667" />
+          <ConnectorPoint PointX="9" PointY="17.864889322916667" />
+          <ConnectorPoint PointX="9" PointY="17.614889322916667" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_rotina_tbl_historicorotina1" >
-          <ConnectorPoint PointX="9" PointY="5.2112939453125016" />
-          <ConnectorPoint PointX="9.75" PointY="5.2112939453125016" />
+          <ConnectorPoint PointX="9" PointY="9.8362939453124909" />
+          <ConnectorPoint PointX="9.75" PointY="9.8362939453124909" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_item_tbl_pessoa1" >
-          <ConnectorPoint PointX="2.25" PointY="12.379652134114586" />
-          <ConnectorPoint PointX="2.75" PointY="12.379652134114586" />
-          <ConnectorPoint PointX="2.75" PointY="12.625" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="12.625" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="12.625" />
-          <ConnectorPoint PointX="8.25" PointY="12.625" />
-          <ConnectorPoint PointX="8.25" PointY="12.875" />
+          <ConnectorPoint PointX="1.9062519999999998" PointY="11.875" />
+          <ConnectorPoint PointX="1.9062519999999998" PointY="11.625" />
+          <ConnectorPoint PointX="4.5660394130609161" PointY="11.625" />
+          <ConnectorPoint PointX="4.8134763104968128" PointY="11.625" />
+          <ConnectorPoint PointX="10.125" PointY="11.625" />
+          <ConnectorPoint PointX="10.125" PointY="14.788198242187491" />
+          <ConnectorPoint PointX="10.5" PointY="14.788198242187491" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_item_tbl_produto1" >
-          <ConnectorPoint PointX="6.75" PointY="21.653595377604162" />
-          <ConnectorPoint PointX="8.25" PointY="21.653595377604162" />
-          <ConnectorPoint PointX="8.25" PointY="16.201396484375007" />
+          <ConnectorPoint PointX="9.75" PointY="19.778595377604177" />
+          <ConnectorPoint PointX="11.25" PointY="19.778595377604177" />
+          <ConnectorPoint PointX="11.25" PointY="16.451396484374982" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_item_tbl_venda1" >
-          <ConnectorPoint PointX="6.75" PointY="17.807444661458334" />
-          <ConnectorPoint PointX="7.8437475" PointY="17.807444661458334" />
-          <ConnectorPoint PointX="7.8437475" PointY="16.201396484375007" />
+          <ConnectorPoint PointX="9.75" PointY="15.850698242187491" />
+          <ConnectorPoint PointX="10.5" PointY="15.850698242187491" />
+        </AssociationConnector>
+        <AssociationConnector Association="academiaModel.fk_TBL_MATRICULA_TBL_MODALIDADE1" >
+          <ConnectorPoint PointX="4.5" PointY="6.2401432291666623" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="6.2401432291666614" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="6.2401432291666623" />
+          <ConnectorPoint PointX="5.25" PointY="6.2401432291666623" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_mensagem_tbl_pessoa1" >
-          <ConnectorPoint PointX="1.9062525" PointY="16.268616536458325" />
-          <ConnectorPoint PointX="1.9062525" PointY="21.211293945312498" />
-          <ConnectorPoint PointX="3" PointY="21.211293945312498" />
+          <ConnectorPoint PointX="1.9062525" PointY="17.893616536458325" />
+          <ConnectorPoint PointX="1.9062525" PointY="22.836293945312491" />
+          <ConnectorPoint PointX="3" PointY="22.836293945312491" />
         </AssociationConnector>
         <AssociationConnector Association="academiaModel.fk_tbl_venda_tbl_pessoa1" >
-          <ConnectorPoint PointX="1.0937475" PointY="16.268616536458325" />
-          <ConnectorPoint PointX="1.0937475" PointY="16.96875" />
-          <ConnectorPoint PointX="1.4166666666666667" PointY="16.96875" />
-          <ConnectorPoint PointX="1.5833333333333333" PointY="16.96875" />
-          <ConnectorPoint PointX="1.8229191666666667" PointY="16.96875" />
-          <ConnectorPoint PointX="1.9895858333333332" PointY="16.96875" />
-          <ConnectorPoint PointX="5.25" PointY="16.96875" />
+          <ConnectorPoint PointX="1.093748" PointY="17.893616536458325" />
+          <ConnectorPoint PointX="1.093748" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="5" PointY="18.460999348958353" />
+          <ConnectorPoint PointX="5" PointY="17.374410807291667" />
+          <ConnectorPoint PointX="7.875" PointY="17.374410807291667" />
+          <ConnectorPoint PointX="7.875" PointY="16.432444661458334" />
+          <ConnectorPoint PointX="8.25" PointY="16.432444661458334" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

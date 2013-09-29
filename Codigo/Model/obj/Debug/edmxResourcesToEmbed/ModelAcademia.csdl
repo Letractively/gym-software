@@ -8,6 +8,7 @@
     <EntitySet Name="tbl_funcionario" EntityType="academiaModel.tbl_funcionario" />
     <EntitySet Name="tbl_historico_rotina" EntityType="academiaModel.tbl_historico_rotina" />
     <EntitySet Name="tbl_item" EntityType="academiaModel.tbl_item" />
+    <EntitySet Name="tbl_matricula" EntityType="academiaModel.tbl_matricula" />
     <EntitySet Name="tbl_medida" EntityType="academiaModel.tbl_medida" />
     <EntitySet Name="tbl_mensagem" EntityType="academiaModel.tbl_mensagem" />
     <EntitySet Name="tbl_modalidade" EntityType="academiaModel.tbl_modalidade" />
@@ -23,6 +24,10 @@
     <AssociationSet Name="fk_tbl_atividadealuno_tbl_aluno1" Association="academiaModel.fk_tbl_atividadealuno_tbl_aluno1">
       <End Role="tbl_aluno" EntitySet="tbl_aluno" />
       <End Role="tbl_atividade_aluno" EntitySet="tbl_atividade_aluno" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TBL_MATRICULA_TBL_ALUNO1" Association="academiaModel.fk_TBL_MATRICULA_TBL_ALUNO1">
+      <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+      <End Role="tbl_matricula" EntitySet="tbl_matricula" />
     </AssociationSet>
     <AssociationSet Name="fk_tbl_medida_tbl_aluno1" Association="academiaModel.fk_tbl_medida_tbl_aluno1">
       <End Role="tbl_aluno" EntitySet="tbl_aluno" />
@@ -72,6 +77,10 @@
       <End Role="tbl_venda" EntitySet="tbl_venda" />
       <End Role="tbl_item" EntitySet="tbl_item" />
     </AssociationSet>
+    <AssociationSet Name="fk_TBL_MATRICULA_TBL_MODALIDADE1" Association="academiaModel.fk_TBL_MATRICULA_TBL_MODALIDADE1">
+      <End Role="tbl_modalidade" EntitySet="tbl_modalidade" />
+      <End Role="tbl_matricula" EntitySet="tbl_matricula" />
+    </AssociationSet>
     <AssociationSet Name="fk_tbl_mensagem_tbl_pessoa1" Association="academiaModel.fk_tbl_mensagem_tbl_pessoa1">
       <End Role="tbl_pessoa" EntitySet="tbl_pessoa" />
       <End Role="tbl_mensagem" EntitySet="tbl_mensagem" />
@@ -94,6 +103,7 @@
     <Property Type="DateTime" Name="DataTrancamento" />
     <NavigationProperty Name="tbl_pessoa" Relationship="academiaModel.fk_tbl_aluno_tbl_pessoa" FromRole="tbl_aluno" ToRole="tbl_pessoa" />
     <NavigationProperty Name="tbl_atividade_aluno" Relationship="academiaModel.fk_tbl_atividadealuno_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_atividade_aluno" />
+    <NavigationProperty Name="tbl_matricula" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_ALUNO1" FromRole="tbl_aluno" ToRole="tbl_matricula" />
     <NavigationProperty Name="tbl_medida" Relationship="academiaModel.fk_tbl_medida_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_medida" />
     <NavigationProperty Name="tbl_pagamento_mensalidade" Relationship="academiaModel.fk_tbl_pagamentomensalidade_tbl_aluno1" FromRole="tbl_aluno" ToRole="tbl_pagamento_mensalidade" />
   </EntityType>
@@ -177,6 +187,17 @@
     <NavigationProperty Name="tbl_produto" Relationship="academiaModel.fk_tbl_item_tbl_produto1" FromRole="tbl_item" ToRole="tbl_produto" />
     <NavigationProperty Name="tbl_venda" Relationship="academiaModel.fk_tbl_item_tbl_venda1" FromRole="tbl_item" ToRole="tbl_venda" />
   </EntityType>
+  <EntityType Name="tbl_matricula">
+    <Key>
+      <PropertyRef Name="CodigoMatricula" />
+    </Key>
+    <Property Type="Int32" Name="CodigoMatricula" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MatriculaAluno" Nullable="false" />
+    <Property Type="Int32" Name="CodigoModalidade" Nullable="false" />
+    <Property Type="DateTime" Name="DataMatricula" Nullable="false" />
+    <NavigationProperty Name="tbl_aluno" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_ALUNO1" FromRole="tbl_matricula" ToRole="tbl_aluno" />
+    <NavigationProperty Name="tbl_modalidade" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_MODALIDADE1" FromRole="tbl_matricula" ToRole="tbl_modalidade" />
+  </EntityType>
   <EntityType Name="tbl_medida">
     <Key>
       <PropertyRef Name="CodigoMedida" />
@@ -223,6 +244,7 @@
     <Property Type="String" Name="NomeModalidade" Nullable="false" />
     <Property Type="Decimal" Name="ValorModalidade" Nullable="false" />
     <NavigationProperty Name="tbl_atividade" Relationship="academiaModel.fk_tbl_atividade_tbl_modalidade1" FromRole="tbl_modalidade" ToRole="tbl_atividade" />
+    <NavigationProperty Name="tbl_matricula" Relationship="academiaModel.fk_TBL_MATRICULA_TBL_MODALIDADE1" FromRole="tbl_modalidade" ToRole="tbl_matricula" />
   </EntityType>
   <EntityType Name="tbl_pagamento_mensalidade">
     <Key>
@@ -325,6 +347,18 @@
       </Principal>
       <Dependent Role="tbl_atividade_aluno">
         <PropertyRef Name="Matricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TBL_MATRICULA_TBL_ALUNO1">
+    <End Type="academiaModel.tbl_aluno" Role="tbl_aluno" Multiplicity="1" />
+    <End Type="academiaModel.tbl_matricula" Role="tbl_matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aluno">
+        <PropertyRef Name="Matricula" />
+      </Principal>
+      <Dependent Role="tbl_matricula">
+        <PropertyRef Name="MatriculaAluno" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -473,6 +507,18 @@
       </Principal>
       <Dependent Role="tbl_item">
         <PropertyRef Name="CodigoVenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TBL_MATRICULA_TBL_MODALIDADE1">
+    <End Type="academiaModel.tbl_modalidade" Role="tbl_modalidade" Multiplicity="1" />
+    <End Type="academiaModel.tbl_matricula" Role="tbl_matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_modalidade">
+        <PropertyRef Name="CodigoModalidade" />
+      </Principal>
+      <Dependent Role="tbl_matricula">
+        <PropertyRef Name="CodigoModalidade" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

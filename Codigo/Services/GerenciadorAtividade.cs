@@ -78,8 +78,6 @@ namespace Services
         private IQueryable<Atividade> GetQuery()
         {
 
-
-
             IQueryable<tbl_atividade> tbl_atividade = unitOfWork.RepositorioAtividade.GetQueryable();
             IQueryable<tbl_modalidade> tbl_modalidade = unitOfWork.RepositorioModalidade.GetQueryable();
             var query = from atividade in tbl_atividade

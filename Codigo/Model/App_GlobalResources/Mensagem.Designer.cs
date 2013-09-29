@@ -232,6 +232,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cod. Matricula.
+        /// </summary>
+        public static string cod_matricula {
+            get {
+                return ResourceManager.GetString("cod_matricula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cód. Modalidade.
         /// </summary>
         public static string cod_modalidade {
@@ -624,6 +633,15 @@ namespace Models.App_GlobalResources {
         public static string nome_atividade {
             get {
                 return ResourceManager.GetString("nome_atividade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nome Modalidade.
+        /// </summary>
+        public static string nome_modalidade {
+            get {
+                return ResourceManager.GetString("nome_modalidade", resourceCulture);
             }
         }
         

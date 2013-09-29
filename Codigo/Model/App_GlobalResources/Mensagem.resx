@@ -387,4 +387,10 @@
   <data name="gerenciar_atividades" xml:space="preserve">
     <value>Gerenciar Atividades</value>
   </data>
+  <data name="cod_matricula" xml:space="preserve">
+    <value>Cod. Matricula</value>
+  </data>
+  <data name="nome_modalidade" xml:space="preserve">
+    <value>Nome Modalidade</value>
+  </data>
 </root>
