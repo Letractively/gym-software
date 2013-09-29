@@ -29,7 +29,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="">GymSoftware <small>Slogan aqui</small></a></h1>
+        <h1><a href="Home">GymSoftware <small>Slogan aqui</small></a></h1>
       </div>
 
       <div class="menu_nav">
@@ -42,12 +42,11 @@
                     <li><%: Html.ActionLink("Atividade", "Index", "Atividade")%></li>                     
                     <li><%: Html.ActionLink("Medida", "Index", "Medida")%></li>                     
                     <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>
-                    <li><%: Html.ActionLink("Matricula", "Index", "Matricula")%></li>                        
+                    <li><%: Html.ActionLink("Matricula", "Index", "Matricula")%></li>
+                    <li><%: Html.ActionLink("Relatorios", "Index", "Relatorio")%></li>                        
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
-                    <% Html.RenderPartial("LogOnUserControl"); %>
-                
-            
-                               
+                    <% Html.RenderPartial("LogOnUserControl"); %>                
+                                          
            </ul>
            
       </div>
@@ -64,27 +63,9 @@
 
   <div class="fbg">
     <div class="fbg_resize">
-
-
-
-      <div class="col c2">
-        <h2><span>Services</span> Overview</h2>
-        <p>Curabitur sed urna id nunc pulvinar semper. Nunc sit amet tortor sit amet lacus sagittis posuere cursus vitae nunc.Etiam venenatis, turpis at eleifend porta, nisl nulla bibendum justo.</p>
-        <ul class="fbg_ul">
-          <li><a href="#">Lorem ipsum dolor labore et dolore.</a></li>
-          <li><a href="#">Excepteur officia deserunt.</a></li>
-          <li><a href="#">Integer tellus ipsum tempor sed.</a></li>
-        </ul>
-      </div>
-      <div class="col c3">
-        <h2><span>Contato</span></h2>
-        <p>Nullam quam lorem, tristique non vestibulum nec, consectetur in risus. Aliquam a quam vel leo eu porttitor dui.</p>
-        <p class="contact_info"> <span>Address:</span> 1458 TemplateAccess, USA<br />
-          <span>Telephone:</span> +123-1234-5678<br />
-          <span>FAX:</span> +458-4578<br />
-          <span>Others:</span> +301 - 0125 - 01258<br />
-          <span>E-mail:</span> <a href="#">mail@yoursitename.com</a> </p>
-      </div>
+    
+        </br></br></br></br></br></br>
+    
       <div class="clr"></div>
     </div>
   </div>
