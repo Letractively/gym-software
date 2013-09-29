@@ -97,6 +97,9 @@ namespace Services
             return GetQuery();
         }
 
+
+
+
         /// <summary>
         /// Obtém um modalidade
         /// </summary>

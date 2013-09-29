@@ -50,8 +50,7 @@ namespace BibliotecaWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-
-
+                
                 gAluno.Inserir(alunoModel);
                 return RedirectToAction("Index");
             }
