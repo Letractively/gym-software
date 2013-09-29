@@ -37,7 +37,7 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Create(int id)
         {
 
-            ViewBag.Modalidade = new SelectList(gModalidade.ObterTodos(), "CodigoModalidade", "NomeModalidade");
+            ViewBag.Modalidade = new SelectList(gModalidade.ObterTodos(), "Codigo", "Nome");
             ViewBag.Id = id;
             return View();
         }
