@@ -6,99 +6,23 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>ef2c9268-66e5-4cff-a286-a8010a2617ed</rd:DataSourceID>
+      <rd:DataSourceID>11b5846c-428c-4096-83b8-d586bbbb7455</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetFuncionarioPorPermicao">
+    <DataSet Name="DataSetModalidadePorPreco">
       <Fields>
-        <Field Name="CodigoFuncionario">
-          <DataField>CodigoFuncionario</DataField>
+        <Field Name="Codigo">
+          <DataField>Codigo</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Permicao">
-          <DataField>Permicao</DataField>
+        <Field Name="Nome">
+          <DataField>Nome</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CodigoPessoa">
-          <DataField>CodigoPessoa</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="CadastradoDesde">
-          <DataField>CadastradoDesde</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="NomeRazao">
-          <DataField>NomeRazao</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ApelidoFantasia">
-          <DataField>ApelidoFantasia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CpfCnpj">
-          <DataField>CpfCnpj</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="RG">
-          <DataField>RG</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DataNascimento">
-          <DataField>DataNascimento</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Sexo">
-          <DataField>Sexo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Rua">
-          <DataField>Rua</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Numero">
-          <DataField>Numero</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Bairro">
-          <DataField>Bairro</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Cidade">
-          <DataField>Cidade</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Estado">
-          <DataField>Estado</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CEP">
-          <DataField>CEP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Complemento">
-          <DataField>Complemento</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Telefone1">
-          <DataField>Telefone1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Telefone2">
-          <DataField>Telefone2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Email">
-          <DataField>Email</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Senha">
-          <DataField>Senha</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Fornecedor">
-          <DataField>Fornecedor</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Valor">
+          <DataField>Valor</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <Query>
@@ -107,9 +31,9 @@
       </Query>
       <rd:DataSetInfo>
         <rd:DataSetName>Services</rd:DataSetName>
-        <rd:TableName>GerenciadorFuncionario</rd:TableName>
+        <rd:TableName>GerenciadorModalidade</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>ObterTodos</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>Services.GerenciadorFuncionario, Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Services.GerenciadorModalidade, Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -119,16 +43,52 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.4778in</Width>
+              <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.203in</Width>
+              <Width>2.7655in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
               <Height>0.23622in</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Código</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#869286</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>#708270</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox3">
@@ -153,43 +113,7 @@
                       <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#7292cc</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#708270</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox5">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Código</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#7292cc</Color>
+                          <Color>#869286</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>#708270</BackgroundColor>
@@ -208,14 +132,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="NomeRazao">
+                    <Textbox Name="Codigo">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NomeRazao.Value</Value>
+                              <Value>=Sum(Fields!Codigo.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -227,7 +151,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>NomeRazao</rd:DefaultName>
+                      <rd:DefaultName>Codigo</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -243,14 +167,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="CodigoFuncionario">
+                    <Textbox Name="Nome">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!CodigoFuncionario.Value)</Value>
+                              <Value>=Fields!Nome.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -262,7 +186,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>CodigoFuncionario</rd:DefaultName>
+                      <rd:DefaultName>Nome</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -290,16 +214,16 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>1.03633in</Size>
+                <Size>0.98425in</Size>
                 <CellContents>
-                  <Textbox Name="Textbox1">
+                  <Textbox Name="Textbox15">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Permição</Value>
+                            <Value>Valor</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
                               <FontSize>11pt</FontSize>
@@ -311,10 +235,10 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox1</rd:DefaultName>
+                    <rd:DefaultName>Textbox15</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>#7292cc</Color>
+                        <Color>#869286</Color>
                         <Style>Solid</Style>
                       </Border>
                       <BackgroundColor>#708270</BackgroundColor>
@@ -334,16 +258,16 @@
             <TablixMember>
               <Group Name="Group1">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!Permicao.Value</GroupExpression>
+                  <GroupExpression>=Fields!Valor.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!Permicao.Value</Value>
+                  <Value>=Fields!Valor.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>1.03633in</Size>
+                <Size>0.98425in</Size>
                 <CellContents>
                   <Textbox Name="Group1">
                     <CanGrow>true</CanGrow>
@@ -352,7 +276,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!Permicao.Value</Value>
+                            <Value>=Fields!Valor.Value</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
                               <FontSize>11pt</FontSize>
@@ -386,10 +310,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetFuncionarioPorPermicao</DataSetName>
+        <DataSetName>DataSetModalidadePorPreco</DataSetName>
         <Top>0cm</Top>
         <Height>1.2cm</Height>
-        <Width>11.98153cm</Width>
+        <Width>12.02438cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -397,10 +321,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.08333in</Height>
+    <Height>1.07292in</Height>
     <Style />
   </Body>
-  <Width>4.84375in</Width>
+  <Width>5.70784in</Width>
   <Page>
     <PageHeader>
       <Height>2.19604cm</Height>
@@ -414,7 +338,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Lista de Funcionários por Permição</Value>
+                  <Value>Lista de Modalidade  Por Preço</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <Color>SeaGreen</Color>
@@ -427,10 +351,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.34029cm</Top>
-          <Left>3.77202cm</Left>
+          <Top>0.32768cm</Top>
+          <Left>3.66033cm</Left>
           <Height>1.3673cm</Height>
-          <Width>5.68008cm</Width>
+          <Width>5.52133cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -462,7 +386,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Left>0.02cm</Left>
+          <Left>0.02585cm</Left>
           <Height>1.97583cm</Height>
           <Width>3.08208cm</Width>
           <ZIndex>1</ZIndex>
@@ -492,6 +416,6 @@
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
-  <rd:ReportID>1700962b-1b5d-4074-ac5e-646be87d1f4d</rd:ReportID>
+  <rd:ReportID>5534846b-283f-447f-96b0-12598ae5b85e</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
 </Report>

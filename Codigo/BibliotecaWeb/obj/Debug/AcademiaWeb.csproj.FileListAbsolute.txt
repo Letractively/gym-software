@@ -1,0 +1,16 @@
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\Model.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\Services.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\Persistence.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\Model.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\Services.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\bin\en\Model.resources.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\obj\Debug\AcademiaWeb.csprojResolveAssemblyReference.cache
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.cache
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.compiled
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\LRS\Desktop\Repositorio GYM Software\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
