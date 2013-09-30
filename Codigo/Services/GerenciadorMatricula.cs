@@ -127,6 +127,20 @@ namespace Services
             return matriculaes.ElementAtOrDefault(0);
         }
 
+
+
+        /// <summary>
+        /// Obtém um matricula
+        /// </summary>
+        /// <param name="idMatricula">Identificador do matricula na base de dados</param>
+        /// <returns>Matricula model</returns>
+        public int ObterId(int idAluno, int idModalidade)
+        {
+            IEnumerable<Matricula> matriculaes = GetQuery().Where(matriculaModel => matriculaModel.MatriculaAluno.Equals(idAluno)).Where(matriculaModel => matriculaModel.CodigoModalidade.Equals(idModalidade));
+            return matriculaes.ElementAtOrDefault(0).CodigoMatricula;
+        }
+
+
         /// <summary>
         /// Atribui dados do Matricula Model para o Matricula Entity
         /// </summary>

@@ -104,6 +104,15 @@ namespace Services
         }
 
         /// <summary>
+        /// Obter todos as entidades cadastradas de uma modalidade
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Atividade> ObterTodasAtividadesDaModalidade(int idModalidade)
+        {
+            return GetQuery().Where(atividadeModel => atividadeModel.CodigoModalidade.Equals(idModalidade));
+        }
+
+        /// <summary>
         /// Obtém um atividade
         /// </summary>
         /// <param name="idAtividade">Identificador do atividade na base de dados</param>

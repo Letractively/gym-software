@@ -47,6 +47,7 @@
                     <li><%: Html.ActionLink("Atividade", "Index", "Atividade")%></li>                     
                     <li><%: Html.ActionLink("Medida", "Index", "Medida")%></li>                     
                     <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>                   
+                    <li><%: Html.ActionLink("Rotina", "Index", "Rotina")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                 </ul>
             </nav>

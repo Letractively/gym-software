@@ -98,7 +98,7 @@ namespace BibliotecaWeb.Controllers
         {
             gMedida.Remover(id);
             return RedirectToAction("Index");
-            View();
+            
         }
     }
 }

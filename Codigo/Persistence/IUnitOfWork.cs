@@ -14,5 +14,6 @@ namespace Persistence
         IRepositorioGenerico<tbl_medida> RepositorioMedida { get; }
         IRepositorioGenerico<tbl_atividade> RepositorioAtividade { get; }
         IRepositorioGenerico<tbl_matricula> RepositorioMatricula { get; }
+        IRepositorioGenerico<tbl_rotina> RepositorioRotina { get; }
     }
 }

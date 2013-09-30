@@ -57,7 +57,7 @@
       <End Role="tbl_venda" EntitySet="tbl_venda" />
       <End Role="tbl_item" EntitySet="tbl_item" />
     </AssociationSet>
-    <AssociationSet Name="fk_TBL_MATRICULA_TBL_ALUNO1" Association="academiaModel.Store.fk_TBL_MATRICULA_TBL_ALUNO1">
+    <AssociationSet Name="fk_TBL_MATRICULA_TBL_ALUNO2" Association="academiaModel.Store.fk_TBL_MATRICULA_TBL_ALUNO2">
       <End Role="tbl_aluno" EntitySet="tbl_aluno" />
       <End Role="tbl_matricula" EntitySet="tbl_matricula" />
     </AssociationSet>
@@ -77,8 +77,12 @@
       <End Role="tbl_aluno" EntitySet="tbl_aluno" />
       <End Role="tbl_pagamento_mensalidade" EntitySet="tbl_pagamento_mensalidade" />
     </AssociationSet>
-    <AssociationSet Name="fk_tbl_rotina_tbl_historicorotina1" Association="academiaModel.Store.fk_tbl_rotina_tbl_historicorotina1">
-      <End Role="tbl_historico_rotina" EntitySet="tbl_historico_rotina" />
+    <AssociationSet Name="fk_TBL_ROTINA_TBL_ALUNO1" Association="academiaModel.Store.fk_TBL_ROTINA_TBL_ALUNO1">
+      <End Role="tbl_aluno" EntitySet="tbl_aluno" />
+      <End Role="tbl_rotina" EntitySet="tbl_rotina" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TBL_ROTINA_TBL_MATRICULA1" Association="academiaModel.Store.fk_TBL_ROTINA_TBL_MATRICULA1">
+      <End Role="tbl_matricula" EntitySet="tbl_matricula" />
       <End Role="tbl_rotina" EntitySet="tbl_rotina" />
     </AssociationSet>
     <AssociationSet Name="fk_tbl_venda_tbl_funcionario1" Association="academiaModel.Store.fk_tbl_venda_tbl_funcionario1">
@@ -174,8 +178,8 @@
       <PropertyRef Name="CodigoMatricula" />
     </Key>
     <Property Name="CodigoMatricula" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="MatriculaAluno" Type="int" Nullable="false" />
     <Property Name="CodigoModalidade" Type="int" Nullable="false" />
+    <Property Name="MatriculaAluno" Type="int" Nullable="false" />
     <Property Name="DataMatricula" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="tbl_medida">
@@ -271,13 +275,11 @@
   <EntityType Name="tbl_rotina">
     <Key>
       <PropertyRef Name="CodigoRotina" />
-      <PropertyRef Name="Matricula" />
-      <PropertyRef Name="CodigoAtividade" />
     </Key>
     <Property Name="CodigoRotina" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Matricula" Type="int" Nullable="false" />
-    <Property Name="CodigoAtividade" Type="int" Nullable="false" />
-    <Property Name="Quantidade" Type="decimal" Nullable="false" Scale="5" />
+    <Property Name="MatriculaAluno" Type="int" Nullable="false" />
+    <Property Name="CodigoMatricula" Type="int" Nullable="false" />
+    <Property Name="Quantidade" Type="int" Nullable="false" />
     <Property Name="Repeticao" Type="int" Nullable="false" />
     <Property Name="Dia" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
@@ -412,7 +414,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_TBL_MATRICULA_TBL_ALUNO1">
+  <Association Name="fk_TBL_MATRICULA_TBL_ALUNO2">
     <End Role="tbl_aluno" Type="academiaModel.Store.tbl_aluno" Multiplicity="1" />
     <End Role="tbl_matricula" Type="academiaModel.Store.tbl_matricula" Multiplicity="*" />
     <ReferentialConstraint>
@@ -472,17 +474,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_tbl_rotina_tbl_historicorotina1">
-    <End Role="tbl_historico_rotina" Type="academiaModel.Store.tbl_historico_rotina" Multiplicity="1" />
+  <Association Name="fk_TBL_ROTINA_TBL_ALUNO1">
+    <End Role="tbl_aluno" Type="academiaModel.Store.tbl_aluno" Multiplicity="1" />
     <End Role="tbl_rotina" Type="academiaModel.Store.tbl_rotina" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tbl_historico_rotina">
+      <Principal Role="tbl_aluno">
         <PropertyRef Name="Matricula" />
-        <PropertyRef Name="CodigoAtividade" />
       </Principal>
       <Dependent Role="tbl_rotina">
-        <PropertyRef Name="Matricula" />
-        <PropertyRef Name="CodigoAtividade" />
+        <PropertyRef Name="MatriculaAluno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TBL_ROTINA_TBL_MATRICULA1">
+    <End Role="tbl_matricula" Type="academiaModel.Store.tbl_matricula" Multiplicity="1" />
+    <End Role="tbl_rotina" Type="academiaModel.Store.tbl_rotina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_matricula">
+        <PropertyRef Name="CodigoMatricula" />
+      </Principal>
+      <Dependent Role="tbl_rotina">
+        <PropertyRef Name="CodigoMatricula" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
