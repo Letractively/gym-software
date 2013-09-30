@@ -12,6 +12,8 @@
 <p><%: Html.ActionLink("Produtos cadastrados", "Index", "Produto/RelatorioProduto")%></p>
 <p><%: Html.ActionLink("Funcionarios cadastrados", "Index", "Funcionario/RelatorioFuncionario")%></p>
 <p><%: Html.ActionLink("Funcionarios Por Permicao", "Index", "Funcionario/RelatorioFuncionarioPorPermicao")%></p>
+<p><%: Html.ActionLink("Atividades Por Modalidade", "Index", "Atividade/RelatorioAtividadePorModalidade")%></p>
+<p><%: Html.ActionLink("Modalidades Por Preço", "Index", "Modalidade/RelatorioModalidadePorPreco")%></p>
 <p><%: Html.ActionLink("Aluno cadastrados", "Index", "Aluno/RelatorioAluno")%></p>
 
 

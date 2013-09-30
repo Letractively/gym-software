@@ -28,8 +28,7 @@ namespace Models.Models
         public decimal Quantidade { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_valor")]
-        [Range(0, 1000000)]
-        
+        [Range(0, 1000000)]        
         [Display(Name = "quantidade_minima", ResourceType = typeof(Mensagem))]
         public decimal QuantidadeMinima { get; set; }
 

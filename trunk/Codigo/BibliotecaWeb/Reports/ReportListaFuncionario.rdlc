@@ -119,10 +119,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.54675in</Width>
+              <Width>1.47383in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.17375in</Width>
+              <Width>3.23625in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -222,7 +222,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>CodigoFuncionario</rd:DefaultName>
@@ -255,7 +257,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>NomeRazao</rd:DefaultName>
@@ -294,7 +298,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetFuncionario</DataSetName>
         <Height>1.2cm</Height>
-        <Width>9.45008cm</Width>
+        <Width>11.96361cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -302,13 +306,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>1.13517in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>4.82292in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>2.19604cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -332,8 +336,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.94403cm</Top>
-          <Left>3.92875cm</Left>
+          <Top>0.67945cm</Top>
+          <Left>3.61125cm</Left>
           <Height>0.99688cm</Height>
           <Width>5.52133cm</Width>
           <Style>
@@ -367,10 +371,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.25612cm</Top>
-          <Left>0.28258cm</Left>
-          <Height>1.97583cm</Height>
-          <Width>3.08208cm</Width>
+          <Height>1.94091cm</Height>
+          <Width>3.15299cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

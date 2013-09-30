@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Edit</h2>
+<h2>Editar</h2>
 
 <p>
 
@@ -66,5 +66,5 @@
 <% } %>
 
 </table>
-<%: Html.ActionLink("Back to List", "Index") %>
+<%: Html.ActionLink("Voltar para a Lista", "Index") %>
 </asp:Content>

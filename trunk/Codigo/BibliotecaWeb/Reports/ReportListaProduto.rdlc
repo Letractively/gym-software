@@ -62,10 +62,10 @@
               <Width>1.10925in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73425in</Width>
+              <Width>2.27592in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.92363in</Width>
+              <Width>1.30905in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -83,7 +83,7 @@
                             <TextRun>
                               <Value>Código Barra</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -98,10 +98,10 @@
                       <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#949ca4</Color>
+                          <Color>#708270</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#7c8692</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -121,7 +121,7 @@
                             <TextRun>
                               <Value>Nome</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -136,10 +136,10 @@
                       <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#949ca4</Color>
+                          <Color>#708270</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#7c8692</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -157,9 +157,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Preço Venda</Value>
+                              <Value>Preço de Venda</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -174,10 +174,10 @@
                       <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#949ca4</Color>
+                          <Color>#708270</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#7c8692</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -202,8 +202,8 @@
                             <TextRun>
                               <Value>=Fields!CodigoBarra.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -237,8 +237,8 @@
                             <TextRun>
                               <Value>=Fields!Nome.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -272,8 +272,8 @@
                             <TextRun>
                               <Value>=Sum(Fields!PrecoVenda.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -318,8 +318,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetProduto</DataSetName>
+        <Top>0cm</Top>
         <Height>1.2cm</Height>
-        <Width>9.56853cm</Width>
+        <Width>11.9233cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -327,13 +328,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>1.0625in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>4.83333in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>2.19604cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -357,8 +358,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.97cm</Top>
-          <Left>4.0472cm</Left>
+          <Top>0.68425cm</Top>
+          <Left>3.6662cm</Left>
           <Height>0.99688cm</Height>
           <Width>5.52133cm</Width>
           <Style>
@@ -392,8 +393,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.28208cm</Top>
-          <Left>0.40099cm</Left>
+          <Left>0.01999cm</Left>
           <Height>1.97583cm</Height>
           <Width>3.08208cm</Width>
           <ZIndex>1</ZIndex>
@@ -421,7 +421,9 @@
     <TopMargin>2cm</TopMargin>
     <BottomMargin>2cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
-    <Style />
+    <Style>
+      <BackgroundColor>White</BackgroundColor>
+    </Style>
   </Page>
   <rd:ReportID>a9b16831-0070-4a07-b907-21f463179b38</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>

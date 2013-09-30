@@ -59,19 +59,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.70475in</Width>
+              <Width>0.74393in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.86508in</Width>
+              <Width>0.91716in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.48425in</Width>
+              <Width>0.6405in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.68217in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>0.90092in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.953in</Width>
@@ -90,9 +90,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cd Barra</Value>
+                              <Value>Cd. Barra</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -108,7 +108,7 @@
                           <Color>#7292cc</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -128,7 +128,7 @@
                             <TextRun>
                               <Value>Nome</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -144,7 +144,7 @@
                           <Color>#7292cc</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -162,9 +162,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Qnt.</Value>
+                              <Value>Qtd</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -180,7 +180,7 @@
                           <Color>#7292cc</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -198,9 +198,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Qnt Min</Value>
+                              <Value>Qtd Min</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -216,7 +216,7 @@
                           <Color>#7292cc</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -236,7 +236,7 @@
                             <TextRun>
                               <Value>Preço Custo</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -252,7 +252,7 @@
                           <Color>#7292cc</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -272,7 +272,7 @@
                             <TextRun>
                               <Value>Preço Venda</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -288,7 +288,7 @@
                           <Color>#7292cc</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
+                        <BackgroundColor>#708270</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -313,8 +313,8 @@
                             <TextRun>
                               <Value>=Fields!CodigoBarra.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -346,8 +346,8 @@
                             <TextRun>
                               <Value>=Fields!Nome.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -379,8 +379,8 @@
                             <TextRun>
                               <Value>=Fields!Quantidade.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -412,8 +412,8 @@
                             <TextRun>
                               <Value>=Fields!QuantidadeMinima.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -445,8 +445,8 @@
                             <TextRun>
                               <Value>=Fields!PrecoCusto.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -478,8 +478,8 @@
                             <TextRun>
                               <Value>=Fields!PrecoVenda.Value</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -525,9 +525,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.32833cm</Top>
+        <Top>2.15222cm</Top>
         <Height>1.2cm</Height>
-        <Width>11.8707cm</Width>
+        <Width>12.2877cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -604,10 +604,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>1.94792in</Height>
     <Style />
   </Body>
-  <Width>7.29601in</Width>
+  <Width>4.95226in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

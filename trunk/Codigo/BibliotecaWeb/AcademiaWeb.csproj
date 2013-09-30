@@ -244,6 +244,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reports\ReportListaAlunos.rdlc" />
+    <EmbeddedResource Include="Reports\ReportListaAtividadePorModalidade.rdlc" />
+    <EmbeddedResource Include="Reports\ReportListaModalidadePorPreco.rdlc" />
     <EmbeddedResource Include="Reports\ReportListaProdutosEstoqueBaixo.rdlc" />
     <EmbeddedResource Include="Reports\ReportListaFuncionario.rdlc" />
     <EmbeddedResource Include="Reports\ReportListaFuncionarioPorPermicao.rdlc" />
