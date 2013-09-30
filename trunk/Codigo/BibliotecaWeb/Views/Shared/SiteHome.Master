@@ -23,13 +23,26 @@
 
         
 
+    <style type="text/css">
+        .style1
+        {
+            font-weight: normal;
+        }
+        .style2
+        {
+            font-size: small;
+        }
+    </style>
+
+        
+
 </head>
 <body>
 <div class="main">
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="Home">GymSoftware <small><i>Seu Corpo é Nosso Trabalho</i></small></a></h1>
+        <h1><a href="Home">GymSoftware <span class="style1"> <small class="style2">Seu Corpo é Nosso Trabalho</small></span></a></h1>
       </div>
 
       <div class="menu_nav">
@@ -43,7 +56,8 @@
                     <li><%: Html.ActionLink("Medida", "Index", "Medida")%></li>                     
                     <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>
                     <li><%: Html.ActionLink("Matricula", "Index", "Matricula")%></li>
-                    <li><%: Html.ActionLink("Relatorios", "Index", "Relatorio")%></li>                        
+                    <li><%: Html.ActionLink("Relatorios", "Index", "Relatorio")%></li>    
+                    <li><%: Html.ActionLink("Rotina", "Index", "Rotina")%></li>                    
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                     <% Html.RenderPartial("LogOnUserControl"); %>                
                                           

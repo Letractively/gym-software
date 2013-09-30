@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerenciadorRotina.cs" />
     <Compile Include="GerenciadorMatricula.cs" />
     <Compile Include="GerenciadorAtividade.cs" />
     <Compile Include="GerenciadorAluno.cs" />

@@ -393,4 +393,10 @@
   <data name="nome_modalidade" xml:space="preserve">
     <value>Nome Modalidade</value>
   </data>
+  <data name="dia" xml:space="preserve">
+    <value>Dia</value>
+  </data>
+  <data name="repeticao" xml:space="preserve">
+    <value>Repetição</value>
+  </data>
 </root>

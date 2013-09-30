@@ -54,6 +54,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Atividade.cs" />
+    <Compile Include="Models\Rotina.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Matricula.cs" />
     <Compile Include="Models\Medida.cs" />

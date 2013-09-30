@@ -412,6 +412,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Dia.
+        /// </summary>
+        public static string dia {
+            get {
+                return ResourceManager.GetString("dia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Dia Venciamento.
         /// </summary>
         public static string dia_vencimento {
@@ -786,6 +795,15 @@ namespace Models.App_GlobalResources {
         public static string quantidade_minima {
             get {
                 return ResourceManager.GetString("quantidade_minima", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Repetição.
+        /// </summary>
+        public static string repeticao {
+            get {
+                return ResourceManager.GetString("repeticao", resourceCulture);
             }
         }
         

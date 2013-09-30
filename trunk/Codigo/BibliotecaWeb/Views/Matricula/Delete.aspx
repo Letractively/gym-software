@@ -33,7 +33,7 @@
 <% using (Html.BeginForm()) { %>
     <p>
         <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.voltar_para_lista , "Index") %>
     </p>
 <% } %>
 
