@@ -1,0 +1,1 @@
+Projeto de Engenharia de Software I da Universidade Federal de Sergipe sob orientação o professor Marcos Dósea, que visa a criação de um software de gerenciamento de academia.
